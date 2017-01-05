@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		205D469EFC17F9EAE67FAA0A /* Pods_Cooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CC375C299491EE41BC3CF7 /* Pods_Cooking.framework */; };
+		7CF8D5751E1EB0A500041DAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8D5741E1EB0A500041DAB /* main.m */; };
+		7CF8D5781E1EB0A500041DAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8D5771E1EB0A500041DAB /* AppDelegate.m */; };
+		7CF8D57B1E1EB0A500041DAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8D57A1E1EB0A500041DAB /* ViewController.m */; };
+		7CF8D57E1E1EB0A500041DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF8D57C1E1EB0A500041DAB /* Main.storyboard */; };
+		7CF8D5801E1EB0A500041DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CF8D57F1E1EB0A500041DAB /* Assets.xcassets */; };
+		7CF8D5831E1EB0A500041DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF8D5811E1EB0A500041DAB /* LaunchScreen.storyboard */; };
+		7CF8D58E1E1EB0A500041DAB /* CookingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8D58D1E1EB0A500041DAB /* CookingTests.m */; };
+		7CF8D5991E1EB0A500041DAB /* CookingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8D5981E1EB0A500041DAB /* CookingUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7CF8D58A1E1EB0A500041DAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CF8D5681E1EB0A500041DAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CF8D56F1E1EB0A500041DAB;
+			remoteInfo = Cooking;
+		};
+		7CF8D5951E1EB0A500041DAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CF8D5681E1EB0A500041DAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CF8D56F1E1EB0A500041DAB;
+			remoteInfo = Cooking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00CC375C299491EE41BC3CF7 /* Pods_Cooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CF8D5701E1EB0A500041DAB /* Cooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CF8D5741E1EB0A500041DAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7CF8D5761E1EB0A500041DAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7CF8D5771E1EB0A500041DAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7CF8D5791E1EB0A500041DAB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7CF8D57A1E1EB0A500041DAB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7CF8D57D1E1EB0A500041DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7CF8D57F1E1EB0A500041DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CF8D5821E1EB0A500041DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7CF8D5841E1EB0A500041DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CF8D5891E1EB0A500041DAB /* CookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CF8D58D1E1EB0A500041DAB /* CookingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookingTests.m; sourceTree = "<group>"; };
+		7CF8D58F1E1EB0A500041DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CF8D5941E1EB0A500041DAB /* CookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CF8D5981E1EB0A500041DAB /* CookingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookingUITests.m; sourceTree = "<group>"; };
+		7CF8D59A1E1EB0A500041DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8068E23C23649D1453555202 /* Pods-Cooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cooking/Pods-Cooking.release.xcconfig"; sourceTree = "<group>"; };
+		B1359B43841A1206C1516D28 /* Pods-Cooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cooking/Pods-Cooking.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CF8D56D1E1EB0A500041DAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205D469EFC17F9EAE67FAA0A /* Pods_Cooking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF8D5861E1EB0A500041DAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF8D5911E1EB0A500041DAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40F8A5E0348A6DD9B32C6071 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1359B43841A1206C1516D28 /* Pods-Cooking.debug.xcconfig */,
+				8068E23C23649D1453555202 /* Pods-Cooking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4662D3F9D54D7B76A30AF999 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00CC375C299491EE41BC3CF7 /* Pods_Cooking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CF8D5671E1EB0A500041DAB = {
+			isa = PBXGroup;
+			children = (
+				7CF8D5721E1EB0A500041DAB /* Cooking */,
+				7CF8D58C1E1EB0A500041DAB /* CookingTests */,
+				7CF8D5971E1EB0A500041DAB /* CookingUITests */,
+				7CF8D5711E1EB0A500041DAB /* Products */,
+				40F8A5E0348A6DD9B32C6071 /* Pods */,
+				4662D3F9D54D7B76A30AF999 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7CF8D5711E1EB0A500041DAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CF8D5701E1EB0A500041DAB /* Cooking.app */,
+				7CF8D5891E1EB0A500041DAB /* CookingTests.xctest */,
+				7CF8D5941E1EB0A500041DAB /* CookingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CF8D5721E1EB0A500041DAB /* Cooking */ = {
+			isa = PBXGroup;
+			children = (
+				7CF8D5761E1EB0A500041DAB /* AppDelegate.h */,
+				7CF8D5771E1EB0A500041DAB /* AppDelegate.m */,
+				7CF8D5791E1EB0A500041DAB /* ViewController.h */,
+				7CF8D57A1E1EB0A500041DAB /* ViewController.m */,
+				7CF8D57C1E1EB0A500041DAB /* Main.storyboard */,
+				7CF8D57F1E1EB0A500041DAB /* Assets.xcassets */,
+				7CF8D5811E1EB0A500041DAB /* LaunchScreen.storyboard */,
+				7CF8D5841E1EB0A500041DAB /* Info.plist */,
+				7CF8D5731E1EB0A500041DAB /* Supporting Files */,
+			);
+			path = Cooking;
+			sourceTree = "<group>";
+		};
+		7CF8D5731E1EB0A500041DAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CF8D5741E1EB0A500041DAB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7CF8D58C1E1EB0A500041DAB /* CookingTests */ = {
+			isa = PBXGroup;
+			children = (
+				7CF8D58D1E1EB0A500041DAB /* CookingTests.m */,
+				7CF8D58F1E1EB0A500041DAB /* Info.plist */,
+			);
+			path = CookingTests;
+			sourceTree = "<group>";
+		};
+		7CF8D5971E1EB0A500041DAB /* CookingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7CF8D5981E1EB0A500041DAB /* CookingUITests.m */,
+				7CF8D59A1E1EB0A500041DAB /* Info.plist */,
+			);
+			path = CookingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CF8D56F1E1EB0A500041DAB /* Cooking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CF8D59D1E1EB0A500041DAB /* Build configuration list for PBXNativeTarget "Cooking" */;
+			buildPhases = (
+				7D1D236C222CA36CFC5449EB /* [CP] Check Pods Manifest.lock */,
+				7CF8D56C1E1EB0A500041DAB /* Sources */,
+				7CF8D56D1E1EB0A500041DAB /* Frameworks */,
+				7CF8D56E1E1EB0A500041DAB /* Resources */,
+				F9E08325BDA980979156E49E /* [CP] Embed Pods Frameworks */,
+				E6FA3A8E830826841CFAAF16 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cooking;
+			productName = Cooking;
+			productReference = 7CF8D5701E1EB0A500041DAB /* Cooking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7CF8D5881E1EB0A500041DAB /* CookingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CF8D5A01E1EB0A500041DAB /* Build configuration list for PBXNativeTarget "CookingTests" */;
+			buildPhases = (
+				7CF8D5851E1EB0A500041DAB /* Sources */,
+				7CF8D5861E1EB0A500041DAB /* Frameworks */,
+				7CF8D5871E1EB0A500041DAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CF8D58B1E1EB0A500041DAB /* PBXTargetDependency */,
+			);
+			name = CookingTests;
+			productName = CookingTests;
+			productReference = 7CF8D5891E1EB0A500041DAB /* CookingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7CF8D5931E1EB0A500041DAB /* CookingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CF8D5A31E1EB0A500041DAB /* Build configuration list for PBXNativeTarget "CookingUITests" */;
+			buildPhases = (
+				7CF8D5901E1EB0A500041DAB /* Sources */,
+				7CF8D5911E1EB0A500041DAB /* Frameworks */,
+				7CF8D5921E1EB0A500041DAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CF8D5961E1EB0A500041DAB /* PBXTargetDependency */,
+			);
+			name = CookingUITests;
+			productName = CookingUITests;
+			productReference = 7CF8D5941E1EB0A500041DAB /* CookingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CF8D5681E1EB0A500041DAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = universe;
+				TargetAttributes = {
+					7CF8D56F1E1EB0A500041DAB = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					7CF8D5881E1EB0A500041DAB = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7CF8D56F1E1EB0A500041DAB;
+					};
+					7CF8D5931E1EB0A500041DAB = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7CF8D56F1E1EB0A500041DAB;
+					};
+				};
+			};
+			buildConfigurationList = 7CF8D56B1E1EB0A500041DAB /* Build configuration list for PBXProject "Cooking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7CF8D5671E1EB0A500041DAB;
+			productRefGroup = 7CF8D5711E1EB0A500041DAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CF8D56F1E1EB0A500041DAB /* Cooking */,
+				7CF8D5881E1EB0A500041DAB /* CookingTests */,
+				7CF8D5931E1EB0A500041DAB /* CookingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CF8D56E1E1EB0A500041DAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF8D5831E1EB0A500041DAB /* LaunchScreen.storyboard in Resources */,
+				7CF8D5801E1EB0A500041DAB /* Assets.xcassets in Resources */,
+				7CF8D57E1E1EB0A500041DAB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF8D5871E1EB0A500041DAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF8D5921E1EB0A500041DAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D1D236C222CA36CFC5449EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6FA3A8E830826841CFAAF16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cooking/Pods-Cooking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9E08325BDA980979156E49E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cooking/Pods-Cooking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CF8D56C1E1EB0A500041DAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF8D57B1E1EB0A500041DAB /* ViewController.m in Sources */,
+				7CF8D5781E1EB0A500041DAB /* AppDelegate.m in Sources */,
+				7CF8D5751E1EB0A500041DAB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF8D5851E1EB0A500041DAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF8D58E1E1EB0A500041DAB /* CookingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF8D5901E1EB0A500041DAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CF8D5991E1EB0A500041DAB /* CookingUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7CF8D58B1E1EB0A500041DAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CF8D56F1E1EB0A500041DAB /* Cooking */;
+			targetProxy = 7CF8D58A1E1EB0A500041DAB /* PBXContainerItemProxy */;
+		};
+		7CF8D5961E1EB0A500041DAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CF8D56F1E1EB0A500041DAB /* Cooking */;
+			targetProxy = 7CF8D5951E1EB0A500041DAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7CF8D57C1E1EB0A500041DAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CF8D57D1E1EB0A500041DAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7CF8D5811E1EB0A500041DAB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CF8D5821E1EB0A500041DAB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7CF8D59B1E1EB0A500041DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7CF8D59C1E1EB0A500041DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CF8D59E1E1EB0A500041DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1359B43841A1206C1516D28 /* Pods-Cooking.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cooking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hi.universe.Cooking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7CF8D59F1E1EB0A500041DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8068E23C23649D1453555202 /* Pods-Cooking.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cooking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hi.universe.Cooking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7CF8D5A11E1EB0A500041DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CookingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hi.universe.CookingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cooking.app/Cooking";
+			};
+			name = Debug;
+		};
+		7CF8D5A21E1EB0A500041DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CookingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hi.universe.CookingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cooking.app/Cooking";
+			};
+			name = Release;
+		};
+		7CF8D5A41E1EB0A500041DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CookingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hi.universe.CookingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cooking;
+			};
+			name = Debug;
+		};
+		7CF8D5A51E1EB0A500041DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CookingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hi.universe.CookingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cooking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CF8D56B1E1EB0A500041DAB /* Build configuration list for PBXProject "Cooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CF8D59B1E1EB0A500041DAB /* Debug */,
+				7CF8D59C1E1EB0A500041DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CF8D59D1E1EB0A500041DAB /* Build configuration list for PBXNativeTarget "Cooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CF8D59E1E1EB0A500041DAB /* Debug */,
+				7CF8D59F1E1EB0A500041DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7CF8D5A01E1EB0A500041DAB /* Build configuration list for PBXNativeTarget "CookingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CF8D5A11E1EB0A500041DAB /* Debug */,
+				7CF8D5A21E1EB0A500041DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7CF8D5A31E1EB0A500041DAB /* Build configuration list for PBXNativeTarget "CookingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CF8D5A41E1EB0A500041DAB /* Debug */,
+				7CF8D5A51E1EB0A500041DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CF8D5681E1EB0A500041DAB /* Project object */;
+}
