@@ -13,7 +13,7 @@
 //菜系种类
 typedef enum{
     
-    CookingStyleYueCai,
+    CookingStyleYueCai = 0,
     CookingStyleChuanCai,
     CookingStyleSuCai,
     CookingStyleZheCai,
@@ -28,6 +28,6 @@ typedef enum{
 
 @interface NetManager : BaseNetManager
 
-+ (id)getCookingStyleModelWithStyle:(CookingStyle)style CompletionHandler:(void (^)(CookingStyleModel *, NSError *))completionHandler;
++ (id)getCookingStyleModelWithStyle:(CookingStyle)style CompletionHandler:(void (^)(CookingStyleModel *model, NSError *error))completionHandler;
 
 @end

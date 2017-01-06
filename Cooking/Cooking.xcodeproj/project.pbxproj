@@ -587,6 +587,7 @@
 				TargetAttributes = {
 					7CF8D56F1E1EB0A500041DAB = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 754TY7VH2R;
 						ProvisioningStyle = Automatic;
 					};
 					7CF8D5881E1EB0A500041DAB = {
@@ -878,6 +879,7 @@
 			baseConfigurationReference = B1359B43841A1206C1516D28 /* Pods-Cooking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 754TY7VH2R;
 				GCC_PREFIX_HEADER = Cooking/PrefixHeader.pch;
 				INFOPLIST_FILE = Cooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -891,6 +893,7 @@
 			baseConfigurationReference = 8068E23C23649D1453555202 /* Pods-Cooking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 754TY7VH2R;
 				GCC_PREFIX_HEADER = Cooking/PrefixHeader.pch;
 				INFOPLIST_FILE = Cooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -15,16 +15,27 @@
 @property (weak, nonatomic) IBOutlet UILabel *cookingStyleLable;
 @property (weak, nonatomic) IBOutlet UIButton *showAllButton;
 
+
+
 @end
 
 @implementation UNCookingStyleCell
 
+#pragma mark - 参数赋值
+- (void)setHeaderTitle:(NSString *)headerTitle{
+    _headerTitle = headerTitle;
+    self.cookingStyleLable.text = headerTitle;
+}
+
+- (void)setPosts:(NSArray<CookingStylePostsModel *> *)posts{
+    _posts = posts;
+    [self.collectionView reloadData];
+}
+
+#pragma mark - 界面
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    
-    self.cookingStyleLable.text = @"粤菜";
-    
     [self collectionSetup];
     [self setShowAllButtonAction];
 }
@@ -38,6 +49,7 @@
 - (void)didTouchedAllButton:(UIButton *)sender{
 
     [self.delegate cookingStyleCell:self didClickShowAllButton:sender];
+    
 }
 
 
@@ -73,17 +85,20 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 
     UNCookFoodCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"foodCell" forIndexPath:indexPath];
-    
-//    cell.layer.cornerRadius = 3;
-//    cell.layer.masksToBounds = YES;
-//    cell.layer.borderWidth = 1;
-//    cell.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor lightGrayColor]);
-    
-    
-    [cell.foodImageIV setImageWithURL:[NSURL URLWithString:@""] placeholder:[UIImage imageNamed:@"background_image.jpeg"]];
-    
-    cell.foodNameLable.text = @"麻辣干锅鸭";
-    cell.foodDetailLable.text = @"难度：配菜(中级) 时间：10-30分钟主料鸭腿3只小葱头6个美人椒2个干辣椒4个香葱2根姜1小块蒜3瓣辅料 花椒十几粒大料1个香叶一片盐2茶匙白胡椒半茶匙鸡精半茶匙料酒4勺老抽";
+    if (self.posts.count > 0) {
+//        NSLog(@"posts.count:%ld item:%ld",self.posts.count,indexPath.item);
+        CookingStylePostsModel *model = self.posts[indexPath.row];
+        
+        [cell.foodImageIV setImageWithURL:[NSURL URLWithString:model.thumbnail] placeholder:[UIImage imageNamed:@"background_image.jpeg"]];
+        cell.foodNameLable.text = model.title;
+        cell.foodDetailLable.text = model.excerpt;
+    }else{
+        [cell.foodImageIV setImage:[UIImage imageNamed:@"background_image.jpeg"]];
+        cell.foodNameLable.text = @"";
+        cell.foodDetailLable.text = @"";
+  
+    }
+
     return cell;
 }
 

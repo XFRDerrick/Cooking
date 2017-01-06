@@ -11,15 +11,34 @@
 #import "UNCookingStyleCell.h"
 
 @interface UNHomeTableViewController ()<UNCookingStyleCellDelegate,UICollectionViewDelegate>
+@property (nonatomic, strong) NSArray *foodStylesTitle;
 
+@property (nonatomic, strong) NSMutableDictionary *stylesData;
 
 @end
 
 @implementation UNHomeTableViewController
 
+- (NSMutableDictionary *)stylesData{
+
+    if (!_stylesData) {
+        _stylesData = [NSMutableDictionary dictionary];
+    }
+    return _stylesData;
+}
+- (NSArray *)foodStylesTitle{
+
+    if (!_foodStylesTitle) {
+        _foodStylesTitle = @[@"粤菜",@"川菜",@"苏菜",@"浙菜",@"闽菜",@"徽菜",@"鲁菜",@"上海菜",@"东北菜",@"烘焙"];
+    }
+    return _foodStylesTitle;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
+    //异步加载数据
+    [self loadCookingData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,6 +49,30 @@
 - (void)setupTableView{
 
     [self.tableView registerNib:[UINib nibWithNibName:@"UNCookingStyleCell" bundle:nil] forCellReuseIdentifier:@"cookingStyleCell"];
+//    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+//       
+//        
+//    }];
+    
+}
+
+- (void)loadCookingData{
+    
+    for (int i =0; i < self.foodStylesTitle.count; i ++) {
+        
+        dispatch_async(dispatch_queue_create(0, 0), ^{
+
+            [NetManager getCookingStyleModelWithStyle:i CompletionHandler:^(CookingStyleModel *model, NSError *error) {
+                //请求
+                [self.stylesData setObject:model forKey:@(i).stringValue];
+//                NSLog(@"%ld",self.stylesData.count);
+                //刷新指定行
+                //[self.tableView reloadData];
+                [self.tableView reloadRow:i inSection:0 withRowAnimation:UITableViewRowAnimationNone];
+            }];
+        });
+        
+    }
 
 }
 
@@ -41,7 +84,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.foodStylesTitle.count;
 }
 
 
@@ -53,6 +96,13 @@
     cell.delegate = self;
     cell.collectionView.delegate = self;
     
+    //数据传值
+    cell.headerTitle = self.foodStylesTitle[indexPath.row];
+    if ([self.stylesData objectForKey:@(indexPath.row).stringValue]) {
+        NSArray<CookingStylePostsModel *> *modelArr = [[self.stylesData objectForKey:@(indexPath.row).stringValue] posts];
+      
+        cell.posts = modelArr;
+    }
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

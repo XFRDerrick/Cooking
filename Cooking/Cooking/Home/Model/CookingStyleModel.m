@@ -11,9 +11,22 @@
 
 @implementation CookingStyleModel
 
++ (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass{
 
+    return @{@"posts":@"CookingStylePostsModel"};
+}
 
 
 @end
 
+
+@implementation CookingStylePostsModel
+
+
++ (NSDictionary<NSString *,id> *)modelCustomPropertyMapper{
+
+    return @{@"postsID":@"id"};
+}
+
+@end
 

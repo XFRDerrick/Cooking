@@ -21,4 +21,7 @@
 @property (nonatomic, weak) id<UNCookingStyleCellDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+@property (nonatomic, copy) NSString *headerTitle;
+@property (nonatomic, strong)NSArray <CookingStylePostsModel*> *posts;
+
 @end

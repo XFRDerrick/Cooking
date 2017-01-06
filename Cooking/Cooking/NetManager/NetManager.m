@@ -10,6 +10,7 @@
 
 @implementation NetManager
 
+
 + (id)getCookingStyleModelWithStyle:(CookingStyle)style CompletionHandler:(void (^)(CookingStyleModel *, NSError *))completionHandler{
     
     NSString *middleStr = nil;
