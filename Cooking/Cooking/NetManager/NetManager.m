@@ -9,17 +9,50 @@
 #import "NetManager.h"
 
 @implementation NetManager
-//
-//+ (id)getUserInfoWithParamaters:(NSDictionary *)paramaters CompletionHandler:(void (^)(UNUserInfo *, NSError *))completionHandler{
-//    NSString *path = UserInfoBasePath;
-//    
-//    return [self GET:path paramaters:paramaters completionHandler:^(id respondObj, NSError *error) {
-//        
-//        !completionHandler ?: completionHandler([UNUserInfo parse:respondObj],error);
-//    }];
-//}
-//
 
++ (id)getCookingStyleModelWithStyle:(CookingStyle)style CompletionHandler:(void (^)(CookingStyleModel *, NSError *))completionHandler{
+    
+    NSString *middleStr = nil;
+    switch (style) {
+            case CookingStyleYueCai:
+            middleStr = @"yuecai";
+            break;
+            case CookingStyleChuanCai:
+            middleStr = @"chuancai";
+            break;
+            case CookingStyleSuCai:
+            middleStr = @"sucai";
+            break;
+            case CookingStyleZheCai:
+            middleStr = @"zhicai";
+            break;
+            case CookingStyleMinCai:
+            middleStr = @"mincai";
+            break;
+            case CookingStyleHuiCai:
+            middleStr = @"huicai";
+            break;
+            case CookingStyleLuCai:
+            middleStr = @"lucai";
+            break;
+            case CookingStyleShangHaiCai:
+            middleStr = @"shangcai";
+            break;
+            case CookingStyleDongBeiCai:
+            middleStr = @"dongbeijiacaipu";
+            break;
+            case CookingStyleHongBei:
+            middleStr = @"hongpei";
+            break;
+        default:
+            break;
+    }
+    NSString *path = [NSString stringWithFormat:@"%@%@%@",kCookingStyleBasePathHeader,middleStr,kCookingStyleBasePathFoot];
+    
+    return [self GET:path paramaters:nil completionHandler:^(id respondObj, NSError *error) {
+           !completionHandler ?: completionHandler([CookingStyleModel parse:respondObj],error);
+    }];
+}
 
 
 

@@ -29,6 +29,13 @@
 		7C6BBD6C1E1F3EDD007A2435 /* UNCookingEtaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD6B1E1F3EDD007A2435 /* UNCookingEtaViewController.m */; };
 		7C6BBD6F1E1F3EEB007A2435 /* UNWonderfulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD6E1E1F3EEB007A2435 /* UNWonderfulViewController.m */; };
 		7C6BBD721E1F3F23007A2435 /* UNHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD711E1F3F23007A2435 /* UNHomeTableViewController.m */; };
+		7C6BBD761E1F469F007A2435 /* UNCookingStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD741E1F469F007A2435 /* UNCookingStyleCell.m */; };
+		7C6BBD771E1F469F007A2435 /* UNCookingStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6BBD751E1F469F007A2435 /* UNCookingStyleCell.xib */; };
+		7C6BBD7F1E1F4882007A2435 /* bt_all_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C6BBD7D1E1F4882007A2435 /* bt_all_normal@2x.png */; };
+		7C6BBD801E1F4882007A2435 /* bt_all_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C6BBD7E1E1F4882007A2435 /* bt_all_normal@3x.png */; };
+		7C6BBD841E1F49FE007A2435 /* UNCookFoodCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD821E1F49FE007A2435 /* UNCookFoodCollectionCell.m */; };
+		7C6BBD851E1F49FE007A2435 /* UNCookFoodCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6BBD831E1F49FE007A2435 /* UNCookFoodCollectionCell.xib */; };
+		7C6BBD871E1F5A0F007A2435 /* background_image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7C6BBD861E1F5A0F007A2435 /* background_image.jpeg */; };
 		7CF8D5751E1EB0A500041DAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8D5741E1EB0A500041DAB /* main.m */; };
 		7CF8D5781E1EB0A500041DAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8D5771E1EB0A500041DAB /* AppDelegate.m */; };
 		7CF8D57E1E1EB0A500041DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF8D57C1E1EB0A500041DAB /* Main.storyboard */; };
@@ -101,6 +108,15 @@
 		7C6BBD6E1E1F3EEB007A2435 /* UNWonderfulViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNWonderfulViewController.m; sourceTree = "<group>"; };
 		7C6BBD701E1F3F23007A2435 /* UNHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNHomeTableViewController.h; sourceTree = "<group>"; };
 		7C6BBD711E1F3F23007A2435 /* UNHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNHomeTableViewController.m; sourceTree = "<group>"; };
+		7C6BBD731E1F469F007A2435 /* UNCookingStyleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNCookingStyleCell.h; sourceTree = "<group>"; };
+		7C6BBD741E1F469F007A2435 /* UNCookingStyleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNCookingStyleCell.m; sourceTree = "<group>"; };
+		7C6BBD751E1F469F007A2435 /* UNCookingStyleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNCookingStyleCell.xib; sourceTree = "<group>"; };
+		7C6BBD7D1E1F4882007A2435 /* bt_all_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_all_normal@2x.png"; sourceTree = "<group>"; };
+		7C6BBD7E1E1F4882007A2435 /* bt_all_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_all_normal@3x.png"; sourceTree = "<group>"; };
+		7C6BBD811E1F49FE007A2435 /* UNCookFoodCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNCookFoodCollectionCell.h; sourceTree = "<group>"; };
+		7C6BBD821E1F49FE007A2435 /* UNCookFoodCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNCookFoodCollectionCell.m; sourceTree = "<group>"; };
+		7C6BBD831E1F49FE007A2435 /* UNCookFoodCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNCookFoodCollectionCell.xib; sourceTree = "<group>"; };
+		7C6BBD861E1F5A0F007A2435 /* background_image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_image.jpeg; sourceTree = "<group>"; };
 		7CF8D5701E1EB0A500041DAB /* Cooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF8D5741E1EB0A500041DAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7CF8D5761E1EB0A500041DAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -307,6 +323,12 @@
 		7C6BBD511E1F2CAF007A2435 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7C6BBD731E1F469F007A2435 /* UNCookingStyleCell.h */,
+				7C6BBD741E1F469F007A2435 /* UNCookingStyleCell.m */,
+				7C6BBD751E1F469F007A2435 /* UNCookingStyleCell.xib */,
+				7C6BBD811E1F49FE007A2435 /* UNCookFoodCollectionCell.h */,
+				7C6BBD821E1F49FE007A2435 /* UNCookFoodCollectionCell.m */,
+				7C6BBD831E1F49FE007A2435 /* UNCookFoodCollectionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -412,6 +434,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7C6BBD781E1F4770007A2435 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7C6BBD861E1F5A0F007A2435 /* background_image.jpeg */,
+				7C6BBD7D1E1F4882007A2435 /* bt_all_normal@2x.png */,
+				7C6BBD7E1E1F4882007A2435 /* bt_all_normal@3x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		7CF8D5671E1EB0A500041DAB = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +493,7 @@
 		7CF8D5731E1EB0A500041DAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C6BBD781E1F4770007A2435 /* Images */,
 				7CF8D5741E1EB0A500041DAB /* main.m */,
 			);
 			name = "Supporting Files";
@@ -593,9 +626,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C6BBD851E1F49FE007A2435 /* UNCookFoodCollectionCell.xib in Resources */,
+				7C6BBD871E1F5A0F007A2435 /* background_image.jpeg in Resources */,
 				7C6BBD2B1E1F2483007A2435 /* Info.plist in Resources */,
 				7CF8D5831E1EB0A500041DAB /* LaunchScreen.storyboard in Resources */,
 				7CF8D5801E1EB0A500041DAB /* Assets.xcassets in Resources */,
+				7C6BBD7F1E1F4882007A2435 /* bt_all_normal@2x.png in Resources */,
+				7C6BBD801E1F4882007A2435 /* bt_all_normal@3x.png in Resources */,
+				7C6BBD771E1F469F007A2435 /* UNCookingStyleCell.xib in Resources */,
 				7CF8D57E1E1EB0A500041DAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -669,6 +707,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C6BBD841E1F49FE007A2435 /* UNCookFoodCollectionCell.m in Sources */,
 				7C6BBD071E1F2461007A2435 /* UIView+HUD.m in Sources */,
 				7C6BBD2E1E1F2483007A2435 /* WMMenuView.m in Sources */,
 				7C6BBD311E1F2483007A2435 /* WMPageController.m in Sources */,
@@ -690,6 +729,7 @@
 				7C6BBD2A1E1F2483007A2435 /* FLAnimatedImageView.m in Sources */,
 				7CF8D5751E1EB0A500041DAB /* main.m in Sources */,
 				7C6BBD291E1F2483007A2435 /* FLAnimatedImage.m in Sources */,
+				7C6BBD761E1F469F007A2435 /* UNCookingStyleCell.m in Sources */,
 				7C6BBD2D1E1F2483007A2435 /* WMMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

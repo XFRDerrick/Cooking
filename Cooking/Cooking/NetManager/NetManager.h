@@ -8,6 +8,8 @@
 
 #import "BaseNetManager.h"
 
+#import "CookingStyleModel.h"
+
 //菜系种类
 typedef enum{
     
@@ -26,6 +28,6 @@ typedef enum{
 
 @interface NetManager : BaseNetManager
 
-//+ (id)getUserInfoWithParamaters:(NSDictionary *)paramaters CompletionHandler:(void (^)(UNUserInfo *, NSError *))completionHandler
++ (id)getCookingStyleModelWithStyle:(CookingStyle)style CompletionHandler:(void (^)(CookingStyleModel *, NSError *))completionHandler;
 
 @end

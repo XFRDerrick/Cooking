@@ -32,7 +32,7 @@
 - (void)addChildControllers{
 
     UNHomeTableViewController *homeVC = [[UNHomeTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    homeVC.title = @"主页";
+    homeVC.title = @"菜系";
     
     [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:homeVC]];
     
