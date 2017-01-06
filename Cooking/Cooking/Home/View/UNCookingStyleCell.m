@@ -22,6 +22,7 @@
 @implementation UNCookingStyleCell
 
 #pragma mark - 参数赋值
+
 - (void)setHeaderTitle:(NSString *)headerTitle{
     _headerTitle = headerTitle;
     self.cookingStyleLable.text = headerTitle;
@@ -29,6 +30,7 @@
 
 - (void)setPosts:(NSArray<CookingStylePostsModel *> *)posts{
     _posts = posts;
+    
     [self.collectionView reloadData];
 }
 
@@ -98,7 +100,7 @@
         cell.foodDetailLable.text = @"";
   
     }
-
+    cell.tag = self.index;
     return cell;
 }
 

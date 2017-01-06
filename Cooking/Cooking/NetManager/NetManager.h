@@ -12,7 +12,6 @@
 
 //菜系种类
 typedef enum{
-    
     CookingStyleYueCai = 0,
     CookingStyleChuanCai,
     CookingStyleSuCai,

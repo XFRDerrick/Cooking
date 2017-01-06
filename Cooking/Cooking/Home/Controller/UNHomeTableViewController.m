@@ -9,6 +9,8 @@
 #import "UNHomeTableViewController.h"
 
 #import "UNCookingStyleCell.h"
+#import "UNCookFoodCollectionCell.h"
+#import "UNAllFoodsListController.h"
 
 @interface UNHomeTableViewController ()<UNCookingStyleCellDelegate,UICollectionViewDelegate>
 @property (nonatomic, strong) NSArray *foodStylesTitle;
@@ -38,7 +40,7 @@
     [super viewDidLoad];
     [self setupTableView];
     //异步加载数据
-    [self loadCookingData];
+//    [self loadCookingData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,10 +51,12 @@
 - (void)setupTableView{
 
     [self.tableView registerNib:[UINib nibWithNibName:@"UNCookingStyleCell" bundle:nil] forCellReuseIdentifier:@"cookingStyleCell"];
-//    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
-//       
-//        
-//    }];
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self.stylesData removeAllObjects];
+        [self loadCookingData];
+    }];
+    [self.tableView.mj_header beginRefreshing];
     
 }
 
@@ -63,17 +67,22 @@
         dispatch_async(dispatch_queue_create(0, 0), ^{
 
             [NetManager getCookingStyleModelWithStyle:i CompletionHandler:^(CookingStyleModel *model, NSError *error) {
-                //请求
-                [self.stylesData setObject:model forKey:@(i).stringValue];
-//                NSLog(@"%ld",self.stylesData.count);
-                //刷新指定行
-                //[self.tableView reloadData];
-                [self.tableView reloadRow:i inSection:0 withRowAnimation:UITableViewRowAnimationNone];
+                if (!error) {
+                    //请求
+                    [self.stylesData setObject:model forKey:@(i).stringValue];
+                    if (self.stylesData.count == self.foodStylesTitle.count) {
+                        [self.tableView.mj_header endRefreshing];
+                    }
+                    //刷新指定行
+                    //[self.tableView reloadData];
+                    [self.tableView reloadRow:i inSection:0 withRowAnimation:UITableViewRowAnimationNone];
+                }
+                
             }];
         });
         
     }
-
+    
 }
 
 #pragma mark - Table view data source
@@ -97,12 +106,14 @@
     cell.collectionView.delegate = self;
     
     //数据传值
+    cell.index = indexPath.row;
     cell.headerTitle = self.foodStylesTitle[indexPath.row];
     if ([self.stylesData objectForKey:@(indexPath.row).stringValue]) {
         NSArray<CookingStylePostsModel *> *modelArr = [[self.stylesData objectForKey:@(indexPath.row).stringValue] posts];
       
         cell.posts = modelArr;
     }
+    cell.tag = indexPath.row;
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -113,11 +124,20 @@
 
 #pragma mark - 点击cell/button 事件
 - (void)cookingStyleCell:(UNCookingStyleCell *)cell didClickShowAllButton:(UIButton *)sender{
-    NSLog(@"显示全部菜单");
+    
+    NSArray<CookingStylePostsModel *> *arr = [[self.stylesData objectForKey:@(cell.tag).stringValue] posts];
+    
+    UNAllFoodsListController *listVC = [[UNAllFoodsListController alloc] initWithStyle:UITableViewStylePlain withRow:(CookingStyle)cell.tag andDatas:arr];
+    
+    [self.navigationController pushViewController:listVC animated:YES];
 }
 
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"点击了%ld",indexPath.row);
+    
+    UNCookFoodCollectionCell *cell = (UNCookFoodCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    NSLog(@"%ld - %ld",indexPath.row,cell.tag);
+    
 }
 
 
