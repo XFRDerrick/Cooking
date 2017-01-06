@@ -8,8 +8,24 @@
 
 #import "BaseNetManager.h"
 
-
+//菜系种类
+typedef enum{
+    
+    CookingStyleYueCai,
+    CookingStyleChuanCai,
+    CookingStyleSuCai,
+    CookingStyleZheCai,
+    CookingStyleMinCai,
+    CookingStyleHuiCai,
+    CookingStyleLuCai,
+    CookingStyleShangHaiCai,
+    CookingStyleDongBeiCai,
+    CookingStyleHongBei,
+    
+}CookingStyle;
 
 @interface NetManager : BaseNetManager
+
+//+ (id)getUserInfoWithParamaters:(NSDictionary *)paramaters CompletionHandler:(void (^)(UNUserInfo *, NSError *))completionHandler
 
 @end

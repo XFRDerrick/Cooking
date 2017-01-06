@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UNHomeTableViewController.h
 //  Cooking
 //
 //  Created by universe on 2017/1/6.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface UNHomeTableViewController : UITableViewController
 
 @end
-

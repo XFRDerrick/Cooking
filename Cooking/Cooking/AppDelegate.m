@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "UNMainTarBarController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UNMainTarBarController *tabVC = [[UNMainTarBarController alloc] init];
+    self.window.rootViewController = tabVC;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
