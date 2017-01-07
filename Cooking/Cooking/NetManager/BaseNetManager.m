@@ -16,7 +16,7 @@
     
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", @"text/json", @"text/javascript", @"text/plain", nil];
     return [manager GET:path parameters:paramaters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        NSLog(@"%@",task.currentRequest.URL.absoluteString);
+        NSLog(@"%@",task.currentRequest.URL.absoluteString);
         
         !completionHandler ?:completionHandler(responseObject,nil);
         
@@ -35,7 +35,6 @@
     
     return [manager GET:path parameters:paramaters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"success_%@",task.currentRequest.URL.absoluteString);
-        
         NSLog(@"status__%@",responseObject[@"status"]);
         !completionHandler ?:completionHandler(responseObject,nil);
         

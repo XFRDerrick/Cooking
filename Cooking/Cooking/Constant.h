@@ -24,4 +24,14 @@
 #define JokePictureBasePath @"http://japi.juhe.cn/joke/img/text.from"
 
 
+//ii
+
+#define kBasePath @"http://api.daydaycook.com.cn"
+//JSON
+#define kDayDayCookPath @"http://api.daydaycook.com.cn/daydaycook/server/recipe/search.do"
+//进入详情页Web id (请求的ID)
+#define kCookMenu @"http://api.daydaycook.com.cn/daydaycook/h5/recipe/loadContent.do?id=%ld&languageId=&mainland="
+//视频为请求的URL
+
+
 #endif /* Constant_h */

@@ -12,6 +12,8 @@
 #import "UNBaseNavController.h"
 #import "UNHomeTableViewController.h"
 #import "UNWonderfulViewController.h"
+#import "UNWonderMenuLayout.h"
+
 #import "UNMineViewController.h"
 #import "UNCookingEtaViewController.h"
 
@@ -36,8 +38,8 @@
     
     [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:homeVC]];
     
-    UNWonderfulViewController *wonVC = [[UNWonderfulViewController alloc] init];
-    wonVC.title = @"精彩";
+    UNWonderfulViewController *wonVC = [[UNWonderfulViewController alloc] initWithCollectionViewLayout:[[UNWonderMenuLayout alloc] init]];
+    wonVC.title = @"菜谱";
      [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:wonVC]];
     
     UNCookingEtaViewController *cookVC = [[UNCookingEtaViewController alloc] init];

@@ -1,5 +1,5 @@
 //
-//  UNWonderfulViewController.h
+//  UNWonderMenuLayout.h
 //  Cooking
 //
 //  Created by universe on 2017/1/7.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UNWonderfulViewController : UICollectionViewController
+@interface UNWonderMenuLayout : UICollectionViewFlowLayout
 
 @end
