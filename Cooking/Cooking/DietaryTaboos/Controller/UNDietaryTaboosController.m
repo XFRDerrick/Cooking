@@ -1,24 +1,22 @@
 //
-//  UNBaseNavController.m
+//  UNDietaryTaboosController.m
 //  Cooking
 //
-//  Created by universe on 2017/1/6.
+//  Created by universe on 2017/1/8.
 //  Copyright © 2017年 universe. All rights reserved.
 //
 
-#import "UNBaseNavController.h"
+#import "UNDietaryTaboosController.h"
 
-@interface UNBaseNavController ()
+@interface UNDietaryTaboosController ()
 
 @end
 
-@implementation UNBaseNavController
+@implementation UNDietaryTaboosController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationBar.barTintColor = [UIColor whiteColor];
-    
 }
 
 - (void)didReceiveMemoryWarning {

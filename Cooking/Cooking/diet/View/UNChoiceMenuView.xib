@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UNChoiceMenuView">
+            <rect key="frame" x="0.0" y="0.0" width="145" height="348"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lo4-Kr-zos">
+                    <rect key="frame" x="144" y="0.0" width="1" height="348"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="G1S-Rl-7pR"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tJc-bM-eMu">
+                    <rect key="frame" x="0.0" y="0.0" width="144" height="348"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNt-pf-HQa">
+                            <rect key="frame" x="0.0" y="0.0" width="144" height="42.5"/>
+                            <state key="normal" title="清爽色拉">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didSelectMenuChoice:" destination="iN0-l3-epB" eventType="touchUpInside" id="fcH-UU-DVs"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mgp-55-ng3">
+                            <rect key="frame" x="0.0" y="42.5" width="144" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="hia-tI-V6C"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxy-Wr-F5L">
+                            <rect key="frame" x="0.0" y="43.5" width="144" height="43"/>
+                            <state key="normal" title="靓汤">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didSelectMenuChoice:" destination="iN0-l3-epB" eventType="touchUpInside" id="p5r-8K-xCv"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5x-gF-LUy">
+                            <rect key="frame" x="0.0" y="86.5" width="144" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="KcH-ck-Zl1"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SR-ww-lLM">
+                            <rect key="frame" x="0.0" y="87.5" width="144" height="42.5"/>
+                            <state key="normal" title="果汁奶昔">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didSelectMenuChoice:" destination="iN0-l3-epB" eventType="touchUpInside" id="e4M-ma-nFw"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yay-Kk-AYe">
+                            <rect key="frame" x="0.0" y="130" width="144" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="51L-o1-nSq"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ9-EQ-lES">
+                            <rect key="frame" x="0.0" y="131" width="144" height="42.5"/>
+                            <state key="normal" title="小鱼小肉">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didSelectMenuChoice:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ref-Q4-FQM"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpQ-b2-2Yq">
+                            <rect key="frame" x="0.0" y="173.5" width="144" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="xUB-xF-o77"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ik-SE-qdo">
+                            <rect key="frame" x="0.0" y="174.5" width="144" height="42.5"/>
+                            <state key="normal" title="素食主义">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didSelectMenuChoice:" destination="iN0-l3-epB" eventType="touchUpInside" id="vQX-GK-zGO"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GE7-Uw-0L7">
+                            <rect key="frame" x="0.0" y="217" width="144" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="3gm-qG-kgH"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg7-Qe-bN9">
+                            <rect key="frame" x="0.0" y="218" width="144" height="43"/>
+                            <state key="normal" title="减脂早餐">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didSelectMenuChoice:" destination="iN0-l3-epB" eventType="touchUpInside" id="ECi-hi-AtF"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6y-fG-vRu">
+                            <rect key="frame" x="0.0" y="261" width="144" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="rhr-kJ-un8"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbN-T4-CAV">
+                            <rect key="frame" x="0.0" y="262" width="144" height="42.5"/>
+                            <state key="normal" title="减脂午餐">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didSelectMenuChoice:" destination="iN0-l3-epB" eventType="touchUpInside" id="hsO-Um-keX"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukZ-aX-Qxe">
+                            <rect key="frame" x="0.0" y="304.5" width="144" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="gI2-Fg-bBi"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sB6-eO-nVb">
+                            <rect key="frame" x="0.0" y="305.5" width="144" height="42.5"/>
+                            <state key="normal" title="减脂晚餐">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didSelectMenuChoice:" destination="iN0-l3-epB" eventType="touchUpInside" id="obc-Qo-GMq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="gxy-Wr-F5L" firstAttribute="top" secondItem="Mgp-55-ng3" secondAttribute="bottom" id="0g0-ge-mUQ"/>
+                        <constraint firstItem="3SR-ww-lLM" firstAttribute="width" secondItem="cNt-pf-HQa" secondAttribute="width" id="2yu-eI-8JE"/>
+                        <constraint firstItem="cNt-pf-HQa" firstAttribute="leading" secondItem="tJc-bM-eMu" secondAttribute="leading" id="39d-xU-tAe"/>
+                        <constraint firstItem="eJ9-EQ-lES" firstAttribute="height" secondItem="cNt-pf-HQa" secondAttribute="height" id="6ES-0v-Tz7"/>
+                        <constraint firstItem="Pg7-Qe-bN9" firstAttribute="height" secondItem="cNt-pf-HQa" secondAttribute="height" id="9Ws-lr-DOT"/>
+                        <constraint firstAttribute="bottom" secondItem="sB6-eO-nVb" secondAttribute="bottom" id="BMc-Up-ww8"/>
+                        <constraint firstItem="sB6-eO-nVb" firstAttribute="width" secondItem="cNt-pf-HQa" secondAttribute="width" id="BlI-da-v0V"/>
+                        <constraint firstAttribute="trailing" secondItem="sB6-eO-nVb" secondAttribute="trailing" id="EOm-jD-tLW"/>
+                        <constraint firstItem="6Ik-SE-qdo" firstAttribute="width" secondItem="cNt-pf-HQa" secondAttribute="width" id="GV3-rb-aZT"/>
+                        <constraint firstItem="Pg7-Qe-bN9" firstAttribute="width" secondItem="cNt-pf-HQa" secondAttribute="width" id="IRe-KD-3kN"/>
+                        <constraint firstItem="ZbN-T4-CAV" firstAttribute="width" secondItem="cNt-pf-HQa" secondAttribute="width" id="Nxe-Pp-8mb"/>
+                        <constraint firstItem="Mgp-55-ng3" firstAttribute="top" secondItem="cNt-pf-HQa" secondAttribute="bottom" id="PUH-AY-wGF"/>
+                        <constraint firstItem="sB6-eO-nVb" firstAttribute="leading" secondItem="tJc-bM-eMu" secondAttribute="leading" id="Xc3-r7-Xr4"/>
+                        <constraint firstItem="eJ9-EQ-lES" firstAttribute="width" secondItem="cNt-pf-HQa" secondAttribute="width" id="bBi-iH-Py2"/>
+                        <constraint firstItem="Mgp-55-ng3" firstAttribute="leading" secondItem="tJc-bM-eMu" secondAttribute="leading" id="fkh-6G-Rgq"/>
+                        <constraint firstItem="3SR-ww-lLM" firstAttribute="height" secondItem="cNt-pf-HQa" secondAttribute="height" id="gg9-p3-sF6"/>
+                        <constraint firstAttribute="trailing" secondItem="cNt-pf-HQa" secondAttribute="trailing" id="ilz-cw-qKW"/>
+                        <constraint firstAttribute="trailing" secondItem="Mgp-55-ng3" secondAttribute="trailing" id="kC7-rq-Vqq"/>
+                        <constraint firstItem="gxy-Wr-F5L" firstAttribute="height" secondItem="cNt-pf-HQa" secondAttribute="height" id="n9E-ao-Vwn"/>
+                        <constraint firstItem="cNt-pf-HQa" firstAttribute="top" secondItem="tJc-bM-eMu" secondAttribute="top" id="oXB-Ve-mkD"/>
+                        <constraint firstItem="sB6-eO-nVb" firstAttribute="height" secondItem="cNt-pf-HQa" secondAttribute="height" id="tnT-Kt-4Z1"/>
+                        <constraint firstItem="gxy-Wr-F5L" firstAttribute="width" secondItem="cNt-pf-HQa" secondAttribute="width" id="txt-bt-RfL"/>
+                        <constraint firstItem="ZbN-T4-CAV" firstAttribute="height" secondItem="cNt-pf-HQa" secondAttribute="height" id="v5H-nE-jXP"/>
+                        <constraint firstItem="6Ik-SE-qdo" firstAttribute="height" secondItem="cNt-pf-HQa" secondAttribute="height" id="xsR-we-dKp"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lo4-Kr-zos" secondAttribute="trailing" id="A0b-oR-Ii5"/>
+                <constraint firstAttribute="bottom" secondItem="tJc-bM-eMu" secondAttribute="bottom" id="BGZ-ch-6rO"/>
+                <constraint firstItem="tJc-bM-eMu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qae-T9-drM"/>
+                <constraint firstItem="tJc-bM-eMu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RJf-F6-j3K"/>
+                <constraint firstItem="lo4-Kr-zos" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="f3t-zT-1hY"/>
+                <constraint firstAttribute="trailing" secondItem="tJc-bM-eMu" secondAttribute="trailing" constant="1" id="mNd-cx-s0Z"/>
+                <constraint firstAttribute="bottom" secondItem="lo4-Kr-zos" secondAttribute="bottom" id="udQ-tW-zcT"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-53.5" y="234"/>
+        </view>
+    </objects>
+</document>

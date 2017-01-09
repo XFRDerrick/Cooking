@@ -26,7 +26,6 @@
 		7C6BBD631E1F3DC5007A2435 /* UNMainTarBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD621E1F3DC5007A2435 /* UNMainTarBarController.m */; };
 		7C6BBD661E1F3DD9007A2435 /* UNBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD651E1F3DD9007A2435 /* UNBaseNavController.m */; };
 		7C6BBD691E1F3EC6007A2435 /* UNMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD681E1F3EC6007A2435 /* UNMineViewController.m */; };
-		7C6BBD6C1E1F3EDD007A2435 /* UNCookingEtaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD6B1E1F3EDD007A2435 /* UNCookingEtaViewController.m */; };
 		7C6BBD721E1F3F23007A2435 /* UNHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD711E1F3F23007A2435 /* UNHomeTableViewController.m */; };
 		7C6BBD761E1F469F007A2435 /* UNCookingStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD741E1F469F007A2435 /* UNCookingStyleCell.m */; };
 		7C6BBD771E1F469F007A2435 /* UNCookingStyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6BBD751E1F469F007A2435 /* UNCookingStyleCell.xib */; };
@@ -51,6 +50,15 @@
 		7CF8D5831E1EB0A500041DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF8D5811E1EB0A500041DAB /* LaunchScreen.storyboard */; };
 		7CF8D58E1E1EB0A500041DAB /* CookingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8D58D1E1EB0A500041DAB /* CookingTests.m */; };
 		7CF8D5991E1EB0A500041DAB /* CookingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8D5981E1EB0A500041DAB /* CookingUITests.m */; };
+		7CFC10271E2323EB0023BC0A /* UNDietCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC10251E2323EB0023BC0A /* UNDietCollectionViewCell.m */; };
+		7CFC10281E2323EB0023BC0A /* UNDietCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC10261E2323EB0023BC0A /* UNDietCollectionViewCell.xib */; };
+		7CFC102B1E232FB50023BC0A /* UNChoiceMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC102A1E232FB50023BC0A /* UNChoiceMenuView.m */; };
+		7CFC102D1E232FC30023BC0A /* UNChoiceMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC102C1E232FC30023BC0A /* UNChoiceMenuView.xib */; };
+		7CFD0E6D1E226F58000DA902 /* UNDietaryTaboosController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD0E6C1E226F58000DA902 /* UNDietaryTaboosController.m */; };
+		7CFD0EB01E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD0EAF1E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.m */; };
+		7CFD0EB31E22929B000DA902 /* UNDietViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD0EB21E22929B000DA902 /* UNDietViewController.m */; };
+		7CFD0EB61E229479000DA902 /* UNDietListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD0EB51E229479000DA902 /* UNDietListModel.m */; };
+		7CFD0EBC1E22A374000DA902 /* UNDietMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD0EBB1E22A374000DA902 /* UNDietMenuModel.m */; };
 		7CFED1091E2083D50065A098 /* YXMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFED1081E2083D50065A098 /* YXMenuModel.m */; };
 		7CFED10C1E208D1D0065A098 /* UNWonderfulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFED10B1E208D1D0065A098 /* UNWonderfulViewController.m */; };
 		7CFED10F1E20988D0065A098 /* UNWonderMenuLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFED10E1E20988D0065A098 /* UNWonderMenuLayout.m */; };
@@ -115,8 +123,6 @@
 		7C6BBD651E1F3DD9007A2435 /* UNBaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNBaseNavController.m; sourceTree = "<group>"; };
 		7C6BBD671E1F3EC6007A2435 /* UNMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNMineViewController.h; sourceTree = "<group>"; };
 		7C6BBD681E1F3EC6007A2435 /* UNMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNMineViewController.m; sourceTree = "<group>"; };
-		7C6BBD6A1E1F3EDD007A2435 /* UNCookingEtaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNCookingEtaViewController.h; sourceTree = "<group>"; };
-		7C6BBD6B1E1F3EDD007A2435 /* UNCookingEtaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNCookingEtaViewController.m; sourceTree = "<group>"; };
 		7C6BBD701E1F3F23007A2435 /* UNHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNHomeTableViewController.h; sourceTree = "<group>"; };
 		7C6BBD711E1F3F23007A2435 /* UNHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNHomeTableViewController.m; sourceTree = "<group>"; };
 		7C6BBD731E1F469F007A2435 /* UNCookingStyleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNCookingStyleCell.h; sourceTree = "<group>"; };
@@ -153,6 +159,22 @@
 		7CF8D5941E1EB0A500041DAB /* CookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF8D5981E1EB0A500041DAB /* CookingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookingUITests.m; sourceTree = "<group>"; };
 		7CF8D59A1E1EB0A500041DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CFC10241E2323EB0023BC0A /* UNDietCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNDietCollectionViewCell.h; sourceTree = "<group>"; };
+		7CFC10251E2323EB0023BC0A /* UNDietCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNDietCollectionViewCell.m; sourceTree = "<group>"; };
+		7CFC10261E2323EB0023BC0A /* UNDietCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNDietCollectionViewCell.xib; sourceTree = "<group>"; };
+		7CFC10291E232FB50023BC0A /* UNChoiceMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNChoiceMenuView.h; sourceTree = "<group>"; };
+		7CFC102A1E232FB50023BC0A /* UNChoiceMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNChoiceMenuView.m; sourceTree = "<group>"; };
+		7CFC102C1E232FC30023BC0A /* UNChoiceMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNChoiceMenuView.xib; sourceTree = "<group>"; };
+		7CFD0E6B1E226F58000DA902 /* UNDietaryTaboosController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNDietaryTaboosController.h; sourceTree = "<group>"; };
+		7CFD0E6C1E226F58000DA902 /* UNDietaryTaboosController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNDietaryTaboosController.m; sourceTree = "<group>"; };
+		7CFD0EAE1E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		7CFD0EAF1E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		7CFD0EB11E22929B000DA902 /* UNDietViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNDietViewController.h; sourceTree = "<group>"; };
+		7CFD0EB21E22929B000DA902 /* UNDietViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNDietViewController.m; sourceTree = "<group>"; };
+		7CFD0EB41E229479000DA902 /* UNDietListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNDietListModel.h; sourceTree = "<group>"; };
+		7CFD0EB51E229479000DA902 /* UNDietListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNDietListModel.m; sourceTree = "<group>"; };
+		7CFD0EBA1E22A374000DA902 /* UNDietMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNDietMenuModel.h; sourceTree = "<group>"; };
+		7CFD0EBB1E22A374000DA902 /* UNDietMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNDietMenuModel.m; sourceTree = "<group>"; };
 		7CFED1071E2083D50065A098 /* YXMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMenuModel.h; sourceTree = "<group>"; };
 		7CFED1081E2083D50065A098 /* YXMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMenuModel.m; sourceTree = "<group>"; };
 		7CFED10A1E208D1D0065A098 /* UNWonderfulViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNWonderfulViewController.h; sourceTree = "<group>"; };
@@ -236,6 +258,7 @@
 		7C6BBD0F1E1F2483007A2435 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				7CFD0EAD1E228F31000DA902 /* CHTCollectionViewWaterfallLayout */,
 				7C6BBD101E1F2483007A2435 /* FLAnimatedImage */,
 				7C6BBD161E1F2483007A2435 /* iCarousel */,
 				7C6BBD1A1E1F2483007A2435 /* WMPageController */,
@@ -288,39 +311,6 @@
 				7C6BBD231E1F2483007A2435 /* WMScrollView.m */,
 			);
 			path = WMMenuView;
-			sourceTree = "<group>";
-		};
-		7C6BBD4A1E1F2CAF007A2435 /* CookingEntertainment */ = {
-			isa = PBXGroup;
-			children = (
-				7C6BBD4B1E1F2CAF007A2435 /* Controller */,
-				7C6BBD4C1E1F2CAF007A2435 /* Model */,
-				7C6BBD4D1E1F2CAF007A2435 /* View */,
-			);
-			path = CookingEntertainment;
-			sourceTree = "<group>";
-		};
-		7C6BBD4B1E1F2CAF007A2435 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				7C6BBD6A1E1F3EDD007A2435 /* UNCookingEtaViewController.h */,
-				7C6BBD6B1E1F3EDD007A2435 /* UNCookingEtaViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		7C6BBD4C1E1F2CAF007A2435 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		7C6BBD4D1E1F2CAF007A2435 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		7C6BBD4E1E1F2CAF007A2435 /* Home */ = {
@@ -523,8 +513,9 @@
 				7C6BBD5A1E1F2CEF007A2435 /* BaseVC */,
 				7C6BBD4E1E1F2CAF007A2435 /* Home */,
 				7C6BBD561E1F2CAF007A2435 /* Wonderful */,
-				7C6BBD4A1E1F2CAF007A2435 /* CookingEntertainment */,
 				7C6BBD521E1F2CAF007A2435 /* Mine */,
+				7CFD0E601E226F19000DA902 /* diet */,
+				7CFD0E641E226F19000DA902 /* DietaryTaboos */,
 				7CF8D57C1E1EB0A500041DAB /* Main.storyboard */,
 				7CF8D57F1E1EB0A500041DAB /* Assets.xcassets */,
 				7CF8D5811E1EB0A500041DAB /* LaunchScreen.storyboard */,
@@ -564,6 +555,91 @@
 				7CF8D59A1E1EB0A500041DAB /* Info.plist */,
 			);
 			path = CookingUITests;
+			sourceTree = "<group>";
+		};
+		7CFD0E601E226F19000DA902 /* diet */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD0E611E226F19000DA902 /* Controller */,
+				7CFD0E621E226F19000DA902 /* Model */,
+				7CFD0E631E226F19000DA902 /* View */,
+			);
+			path = diet;
+			sourceTree = "<group>";
+		};
+		7CFD0E611E226F19000DA902 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD0EB11E22929B000DA902 /* UNDietViewController.h */,
+				7CFD0EB21E22929B000DA902 /* UNDietViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7CFD0E621E226F19000DA902 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD0EB41E229479000DA902 /* UNDietListModel.h */,
+				7CFD0EB51E229479000DA902 /* UNDietListModel.m */,
+				7CFD0EBA1E22A374000DA902 /* UNDietMenuModel.h */,
+				7CFD0EBB1E22A374000DA902 /* UNDietMenuModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7CFD0E631E226F19000DA902 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CFC10241E2323EB0023BC0A /* UNDietCollectionViewCell.h */,
+				7CFC10251E2323EB0023BC0A /* UNDietCollectionViewCell.m */,
+				7CFC10261E2323EB0023BC0A /* UNDietCollectionViewCell.xib */,
+				7CFC10291E232FB50023BC0A /* UNChoiceMenuView.h */,
+				7CFC102A1E232FB50023BC0A /* UNChoiceMenuView.m */,
+				7CFC102C1E232FC30023BC0A /* UNChoiceMenuView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7CFD0E641E226F19000DA902 /* DietaryTaboos */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD0E651E226F19000DA902 /* Controller */,
+				7CFD0E661E226F19000DA902 /* Model */,
+				7CFD0E671E226F19000DA902 /* View */,
+			);
+			path = DietaryTaboos;
+			sourceTree = "<group>";
+		};
+		7CFD0E651E226F19000DA902 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD0E6B1E226F58000DA902 /* UNDietaryTaboosController.h */,
+				7CFD0E6C1E226F58000DA902 /* UNDietaryTaboosController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7CFD0E661E226F19000DA902 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7CFD0E671E226F19000DA902 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7CFD0EAD1E228F31000DA902 /* CHTCollectionViewWaterfallLayout */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD0EAE1E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.h */,
+				7CFD0EAF1E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.m */,
+			);
+			path = CHTCollectionViewWaterfallLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -677,6 +753,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CCA55481E20E111008DF870 /* ms_caipu_time@2x.png in Resources */,
+				7CFC102D1E232FC30023BC0A /* UNChoiceMenuView.xib in Resources */,
 				7C6BBD851E1F49FE007A2435 /* UNCookFoodCollectionCell.xib in Resources */,
 				7C6BBD871E1F5A0F007A2435 /* background_image.jpeg in Resources */,
 				7CCA55501E20E588008DF870 /* back_top_icon_gray@2x.png in Resources */,
@@ -689,6 +766,7 @@
 				7C6BBD7F1E1F4882007A2435 /* bt_all_normal@2x.png in Resources */,
 				7C6BBD801E1F4882007A2435 /* bt_all_normal@3x.png in Resources */,
 				7CCA55491E20E111008DF870 /* ms_caipu_time@3x.png in Resources */,
+				7CFC10281E2323EB0023BC0A /* UNDietCollectionViewCell.xib in Resources */,
 				7CCA55511E20E588008DF870 /* back_top_icon_gray@3x.png in Resources */,
 				7C6BBD771E1F469F007A2435 /* UNCookingStyleCell.xib in Resources */,
 				7CCA554C1E20E57B008DF870 /* topbtn_on@2x.png in Resources */,
@@ -765,8 +843,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CFD0EB01E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				7C6BBD841E1F49FE007A2435 /* UNCookFoodCollectionCell.m in Sources */,
+				7CFD0EBC1E22A374000DA902 /* UNDietMenuModel.m in Sources */,
+				7CFD0EB61E229479000DA902 /* UNDietListModel.m in Sources */,
 				7C6BBD071E1F2461007A2435 /* UIView+HUD.m in Sources */,
+				7CFC102B1E232FB50023BC0A /* UNChoiceMenuView.m in Sources */,
+				7CFD0E6D1E226F58000DA902 /* UNDietaryTaboosController.m in Sources */,
 				7C6BBD2E1E1F2483007A2435 /* WMMenuView.m in Sources */,
 				7C6BBD311E1F2483007A2435 /* WMPageController.m in Sources */,
 				7CFED1161E20C0160065A098 /* UNWonderMenuCell.m in Sources */,
@@ -781,7 +864,6 @@
 				7C6BBD051E1F2461007A2435 /* NSObject+Parse.m in Sources */,
 				7CF8D5781E1EB0A500041DAB /* AppDelegate.m in Sources */,
 				7C6BBD691E1F3EC6007A2435 /* UNMineViewController.m in Sources */,
-				7C6BBD6C1E1F3EDD007A2435 /* UNCookingEtaViewController.m in Sources */,
 				7CFED1091E2083D50065A098 /* YXMenuModel.m in Sources */,
 				7C6BBD8E1E1FA6B3007A2435 /* UNFoodCell.m in Sources */,
 				7C6BBD8A1E1FA659007A2435 /* UNAllFoodsListController.m in Sources */,
@@ -793,7 +875,9 @@
 				7CF8D5751E1EB0A500041DAB /* main.m in Sources */,
 				7C6BBD291E1F2483007A2435 /* FLAnimatedImage.m in Sources */,
 				7C6BBD761E1F469F007A2435 /* UNCookingStyleCell.m in Sources */,
+				7CFC10271E2323EB0023BC0A /* UNDietCollectionViewCell.m in Sources */,
 				7C6BBD2D1E1F2483007A2435 /* WMMenuItem.m in Sources */,
+				7CFD0EB31E22929B000DA902 /* UNDietViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,8 @@
 
 #import "YXMenuModel.h"
 
+#import "UNDietListModel.h"
+#import "UNDietMenuModel.h"
 //菜系种类
 typedef enum{
     CookingStyleYueCai = 0,
@@ -32,5 +34,10 @@ typedef enum{
 + (id)getCookingStyleModelWithStyle:(CookingStyle)style CompletionHandler:(void (^)(CookingStyleModel *model, NSError *error))completionHandler;
 
 + (id)getCookingMenuModelWithpage:(NSInteger)page CompletionHandler:(void (^)(YXMenuModel *model, NSError *error))completionHandler;
+
+//
++ (id)getDietMenuModelCompletionHandler:(void(^)(UNDietMenuModel *model,NSError *error))completionHandler;
+
++ (id)getDietListModelWithMainId:(NSString *)mainId Page:(NSInteger)page CompletionHandler:(void(^)(UNDietListModel *model,NSError *error))completionHandler;
 
 @end

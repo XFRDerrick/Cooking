@@ -15,7 +15,10 @@
 #import "UNWonderMenuLayout.h"
 
 #import "UNMineViewController.h"
-#import "UNCookingEtaViewController.h"
+#import "UNDietViewController.h"
+#import "CHTCollectionViewWaterfallLayout.h"
+
+#import "UNDietaryTaboosController.h"
 
 @interface UNMainTarBarController ()
 
@@ -42,13 +45,24 @@
     wonVC.title = @"菜谱";
      [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:wonVC]];
     
-    UNCookingEtaViewController *cookVC = [[UNCookingEtaViewController alloc] init];
-    cookVC.title = @"饮食娱乐";
-      [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:cookVC]];
-    
     UNMineViewController *mineVC = [[UNMineViewController alloc] init];
-     mineVC.title = @"我";
-     [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:mineVC]];
+    mineVC.title = @"我";
+    [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:mineVC]];
+    
+    
+    CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
+    layout.columnCount = 2;
+    layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    UNDietViewController *dietVC = [[UNDietViewController alloc] initWithCollectionViewLayout:layout];
+    dietVC.title = @"减肥食谱";
+      [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:dietVC]];
+    
+    UNDietaryTaboosController *dietabVC = [[UNDietaryTaboosController alloc] init];
+    dietabVC.title = @"饮食禁忌";
+    [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:dietabVC]];
+    
+    
+   
     
 }
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface UNCookFoodCollectionCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *foodImageIV;
 @property (weak, nonatomic) IBOutlet UILabel *foodNameLable;

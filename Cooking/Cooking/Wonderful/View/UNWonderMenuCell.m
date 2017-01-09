@@ -11,11 +11,10 @@
 @interface UNWonderMenuCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *backGroundIamgeIV;
-@property (weak, nonatomic) IBOutlet UILabel *titlelable;
 @property (weak, nonatomic) IBOutlet UILabel *descLable;
 @property (weak, nonatomic) IBOutlet UIButton *timeButton;
 @property (weak, nonatomic) IBOutlet UILabel *updateLable;
-
+@property (weak, nonatomic) IBOutlet UILabel *topTitleLable;
 
 @end
 
@@ -25,7 +24,9 @@
 
     _model = model;
     [self.backGroundIamgeIV setImageWithURL:[NSURL URLWithString:model.imageUrl] placeholder:[UIImage imageNamed:@"background_image.jpeg"]];
-    self.titlelable.text = model.title;
+    
+    self.topTitleLable.text = model.title;
+    
     self.descLable.text = model.desc;
     
     [self.timeButton setTitle:model.maketime forState:UIControlStateNormal];

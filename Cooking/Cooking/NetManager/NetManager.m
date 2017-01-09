@@ -78,6 +78,29 @@
     
 }
 
++ (id)getDietMenuModelCompletionHandler:(void (^)(UNDietMenuModel *, NSError *))completionHandler{
+
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:@"tianjianfeishipu" forKey:@"appname"];
+    return [self POST:KDietMenuPath paramaters:dic completionHandler:^(id respondObj, NSError *error) {
+        !completionHandler ?: completionHandler([UNDietMenuModel  parse:respondObj],error);
+    }];
+   
+}
+
++ (id)getDietListModelWithMainId:(NSString *)mainId Page:(NSInteger)page CompletionHandler:(void (^)(UNDietListModel *, NSError *))completionHandler{
+    
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:@"tianjianfeishipu" forKey:@"appname"];
+    [dic setValue:mainId forKey:@"mainId"];
+    [dic setValue:@(page) forKey:@"page"];
+    
+    return [self POST:KDietListBasePath paramaters:dic completionHandler:^(id respondObj, NSError *error) {
+        !completionHandler ?: completionHandler([UNDietListModel  parse:respondObj],error);
+    }];
+    //?appname=tianjianfeishipu&mainId=%@&page=%ld
+    
+}
 
 
 @end
