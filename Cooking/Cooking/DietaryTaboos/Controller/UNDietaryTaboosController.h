@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UNDietaryTaboosController : UIViewController
+@interface UNDietaryTaboosController : UITableViewController
 
 @end

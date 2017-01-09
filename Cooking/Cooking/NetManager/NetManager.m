@@ -102,5 +102,18 @@
     
 }
 
+//饮食禁忌
++ (id)getDietaryModelWithPostId:(NSInteger)postId Page:(NSInteger)page CompletionHandler:(void (^)(UNDietaryModel *, NSError *))completionHandler{
+    
+    //?id=334&page=1&dev=1
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:@(postId) forKey:@"id"];
+    [dic setValue:@(page) forKey:@"page"];
+    [dic setValue:@"1" forKey:@"dev"];
+    
+    return [self GET:KDietaryPath paramaters:dic completionHandler:^(id respondObj, NSError *error) {
+        !completionHandler ?: completionHandler([UNDietaryModel  parse:respondObj],error);
+    }];
+}
 
 @end

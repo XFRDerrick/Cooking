@@ -54,6 +54,8 @@
 		7CFC10281E2323EB0023BC0A /* UNDietCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC10261E2323EB0023BC0A /* UNDietCollectionViewCell.xib */; };
 		7CFC102B1E232FB50023BC0A /* UNChoiceMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC102A1E232FB50023BC0A /* UNChoiceMenuView.m */; };
 		7CFC102D1E232FC30023BC0A /* UNChoiceMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFC102C1E232FC30023BC0A /* UNChoiceMenuView.xib */; };
+		7CFC10331E236B720023BC0A /* YBPopupMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC10321E236B720023BC0A /* YBPopupMenu.m */; };
+		7CFC10361E2370380023BC0A /* UNDietaryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFC10351E2370380023BC0A /* UNDietaryModel.m */; };
 		7CFD0E6D1E226F58000DA902 /* UNDietaryTaboosController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD0E6C1E226F58000DA902 /* UNDietaryTaboosController.m */; };
 		7CFD0EB01E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD0EAF1E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.m */; };
 		7CFD0EB31E22929B000DA902 /* UNDietViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD0EB21E22929B000DA902 /* UNDietViewController.m */; };
@@ -165,6 +167,10 @@
 		7CFC10291E232FB50023BC0A /* UNChoiceMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNChoiceMenuView.h; sourceTree = "<group>"; };
 		7CFC102A1E232FB50023BC0A /* UNChoiceMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNChoiceMenuView.m; sourceTree = "<group>"; };
 		7CFC102C1E232FC30023BC0A /* UNChoiceMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNChoiceMenuView.xib; sourceTree = "<group>"; };
+		7CFC10311E236B720023BC0A /* YBPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenu.h; sourceTree = "<group>"; };
+		7CFC10321E236B720023BC0A /* YBPopupMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPopupMenu.m; sourceTree = "<group>"; };
+		7CFC10341E2370380023BC0A /* UNDietaryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNDietaryModel.h; sourceTree = "<group>"; };
+		7CFC10351E2370380023BC0A /* UNDietaryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNDietaryModel.m; sourceTree = "<group>"; };
 		7CFD0E6B1E226F58000DA902 /* UNDietaryTaboosController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNDietaryTaboosController.h; sourceTree = "<group>"; };
 		7CFD0E6C1E226F58000DA902 /* UNDietaryTaboosController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNDietaryTaboosController.m; sourceTree = "<group>"; };
 		7CFD0EAE1E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
@@ -258,6 +264,7 @@
 		7C6BBD0F1E1F2483007A2435 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				7CFC10301E236B720023BC0A /* YBPopupMenu */,
 				7CFD0EAD1E228F31000DA902 /* CHTCollectionViewWaterfallLayout */,
 				7C6BBD101E1F2483007A2435 /* FLAnimatedImage */,
 				7C6BBD161E1F2483007A2435 /* iCarousel */,
@@ -557,6 +564,15 @@
 			path = CookingUITests;
 			sourceTree = "<group>";
 		};
+		7CFC10301E236B720023BC0A /* YBPopupMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7CFC10311E236B720023BC0A /* YBPopupMenu.h */,
+				7CFC10321E236B720023BC0A /* YBPopupMenu.m */,
+			);
+			path = YBPopupMenu;
+			sourceTree = "<group>";
+		};
 		7CFD0E601E226F19000DA902 /* diet */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,6 +638,8 @@
 		7CFD0E661E226F19000DA902 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7CFC10341E2370380023BC0A /* UNDietaryModel.h */,
+				7CFC10351E2370380023BC0A /* UNDietaryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -843,12 +861,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CFC10331E236B720023BC0A /* YBPopupMenu.m in Sources */,
 				7CFD0EB01E228F3C000DA902 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				7C6BBD841E1F49FE007A2435 /* UNCookFoodCollectionCell.m in Sources */,
 				7CFD0EBC1E22A374000DA902 /* UNDietMenuModel.m in Sources */,
 				7CFD0EB61E229479000DA902 /* UNDietListModel.m in Sources */,
 				7C6BBD071E1F2461007A2435 /* UIView+HUD.m in Sources */,
 				7CFC102B1E232FB50023BC0A /* UNChoiceMenuView.m in Sources */,
+				7CFC10361E2370380023BC0A /* UNDietaryModel.m in Sources */,
 				7CFD0E6D1E226F58000DA902 /* UNDietaryTaboosController.m in Sources */,
 				7C6BBD2E1E1F2483007A2435 /* WMMenuView.m in Sources */,
 				7C6BBD311E1F2483007A2435 /* WMPageController.m in Sources */,

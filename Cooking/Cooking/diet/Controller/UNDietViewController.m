@@ -57,10 +57,9 @@
     if (self.menuDatas.count == 0) {
         [self loadMenuDatas];
     }
+    [self setupCollectionViewUI];
    
 }
-
-
 
 #pragma mark - 点击导航栏 分类
 - (void)setupNavItem{
@@ -73,7 +72,6 @@
 - (void)choiceMenuAction:(UIBarButtonItem *)item{
     //显示 消失VIew
     if (!self.isCvShow) {//需要显示
-       
         [self showMenu];
     }else{//隐藏
         [self hidenMenu];
@@ -132,7 +130,6 @@
 - (void)loadMenuDatas{
 
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        
         [NetManager getDietMenuModelCompletionHandler:^(UNDietMenuModel *model, NSError *error) {
             if (!error) {
                 NSLog(@"menu:%ld",model.data.count);
@@ -141,8 +138,7 @@
                 self.title = self.menuModel.title;
                 dispatch_async(dispatch_get_main_queue(), ^{
                     //加载menu后加载控制器
-                    [self setupCollectionViewUI];
-
+                    [self.collectionView.mj_header beginRefreshing];
                 });
             }
         }];
@@ -174,7 +170,7 @@
             }
         }];
     }];
-    [self.collectionView.mj_header beginRefreshing];
+//    [self.collectionView.mj_header beginRefreshing];
     
     self.collectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         
@@ -203,10 +199,6 @@
     }else{
         self.firstPoint = point;
     }
-    
-    
-    NSLog(@"手势响应了");
-    
 }
 
 
@@ -258,12 +250,6 @@
 
 #pragma mark <UICollectionViewDelegate>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
 
 /*
 // Uncomment this method to specify if the specified item should be selected
@@ -278,13 +264,6 @@
 	return NO;
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
 */
 
 @end

@@ -45,11 +45,6 @@
     wonVC.title = @"菜谱";
      [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:wonVC]];
     
-    UNMineViewController *mineVC = [[UNMineViewController alloc] init];
-    mineVC.title = @"我";
-    [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:mineVC]];
-    
-    
     CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
     layout.columnCount = 2;
     layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
@@ -61,6 +56,9 @@
     dietabVC.title = @"饮食禁忌";
     [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:dietabVC]];
     
+    UNMineViewController *mineVC = [[UNMineViewController alloc] init];
+    mineVC.title = @"我";
+    [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:mineVC]];
     
    
     

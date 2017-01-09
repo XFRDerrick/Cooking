@@ -41,5 +41,11 @@
 
 //http://zaijiawan.com/matrix_common/api/recipe/detailsbook?appname=tianjianfeishipu&mainId=4&page=1
 
+//饮食禁忌
+#define KDietaryPath @"http://www.idwoo.net/api/yinshiyiji/get_category_posts/"
+
+#define KDietaryDetailPath @"http://www.idwoo.net/api/yinshiyiji/get_post/?post_id=841"
+
+
 
 #endif /* Constant_h */
