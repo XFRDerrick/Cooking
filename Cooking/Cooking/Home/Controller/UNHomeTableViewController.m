@@ -12,6 +12,8 @@
 #import "UNCookFoodCollectionCell.h"
 #import "UNAllFoodsListController.h"
 
+#import "UNFoodDetailController.h"
+
 @interface UNHomeTableViewController ()<UNCookingStyleCellDelegate,UICollectionViewDelegate>
 @property (nonatomic, strong) NSArray *foodStylesTitle;
 
@@ -136,7 +138,17 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     UNCookFoodCollectionCell *cell = (UNCookFoodCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    NSLog(@"%ld - %ld",indexPath.row,cell.tag);
+    
+    NSArray<CookingStylePostsModel *> *arr = [[self.stylesData objectForKey:@(cell.tag).stringValue] posts];
+    
+    CookingStylePostsModel *model = arr[indexPath.row];
+    
+    
+    UNFoodDetailController *foodDetail = [[UNFoodDetailController alloc] init];
+    foodDetail.model = model;
+    
+    [self.navigationController pushViewController:foodDetail animated:YES];
+    
     
 }
 

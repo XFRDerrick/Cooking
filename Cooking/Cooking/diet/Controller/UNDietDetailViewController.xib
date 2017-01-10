@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UNDietDetailViewController">
+            <connections>
+                <outlet property="backButton" destination="Ko5-VI-ZIa" id="HRc-t9-Icv"/>
+                <outlet property="likeButton" destination="H6R-6u-qqb" id="dxY-un-JyB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="eOE-df-A7I" id="ZIG-0r-Baf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOE-df-A7I">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ko5-VI-ZIa">
+                    <rect key="frame" x="20" y="25" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="42q-MP-e7a"/>
+                        <constraint firstAttribute="height" constant="40" id="dcz-HD-Oy3"/>
+                    </constraints>
+                    <state key="normal" image="bt_listen-knowledge_share_button_normal.png"/>
+                    <state key="highlighted" image="bt_listen-knowledge_like_button_press.png"/>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="uWG-Rz-oX0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6R-6u-qqb">
+                    <rect key="frame" x="315" y="25" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="QGS-9N-MOV"/>
+                        <constraint firstAttribute="height" constant="40" id="k2e-KN-V8Z"/>
+                    </constraints>
+                    <state key="normal" image="bt_listen-knowledge_like_button_normal.png"/>
+                    <state key="selected" image="bt_listen-knowledge_like_button_hl.png"/>
+                    <state key="highlighted" image="bt_listen-knowledge_like_button_press.png"/>
+                    <connections>
+                        <action selector="likeAction:" destination="-1" eventType="touchUpInside" id="cFC-VG-Bcd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eOE-df-A7I" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7AB-yn-a2y"/>
+                <constraint firstItem="H6R-6u-qqb" firstAttribute="centerY" secondItem="Ko5-VI-ZIa" secondAttribute="centerY" id="HW9-QU-Gvw"/>
+                <constraint firstAttribute="bottom" secondItem="eOE-df-A7I" secondAttribute="bottom" id="XQK-c7-xKo"/>
+                <constraint firstItem="eOE-df-A7I" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dnZ-yu-nre"/>
+                <constraint firstAttribute="trailing" secondItem="H6R-6u-qqb" secondAttribute="trailing" constant="20" id="gu3-5T-u4y"/>
+                <constraint firstItem="Ko5-VI-ZIa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="qro-Wc-1Bv"/>
+                <constraint firstItem="Ko5-VI-ZIa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="vn8-Ye-Mom"/>
+                <constraint firstAttribute="trailing" secondItem="eOE-df-A7I" secondAttribute="trailing" id="wjx-XY-dle"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="bt_listen-knowledge_like_button_hl.png" width="37" height="40"/>
+        <image name="bt_listen-knowledge_like_button_normal.png" width="37" height="40"/>
+        <image name="bt_listen-knowledge_like_button_press.png" width="37" height="40"/>
+        <image name="bt_listen-knowledge_share_button_normal.png" width="37" height="40"/>
+    </resources>
+</document>

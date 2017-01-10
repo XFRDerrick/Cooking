@@ -11,6 +11,8 @@
 #import "UNDietCollectionViewCell.h"
 #import "UNChoiceMenuView.h"
 
+#import "UNDietDetailViewController.h"
+
 @interface UNDietViewController ()<CHTCollectionViewDelegateWaterfallLayout>
 
 @property (nonatomic, strong) NSArray *menuDatas;
@@ -250,6 +252,13 @@
 
 #pragma mark <UICollectionViewDelegate>
 
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    UNDietDetailViewController *detailVC = [[UNDietDetailViewController alloc] init];
+    detailVC.model = self.listDatas[indexPath.row];
+    [self presentViewController:detailVC animated:YES completion:nil];
+}
 
 /*
 // Uncomment this method to specify if the specified item should be selected

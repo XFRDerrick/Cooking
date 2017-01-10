@@ -17,13 +17,6 @@
 #define kCookingStyleBasePathHeader @"http://www.idwoo.net/api/"
 #define kCookingStyleBasePathFoot @"/get_recent_posts/&page=0&dev=1"
 
-//
-#define VideoPath @"http://www.yidianzixun.com/home?page=channel&id=u13746"
-
-#define JokeBasePath @"http://japi.juhe.cn/joke/content/text.from"
-#define JokePictureBasePath @"http://japi.juhe.cn/joke/img/text.from"
-
-
 //ii
 #define kBasePath @"http://api.daydaycook.com.cn"
 //JSON
@@ -31,6 +24,8 @@
 //进入详情页Web id (请求的ID)
 #define kCookMenu @"http://api.daydaycook.com.cn/daydaycook/h5/recipe/loadContent.do?id=%ld&languageId=&mainland="
 //视频为请求的URL
+
+
 
 
 //减肥食谱 使用Post请求

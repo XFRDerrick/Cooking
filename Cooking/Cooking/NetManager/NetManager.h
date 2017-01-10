@@ -46,6 +46,7 @@ typedef enum{
 + (id)getDietaryModelWithPostId:(NSInteger)postId Page:(NSInteger)page CompletionHandler:(void(^)(UNDietaryModel *model,NSError *error))completionHandler;
 
 //+ (id)getDietaryDetailModelWithPostId:(NSInteger)postId Page:(NSInteger)page CompletionHandler:(void(^)(UNDietaryModel *model,NSError *error))completionHandler;
+//http://60.205.59.95/v1/dish/info?code=77222477
 
 
 @end

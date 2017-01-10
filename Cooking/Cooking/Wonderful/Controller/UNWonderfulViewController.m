@@ -10,6 +10,7 @@
 #import "YXMenuModel.h"
 
 #import "UNWonderMenuCell.h"
+#import "UNWFoodDetailViewController.h"
 
 @interface UNWonderfulViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UIScrollViewDelegate>
 
@@ -151,24 +152,20 @@ static NSString * const reuseIdentifier = @"Cell";
         return CGSizeMake(kScreenSize.width, kScreenSize.height/4);
     }
     return CGSizeMake(kScreenSize.width, kScreenSize.height/2);
-//    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-//    NSLog(@"%f",cell.frame.origin.y);
-//    if (cell.frame.origin.y < kScreenSize.height) {
-//        return CGSizeMake(kScreenSize.width, kScreenSize.height * 0.5);
-//    }else{
-//    
-//        return CGSizeMake(kScreenSize.width, kScreenSize.height * 0.25);
-//    }
-//    return CGSizeMake(kScreenSize.width, kScreenSize.height/2);
+
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-//    YXCookMenuViewController *cookMenuVC = [[YXCookMenuViewController alloc]initWithData:[self.menuVM dataForRow:indexPath.row]];
-//    [self.navigationController pushViewController:cookMenuVC animated:YES];
+    UNWFoodDetailViewController *detailVC = [[UNWFoodDetailViewController alloc] init];
+    NSLog(@"%ld",indexPath.row);
+    detailVC.dataModel = self.menuDatas[indexPath.row];
+    [self presentViewController:detailVC animated:YES completion:nil];
 }
+
 
 
 

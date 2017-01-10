@@ -112,9 +112,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"total :%ld",self.allDatas.count);
-    NSLog(@"now: %ld",[self getShowPageDatas:self.currentPage]);
-    
     return [self getShowPageDatas:self.currentPage];
 }
 
