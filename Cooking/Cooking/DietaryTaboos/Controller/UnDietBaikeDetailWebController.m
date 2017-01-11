@@ -1,33 +1,28 @@
 //
-//  UNFoodDetailController.m
+//  UnDietBaikeDetailWebController.m
 //  Cooking
 //
-//  Created by universe on 2017/1/9.
+//  Created by universe on 2017/1/11.
 //  Copyright © 2017年 universe. All rights reserved.
 //
 
-#import "UNFoodDetailController.h"
+#import "UnDietBaikeDetailWebController.h"
 
-@interface UNFoodDetailController ()
+@interface UnDietBaikeDetailWebController ()
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
-@implementation UNFoodDetailController
+@implementation UnDietBaikeDetailWebController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self setupWebView];
-    
-}
-
-- (void)setupWebView{
-    
+    // Do any additional setup after loading the view from its nib.
     self.webView.scrollView.bounces = NO;
-    NSString *path = [NSString stringWithFormat:kHomeFoodBasePath,self.resultId];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:path]];
-    [self.webView loadRequest:request];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?id=%ld",kDietBaikeDetailBasePath,(long)self.model.listID]];
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:req];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +39,6 @@
     
     self.tabBarController.tabBar.hidden = NO;
 }
-
 
 /*
 #pragma mark - Navigation

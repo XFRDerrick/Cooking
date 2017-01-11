@@ -7,11 +7,16 @@
 //
 
 #import "UNAllFoodsListController.h"
-#import "UNFoodCell.h"
+#import "UNHomeListCell.h"
+#import "UNFoodDetailController.h"
+
 @interface UNAllFoodsListController ()
+//请求数据
+@property (nonatomic, strong) HomeMenuLinksModel *model;
 
 @property (nonatomic, assign) CookingStyle style;
-@property (nonatomic, strong) NSArray *allDatas;
+@property (nonatomic, strong) NSMutableArray *allDatas;
+@property (nonatomic, strong) HomeListPagingModel *nextRequest;
 
 @property (nonatomic, assign) NSInteger currentPage;
 
@@ -21,17 +26,24 @@
 
 @implementation UNAllFoodsListController
 
+
+- (NSMutableArray *)allDatas{
+    
+    if (!_allDatas) {
+        _allDatas = [NSMutableArray array];
+    }
+    return _allDatas;
+}
+
 //初始化方法
-- (instancetype)initWithStyle:(UITableViewStyle)style withRow:(CookingStyle)cookStyle andDatas:(NSArray<CookingStylePostsModel *> *)allData{
+- (instancetype)initWithStyle:(UITableViewStyle)style WithModel:(HomeMenuLinksModel *)model{
 
     if (self = [super initWithStyle:style]) {
-        self.style = cookStyle;
-        self.allDatas = allData;
-        self.currentPage = 1;
+        self.model = model;
+        self.title = model.text;
     }
     return self;
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,35 +53,35 @@
 
 - (void)setupTableView{
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"UNFoodCell" bundle:nil] forCellReuseIdentifier:@"foodCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"UNHomeListCell" bundle:nil] forCellReuseIdentifier:@"homeListCell"];
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
        //下拉刷新 重新加载数据
-        [NetManager getCookingStyleModelWithStyle:self.style CompletionHandler:^(CookingStyleModel *model, NSError *error) {
+        [NetManager getHomeListModelWithLinkshref:self.model.href CompletionHandler:^(HomeListModel *model, NSError *error) {
             [self.tableView.mj_header endRefreshing];
             if (!error) {
-                self.allDatas = model.posts;
-                self.currentPage = 1;
+                self.nextRequest = model.paging;
+                [self.allDatas removeAllObjects];
+                [self.allDatas addObjectsFromArray:model.result];
                 [self.tableView reloadData];
             }
         }];
     }];
-    if (!self.allDatas) {
-        [self.tableView.mj_header beginRefreshing];
-    }
-    
+    [self.tableView.mj_header beginRefreshing];
     
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
        //根据显示的数据
-         self.currentPage += 1;
-         [self.tableView reloadData];
-     
-         [self.tableView.mj_footer endRefreshing];
-        if (self.currentPage * 15 >= self.allDatas.count) {
-            [self centerShowMessage:@"已经没有数据了"];
-        }
-        
+        [NetManager getHomeListModelWithLinkshref:self.nextRequest.next CompletionHandler:^(HomeListModel *model, NSError *error) {
+            [self.tableView.mj_footer endRefreshing];
+            if (!error) {
+                self.nextRequest = model.paging;
+                [self.allDatas addObjectsFromArray:model.result];
+                [self.tableView reloadData];
+            }
+        }];
     }];
 }
+
+#pragma mark - HUD
 
 - (void)centerShowMessage:(NSString *)message{
     [self.view hidenHUD];
@@ -83,8 +95,6 @@
     
     
 }
-
-
 
 - (NSInteger)getShowPageDatas:(NSInteger)currentPage{
     
@@ -112,15 +122,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self getShowPageDatas:self.currentPage];
+    return self.allDatas.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UNFoodCell *cell = [tableView dequeueReusableCellWithIdentifier:@"foodCell" forIndexPath:indexPath];
-    
-    cell.post = self.allDatas[indexPath.row];
-    
+    UNHomeListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeListCell" forIndexPath:indexPath];
+    cell.model = self.allDatas[indexPath.row];
     return cell;
 }
 
@@ -129,48 +137,25 @@
     return 88;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    HomeListResultModel *model = self.allDatas[indexPath.row];
+    UNFoodDetailController *detailVC = [[UNFoodDetailController alloc] init];
+    detailVC.resultId = model.resultId;
+    detailVC.title = model.title;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+#pragma mark - 显示隐藏Tabbar
+
+- (void)viewWillAppear:(BOOL)animated{
+    self.tabBarController.tabBar.hidden = YES;
 }
-*/
+- (void)viewWillDisappear:(BOOL)animated{
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+    self.tabBarController.tabBar.hidden = NO;
 }
-*/
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

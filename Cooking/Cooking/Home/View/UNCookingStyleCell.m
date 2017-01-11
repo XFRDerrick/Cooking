@@ -8,7 +8,8 @@
 
 #import "UNCookingStyleCell.h"
 
-#import "UNCookFoodCollectionCell.h"
+//#import "UNCookFoodCollectionCell.h"
+#import "UNHomeCollectionViewCell.h"
 
 @interface UNCookingStyleCell ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -28,11 +29,12 @@
     self.cookingStyleLable.text = headerTitle;
 }
 
-- (void)setPosts:(NSArray<CookingStylePostsModel *> *)posts{
-    _posts = posts;
+- (void)setLinks:(NSArray<HomeMenuLinksModel *> *)links{
+    _links = links;
     
     [self.collectionView reloadData];
 }
+
 
 #pragma mark - 界面
 - (void)awakeFromNib {
@@ -65,14 +67,12 @@
     layout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     CGFloat w = (long)((kScreenSize.width - 10 * 3) / 5.0 * 2);
-    CGFloat h = w + 21 * 2 + 15;
+    CGFloat h = w + 30;
     layout.itemSize = CGSizeMake(w, h);
     self.collectionView.collectionViewLayout = layout;
     ///
-
     self.collectionView.showsHorizontalScrollIndicator = NO;
-    
-    [self.collectionView registerNib:[UINib nibWithNibName:@"UNCookFoodCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"foodCell"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"UNHomeCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"homeCVCell"];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
@@ -82,29 +82,23 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
 
-    return 10;
+    return self.links.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 
-    UNCookFoodCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"foodCell" forIndexPath:indexPath];
-    if (self.posts.count > 0) {
-//        NSLog(@"posts.count:%ld item:%ld",self.posts.count,indexPath.item);
-        CookingStylePostsModel *model = self.posts[indexPath.row];
+    UNHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"homeCVCell" forIndexPath:indexPath];
+    if (self.links.count > 0) {
         
-        [cell.foodImageIV setImageWithURL:[NSURL URLWithString:model.thumbnail] placeholder:[UIImage imageNamed:@"background_image.jpeg"]];
-        cell.foodNameLable.text = model.title;
-        cell.foodDetailLable.text = model.excerpt;
-    }else{
-        [cell.foodImageIV setImage:[UIImage imageNamed:@"background_image.jpeg"]];
-        cell.foodNameLable.text = @"";
-        cell.foodDetailLable.text = @"";
-  
+        HomeMenuLinksModel *model = self.links[indexPath.row];
+        cell.model = model;
     }
-    cell.tag = self.index;
+    cell.tag = self.tag;
     return cell;
 }
 
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state

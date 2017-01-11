@@ -19,12 +19,11 @@
 
 #pragma mark
 @property (nonatomic, weak) id<UNCookingStyleCellDelegate> delegate;
+
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (nonatomic, copy) NSString *headerTitle;
-//标记点击的是第几个tableView的co——Cell
+@property (nonatomic, strong)NSArray <HomeMenuLinksModel*> *links;
 
-@property (nonatomic, assign) NSInteger index;
-@property (nonatomic, strong)NSArray <CookingStylePostsModel*> *posts;
 
 @end

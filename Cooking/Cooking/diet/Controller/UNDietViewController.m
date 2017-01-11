@@ -80,22 +80,25 @@
     }
 }
 
+#pragma mark - 侧栏的显示和消失
 - (void)showMenu{
+    self.cvShow = YES;
     [UIView animateWithDuration:0.5 animations:^{
         CGRect frame = self.choiceView.frame;
         frame.origin.x = 0;
         self.choiceView.frame = frame;
     }];
-     self.cvShow = ! self.cvShow;
+    
 }
 
 - (void)hidenMenu{
+    self.cvShow = NO;
     [UIView animateWithDuration:0.5 animations:^{
         CGRect frame = self.choiceView.frame;
         frame.origin.x = -frame.size.width;
         self.choiceView.frame = frame;
     }];
-     self.cvShow = ! self.cvShow;
+    
 }
 
 #pragma mark -  MenuView的添加和点击动作
@@ -114,7 +117,7 @@
        
         [weakSelf hidenMenu];
         weakSelf.menuModel = weakSelf.menuDatas[tag];
-        weakSelf.title = weakSelf.menuModel.title;
+        weakSelf.navigationItem.title = weakSelf.menuModel.title;
         [weakSelf.collectionView.mj_header beginRefreshing];
     };
     self.choiceView = view;
@@ -137,7 +140,7 @@
                 NSLog(@"menu:%ld",model.data.count);
                 self.menuDatas = model.data;
                 self.menuModel = self.menuDatas[0];
-                self.title = self.menuModel.title;
+                self.navigationItem.title = self.menuModel.title;
                 dispatch_async(dispatch_get_main_queue(), ^{
                     //加载menu后加载控制器
                     [self.collectionView.mj_header beginRefreshing];

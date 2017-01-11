@@ -35,6 +35,7 @@
         _webView.scrollView.bounces = NO;
         [self.view addSubview:_webView];
         _webView.backgroundColor = [UIColor whiteColor];
+        _webView.opaque = NO;
     }
     return _webView;
 

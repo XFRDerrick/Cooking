@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CookingStyleModel.h"
 
 @interface UNFoodDetailController : UIViewController
 
-@property (nonatomic, strong) CookingStylePostsModel *model;
+@property (nonatomic, copy) NSString *resultId;
 
 @end

@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CookingStyleModel.h"
 
 @interface UNAllFoodsListController : UITableViewController
 
-- (instancetype)initWithStyle:(UITableViewStyle)style withRow:(CookingStyle)cookStyle andDatas:(NSArray<CookingStylePostsModel *> *)allData;
+- (instancetype)initWithStyle:(UITableViewStyle)style WithModel:(HomeMenuLinksModel *)model;
 
 @end

@@ -10,6 +10,26 @@
 
 @implementation NetManager
 
+//home Menu
++ (id)getHomeMenuModelCompletionHandler:(void (^)(HomeMenuModel *, NSError *))completionHandler{
+ 
+    NSString *path = kHomeBasePath;
+    return [self GET:path paramaters:nil completionHandler:^(id respondObj, NSError *error) {
+         !completionHandler ?: completionHandler([HomeMenuModel parse:respondObj],error);
+    }];
+}
+
++ (id)getHomeListModelWithLinkshref:(NSString *)href CompletionHandler:(void (^)(HomeListModel *, NSError *))completionHandler{
+   
+    NSString *path = [NSString stringWithFormat:@"%@%@",kHomeListBasePath,href];
+    //包含中文
+    NSString *str1 = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    
+    return [self GET:str1 paramaters:nil completionHandler:^(id respondObj, NSError *error) {
+        !completionHandler ?: completionHandler([HomeListModel parse:respondObj],error);
+    }];
+    
+}
 
 + (id)getCookingStyleModelWithStyle:(CookingStyle)style CompletionHandler:(void (^)(CookingStyleModel *, NSError *))completionHandler{
     
@@ -117,6 +137,18 @@
 }
 
 
++ (id)getDietBaiKeModelWithPage:(NSInteger)page Classes:(NSString *)classes CompletionHandler:(void (^)(UNDietBaiKeModel *, NSError *))completionHandler{
+    
+    //http://carapi.hbook.us/app/infolist?appid=621&page=2&classes=病人饮食
+    
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:classes forKey:@"classes"];
+    [dic setValue:@(page) forKey:@"page"];
+    
+    return [self GET:kDietBaikeBasePath paramaters:dic completionHandler:^(id respondObj, NSError *error) {
+        !completionHandler ?: completionHandler([UNDietBaiKeModel  parse:respondObj],error);
+    }];
+}
 
 
 @end

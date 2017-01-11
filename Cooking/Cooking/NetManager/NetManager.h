@@ -8,6 +8,8 @@
 
 #import "BaseNetManager.h"
 
+#import "HomeMenuModel.h"
+#import "HomeListModel.h"
 #import "CookingStyleModel.h"
 
 #import "YXMenuModel.h"
@@ -16,6 +18,7 @@
 #import "UNDietMenuModel.h"
 
 #import "UNDietaryModel.h"
+#import "UNDietBaiKeModel.h"
 
 //菜系种类
 typedef enum{
@@ -34,6 +37,9 @@ typedef enum{
 
 @interface NetManager : BaseNetManager
 
++ (id)getHomeMenuModelCompletionHandler:(void (^)(HomeMenuModel *model, NSError *error))completionHandler;
++ (id)getHomeListModelWithLinkshref:(NSString *)href CompletionHandler:(void (^)(HomeListModel *model, NSError *error))completionHandler;
+
 + (id)getCookingStyleModelWithStyle:(CookingStyle)style CompletionHandler:(void (^)(CookingStyleModel *model, NSError *error))completionHandler;
 
 + (id)getCookingMenuModelWithpage:(NSInteger)page CompletionHandler:(void (^)(YXMenuModel *model, NSError *error))completionHandler;
@@ -47,6 +53,11 @@ typedef enum{
 
 //+ (id)getDietaryDetailModelWithPostId:(NSInteger)postId Page:(NSInteger)page CompletionHandler:(void(^)(UNDietaryModel *model,NSError *error))completionHandler;
 //http://60.205.59.95/v1/dish/info?code=77222477
+
+//新的获取第四数据
+
++ (id)getDietBaiKeModelWithPage:(NSInteger)page Classes:(NSString *)classes CompletionHandler:(void(^)(UNDietBaiKeModel *model,NSError *error))completionHandler;
+
 
 
 @end

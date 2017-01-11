@@ -56,7 +56,7 @@
 
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-       
+        
         [NetManager getDietaryModelWithPostId:self.requID Page:1 CompletionHandler:^(UNDietaryModel *model, NSError *error) {
             [self.tableView.mj_header endRefreshing];
             if (!error) {

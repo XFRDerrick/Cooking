@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCVCell" id="gTV-IL-0wX" customClass="UNHomeCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="153" height="188"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="153" height="188"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uw2-Nl-Kw7">
+                        <rect key="frame" x="0.0" y="0.0" width="153" height="153"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Uw2-Nl-Kw7" secondAttribute="height" multiplier="1:1" id="4Tn-IG-MwZ"/>
+                        </constraints>
+                    </imageView>
+                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRk-cx-L67">
+                        <rect key="frame" x="0.0" y="158" width="153" height="30"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NvT-Pp-Mcv">
+                            <rect key="frame" x="0.0" y="0.0" width="153" height="30"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="菜品" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osP-SI-QZ3">
+                                    <rect key="frame" x="59.5" y="5.5" width="33" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="osP-SI-QZ3" firstAttribute="centerX" secondItem="NvT-Pp-Mcv" secondAttribute="centerX" id="OdI-XO-fgP"/>
+                                <constraint firstItem="osP-SI-QZ3" firstAttribute="centerY" secondItem="NvT-Pp-Mcv" secondAttribute="centerY" id="r6o-Sa-4YD"/>
+                            </constraints>
+                        </view>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="n8R-6G-WN6"/>
+                        </constraints>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fRk-cx-L67" secondAttribute="trailing" id="0Cf-A1-Vkz"/>
+                <constraint firstItem="fRk-cx-L67" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="32F-bK-YVx"/>
+                <constraint firstAttribute="bottom" secondItem="fRk-cx-L67" secondAttribute="bottom" id="92V-R1-CzF"/>
+                <constraint firstItem="Uw2-Nl-Kw7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9uD-dK-kmJ"/>
+                <constraint firstItem="Uw2-Nl-Kw7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RcQ-fg-4tg"/>
+                <constraint firstAttribute="trailing" secondItem="Uw2-Nl-Kw7" secondAttribute="trailing" id="dZX-w4-Ud2"/>
+            </constraints>
+            <size key="customSize" width="153" height="188"/>
+            <connections>
+                <outlet property="foodImageIV" destination="Uw2-Nl-Kw7" id="dfa-H3-jPp"/>
+                <outlet property="titleLable" destination="osP-SI-QZ3" id="djc-dW-GmN"/>
+            </connections>
+            <point key="canvasLocation" x="100.5" y="123"/>
+        </collectionViewCell>
+    </objects>
+</document>

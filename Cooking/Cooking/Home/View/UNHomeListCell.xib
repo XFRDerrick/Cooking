@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="homeListCell" rowHeight="79" id="KGk-i7-Jjw" customClass="UNHomeListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="287" height="78"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8xV-1W-Eae">
+                        <rect key="frame" x="15" y="5" width="68.5" height="68.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="8xV-1W-Eae" secondAttribute="height" multiplier="1:1" id="5U4-Xk-fPY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gh-hb-iH7">
+                        <rect key="frame" x="92" y="5" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="三分钟" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqj-WU-65y">
+                        <rect key="frame" x="107" y="59" width="37" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="操作:简单" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqa-9R-ngI">
+                        <rect key="frame" x="91" y="32" width="53" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G68-1R-w27">
+                        <rect key="frame" x="159" y="32.5" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1x-Vr-9fM">
+                        <rect key="frame" x="248" y="59" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ms_caipu_time.png" translatesAutoresizingMaskIntoConstraints="NO" id="yYJ-5Y-Bcc">
+                        <rect key="frame" x="91" y="61" width="13" height="13"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bt_listen-knowledge_like_button_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="fnS-hh-sHC">
+                        <rect key="frame" x="232" y="60" width="13" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="Uec-yq-zcd"/>
+                            <constraint firstAttribute="height" constant="13" id="vOE-Qc-wk2"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="8xV-1W-Eae" secondAttribute="bottom" constant="5" id="2kk-U7-q0u"/>
+                    <constraint firstItem="yYJ-5Y-Bcc" firstAttribute="bottom" secondItem="8xV-1W-Eae" secondAttribute="bottom" id="3OG-z6-JXt"/>
+                    <constraint firstItem="1Gh-hb-iH7" firstAttribute="leading" secondItem="8xV-1W-Eae" secondAttribute="trailing" constant="8" id="3Xr-Yd-Hyy"/>
+                    <constraint firstItem="eqa-9R-ngI" firstAttribute="leading" secondItem="8xV-1W-Eae" secondAttribute="trailing" constant="8" id="7cR-af-o5I"/>
+                    <constraint firstItem="G68-1R-w27" firstAttribute="centerY" secondItem="eqa-9R-ngI" secondAttribute="centerY" id="GKy-am-qyn"/>
+                    <constraint firstItem="Lqj-WU-65y" firstAttribute="bottom" secondItem="8xV-1W-Eae" secondAttribute="bottom" id="GfK-gV-5TX"/>
+                    <constraint firstItem="yYJ-5Y-Bcc" firstAttribute="leading" secondItem="8xV-1W-Eae" secondAttribute="trailing" constant="8" id="KSU-oV-e69"/>
+                    <constraint firstItem="1Gh-hb-iH7" firstAttribute="top" secondItem="8xV-1W-Eae" secondAttribute="top" id="NME-xU-Arf"/>
+                    <constraint firstItem="8xV-1W-Eae" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="NfM-95-pgt"/>
+                    <constraint firstItem="G1x-Vr-9fM" firstAttribute="bottom" secondItem="8xV-1W-Eae" secondAttribute="bottom" id="SuE-nQ-uTG"/>
+                    <constraint firstItem="Lqj-WU-65y" firstAttribute="leading" secondItem="yYJ-5Y-Bcc" secondAttribute="trailing" constant="3" id="ZFo-Wz-UiD"/>
+                    <constraint firstItem="G1x-Vr-9fM" firstAttribute="bottom" secondItem="fnS-hh-sHC" secondAttribute="bottom" id="dzl-dQ-4ux"/>
+                    <constraint firstItem="eqa-9R-ngI" firstAttribute="centerY" secondItem="8xV-1W-Eae" secondAttribute="centerY" id="e08-M5-B0p"/>
+                    <constraint firstAttribute="trailing" secondItem="G1x-Vr-9fM" secondAttribute="trailing" constant="8" id="gQI-ag-Zcw"/>
+                    <constraint firstItem="G1x-Vr-9fM" firstAttribute="leading" secondItem="fnS-hh-sHC" secondAttribute="trailing" constant="3" id="k1d-vK-xyW"/>
+                    <constraint firstItem="8xV-1W-Eae" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="oqw-Sc-dPR"/>
+                    <constraint firstItem="G68-1R-w27" firstAttribute="leading" secondItem="eqa-9R-ngI" secondAttribute="trailing" constant="15" id="tVh-fM-DeV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="differentLable" destination="eqa-9R-ngI" id="etv-wQ-Pb1"/>
+                <outlet property="foodImageIV" destination="8xV-1W-Eae" id="xZw-ka-U41"/>
+                <outlet property="likeCount" destination="G1x-Vr-9fM" id="eV3-Ps-mzB"/>
+                <outlet property="tasetLable" destination="G68-1R-w27" id="fV6-al-ZSA"/>
+                <outlet property="titleLable" destination="1Gh-hb-iH7" id="SvG-ZQ-FJI"/>
+                <outlet property="useTimeLable" destination="Lqj-WU-65y" id="V3p-jI-Do1"/>
+            </connections>
+            <point key="canvasLocation" x="49" y="90.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bt_listen-knowledge_like_button_normal.png" width="37" height="40"/>
+        <image name="ms_caipu_time.png" width="13" height="13"/>
+    </resources>
+</document>

@@ -9,13 +9,17 @@
 #import "UNHomeTableViewController.h"
 
 #import "UNCookingStyleCell.h"
-#import "UNCookFoodCollectionCell.h"
-#import "UNAllFoodsListController.h"
+#import "UNHomeCollectionViewCell.h"
+#import "UNHomeMenuListController.h"
 
+#import "UNAllFoodsListController.h"
 #import "UNFoodDetailController.h"
 
 @interface UNHomeTableViewController ()<UNCookingStyleCellDelegate,UICollectionViewDelegate>
+
+@property (nonatomic, strong) NSArray<HomeMenuLinksModel *> *menuDatas;
 @property (nonatomic, strong) NSArray *foodStylesTitle;
+@property (nonatomic, strong) NSMutableArray *menuCategoryDatas;
 
 @property (nonatomic, strong) NSMutableDictionary *stylesData;
 
@@ -23,6 +27,20 @@
 
 @implementation UNHomeTableViewController
 
+- (NSArray<HomeMenuLinksModel *> *)menuDatas{
+
+    if (!_menuDatas) {
+        _menuDatas = [NSArray array];
+    }
+    return _menuDatas;
+}
+- (NSMutableArray *)menuCategoryDatas{
+    
+    if (!_menuCategoryDatas) {
+        _menuCategoryDatas = [NSMutableArray array];
+    }
+    return _menuCategoryDatas;
+}
 - (NSMutableDictionary *)stylesData{
 
     if (!_stylesData) {
@@ -33,7 +51,7 @@
 - (NSArray *)foodStylesTitle{
 
     if (!_foodStylesTitle) {
-        _foodStylesTitle = @[@"粤菜",@"川菜",@"苏菜",@"浙菜",@"闽菜",@"徽菜",@"鲁菜",@"上海菜",@"东北菜",@"烘焙"];
+        _foodStylesTitle = @[@"地方菜",@"家常",@"中西点心",@"食材",@"菜品/厨具",@"人群",@"其他"];
     }
     return _foodStylesTitle;
 }
@@ -42,7 +60,6 @@
     [super viewDidLoad];
     [self setupTableView];
     //异步加载数据
-//    [self loadCookingData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,36 +72,29 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"UNCookingStyleCell" bundle:nil] forCellReuseIdentifier:@"cookingStyleCell"];
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [self.stylesData removeAllObjects];
-        [self loadCookingData];
+        [NetManager getHomeMenuModelCompletionHandler:^(HomeMenuModel *model, NSError *error) {
+            [self.tableView.mj_header endRefreshing];
+            if (!error) {
+                self.menuDatas = model.links;
+                [self categoryMenuDatas];
+                //刷新
+                [self.tableView reloadData];
+            }
+        }];
     }];
     [self.tableView.mj_header beginRefreshing];
     
 }
-
-- (void)loadCookingData{
-    
-    for (int i =0; i < self.foodStylesTitle.count; i ++) {
-        
-        dispatch_async(dispatch_queue_create(0, 0), ^{
-
-            [NetManager getCookingStyleModelWithStyle:i CompletionHandler:^(CookingStyleModel *model, NSError *error) {
-                if (!error) {
-                    //请求
-                    [self.stylesData setObject:model forKey:@(i).stringValue];
-                    if (self.stylesData.count == self.foodStylesTitle.count) {
-                        [self.tableView.mj_header endRefreshing];
-                    }
-                    //刷新指定行
-                    //[self.tableView reloadData];
-                    [self.tableView reloadRow:i inSection:0 withRowAnimation:UITableViewRowAnimationNone];
-                }
-                
-            }];
-        });
-        
-    }
-    
+//将数据分组存放
+- (void)categoryMenuDatas{
+    NSArray *arrOne = [self.menuDatas subarrayWithRange:NSMakeRange(0, 5)];
+    NSArray *arrTwo = [self.menuDatas subarrayWithRange:NSMakeRange(5, 4)];
+    NSArray *arrThree = [self.menuDatas subarrayWithRange:NSMakeRange(9, 7)];
+    NSArray *arrFour = [self.menuDatas subarrayWithRange:NSMakeRange(16, 10)];
+    NSArray *arrFive = [self.menuDatas subarrayWithRange:NSMakeRange(26,10)];
+    NSArray *arrSix = [self.menuDatas subarrayWithRange:NSMakeRange(36, 3)];
+    NSArray *arrSeven = [self.menuDatas subarrayWithRange:NSMakeRange(39, self.menuDatas.count - 39)];
+    self.menuCategoryDatas = @[arrOne,arrTwo,arrThree,arrFour,arrFive,arrSix,arrSeven].mutableCopy;
 }
 
 #pragma mark - Table view data source
@@ -108,46 +118,45 @@
     cell.collectionView.delegate = self;
     
     //数据传值
-    cell.index = indexPath.row;
     cell.headerTitle = self.foodStylesTitle[indexPath.row];
-    if ([self.stylesData objectForKey:@(indexPath.row).stringValue]) {
-        NSArray<CookingStylePostsModel *> *modelArr = [[self.stylesData objectForKey:@(indexPath.row).stringValue] posts];
-      
-        cell.posts = modelArr;
+    if (self.menuCategoryDatas.count > 0) {
+        cell.links = self.menuCategoryDatas[indexPath.row];
     }
     cell.tag = indexPath.row;
+    
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat w = (long)((kScreenSize.width - 10 * 3) / 5.0 * 2);
-    CGFloat h = w + 21 * 2 + 15 + 45 + 10;
+    CGFloat h = w + 30 + 44 + 10;
     return h;
 }
 
 #pragma mark - 点击cell/button 事件
 - (void)cookingStyleCell:(UNCookingStyleCell *)cell didClickShowAllButton:(UIButton *)sender{
+   
+    int count = 0;
+    for (int i = 0; i <= cell.tag; i ++) {
+        count += [self.menuCategoryDatas[i] count];
+    }
     
-    NSArray<CookingStylePostsModel *> *arr = [[self.stylesData objectForKey:@(cell.tag).stringValue] posts];
+    UNHomeMenuListController *menuList = [[UNHomeMenuListController alloc] initWithStyle:UITableViewStylePlain];
     
-    UNAllFoodsListController *listVC = [[UNAllFoodsListController alloc] initWithStyle:UITableViewStylePlain withRow:(CookingStyle)cell.tag andDatas:arr];
-    
-    [self.navigationController pushViewController:listVC animated:YES];
+    menuList.menuData = self.menuDatas;
+    menuList.index = (count-1);
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:menuList] animated:YES completion:nil];
 }
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UNCookFoodCollectionCell *cell = (UNCookFoodCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    UNHomeCollectionViewCell *cell = (UNHomeCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     
-    NSArray<CookingStylePostsModel *> *arr = [[self.stylesData objectForKey:@(cell.tag).stringValue] posts];
+    HomeMenuLinksModel *model = cell.model;
+
+    UNAllFoodsListController *listVC = [[UNAllFoodsListController alloc] initWithStyle:UITableViewStylePlain WithModel:model];
     
-    CookingStylePostsModel *model = arr[indexPath.row];
-    
-    
-    UNFoodDetailController *foodDetail = [[UNFoodDetailController alloc] init];
-    foodDetail.model = model;
-    
-    [self.navigationController pushViewController:foodDetail animated:YES];
+    [self.navigationController pushViewController:listVC animated:YES];
     
     
 }

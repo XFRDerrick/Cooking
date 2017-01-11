@@ -19,6 +19,7 @@
 #import "CHTCollectionViewWaterfallLayout.h"
 
 #import "UNDietaryTaboosController.h"
+#import "UNDietBaikePageController.h"
 
 @interface UNMainTarBarController ()
 
@@ -29,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.tabBarController.tabBar.backgroundColor = [UIColor whiteColor];
     [self addChildControllers];
     
 }
@@ -51,10 +52,15 @@
     UNDietViewController *dietVC = [[UNDietViewController alloc] initWithCollectionViewLayout:layout];
     dietVC.title = @"减肥食谱";
       [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:dietVC]];
-    
+    /*
     UNDietaryTaboosController *dietabVC = [[UNDietaryTaboosController alloc] init];
     dietabVC.title = @"饮食禁忌";
     [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:dietabVC]];
+    */
+    
+    UNDietBaikePageController *baikeVC = [[UNDietBaikePageController alloc] init];
+    baikeVC.title = @"健康饮食";
+    [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:baikeVC]];
     
     UNMineViewController *mineVC = [[UNMineViewController alloc] init];
     mineVC.title = @"我";
