@@ -11,6 +11,6 @@
 @interface UNHomeMenuListController : UITableViewController
 
 @property (nonatomic, strong) NSArray *menuData;
-@property (nonatomic, assign) NSInteger *index;
+@property (nonatomic, assign) NSUInteger index;
 
 @end

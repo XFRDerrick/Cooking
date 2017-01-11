@@ -15,12 +15,14 @@
     [self hidenHUD];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
-    [hud hide:YES afterDelay:30];
+    [hud hideAnimated:YES afterDelay:30];
+//    [hud hide:YES afterDelay:30];
 }
 
 - (void)hidenHUD{
 
-    [MBProgressHUD hideAllHUDsForView:self animated:YES];
+    [MBProgressHUD hideHUDForView:self animated:YES];
+//    [MBProgressHUD hideAllHUDsForView:self animated:YES];
 }
 
 - (void)showMessage:(NSString *)message{
@@ -30,8 +32,9 @@
     
     
     hud.mode = MBProgressHUDModeText;
-    hud.labelText = message;
-    [hud hide:YES afterDelay:2.0];
+    hud.label.text = message;
+    [hud hideAnimated:YES afterDelay:2.0];
+//    [hud hide:YES afterDelay:2.0];
     
 }
 

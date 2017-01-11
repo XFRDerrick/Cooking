@@ -52,6 +52,7 @@
 		7C4194591E2611B000F505A2 /* UNTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4194571E2611B000F505A2 /* UNTitleCell.xib */; };
 		7C41945D1E26184400F505A2 /* UNSelectCReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C41945B1E26184400F505A2 /* UNSelectCReusableView.m */; };
 		7C41945E1E26184400F505A2 /* UNSelectCReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C41945C1E26184400F505A2 /* UNSelectCReusableView.xib */; };
+		7C4194611E26896E00F505A2 /* AppIcon_app.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C4194601E26896E00F505A2 /* AppIcon_app.jpg */; };
 		7C6BBD051E1F2461007A2435 /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD001E1F2461007A2435 /* NSObject+Parse.m */; };
 		7C6BBD061E1F2461007A2435 /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD021E1F2461007A2435 /* UIColor+RandomColor.m */; };
 		7C6BBD071E1F2461007A2435 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD041E1F2461007A2435 /* UIView+HUD.m */; };
@@ -193,6 +194,7 @@
 		7C41945A1E26184400F505A2 /* UNSelectCReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNSelectCReusableView.h; sourceTree = "<group>"; };
 		7C41945B1E26184400F505A2 /* UNSelectCReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNSelectCReusableView.m; sourceTree = "<group>"; };
 		7C41945C1E26184400F505A2 /* UNSelectCReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNSelectCReusableView.xib; sourceTree = "<group>"; };
+		7C4194601E26896E00F505A2 /* AppIcon_app.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AppIcon_app.jpg; sourceTree = "<group>"; };
 		7C6BBCFF1E1F2461007A2435 /* NSObject+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Parse.h"; sourceTree = "<group>"; };
 		7C6BBD001E1F2461007A2435 /* NSObject+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Parse.m"; sourceTree = "<group>"; };
 		7C6BBD011E1F2461007A2435 /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
@@ -385,6 +387,16 @@
 			name = OldController;
 			sourceTree = "<group>";
 		};
+		7C41945F1E26340900F505A2 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				7C6BBD8B1E1FA6B3007A2435 /* UNFoodCell.h */,
+				7C6BBD8C1E1FA6B3007A2435 /* UNFoodCell.m */,
+				7C6BBD8D1E1FA6B3007A2435 /* UNFoodCell.xib */,
+			);
+			name = Old;
+			sourceTree = "<group>";
+		};
 		7C6BBCFE1E1F2461007A2435 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,9 +529,7 @@
 				7C6BBD811E1F49FE007A2435 /* UNCookFoodCollectionCell.h */,
 				7C6BBD821E1F49FE007A2435 /* UNCookFoodCollectionCell.m */,
 				7C6BBD831E1F49FE007A2435 /* UNCookFoodCollectionCell.xib */,
-				7C6BBD8B1E1FA6B3007A2435 /* UNFoodCell.h */,
-				7C6BBD8C1E1FA6B3007A2435 /* UNFoodCell.m */,
-				7C6BBD8D1E1FA6B3007A2435 /* UNFoodCell.xib */,
+				7C41945F1E26340900F505A2 /* Old */,
 				7C1244921E24C2660071A8CC /* UNHomeListCell.h */,
 				7C1244931E24C2660071A8CC /* UNHomeListCell.m */,
 				7C1244941E24C2660071A8CC /* UNHomeListCell.xib */,
@@ -640,6 +650,7 @@
 		7C6BBD781E1F4770007A2435 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7C4194601E26896E00F505A2 /* AppIcon_app.jpg */,
 				7C4194451E25D6F000F505A2 /* fav_sx_icon_36.png */,
 				7C6BBD861E1F5A0F007A2435 /* background_image.jpeg */,
 				7C6BBD7D1E1F4882007A2435 /* bt_all_normal@2x.png */,
@@ -1008,6 +1019,7 @@
 				7C054C691E23B64F005ECD3F /* UNDietDetailViewController.xib in Resources */,
 				7C12449F1E24D0E80071A8CC /* UNMenuListCell.xib in Resources */,
 				7C054C501E23A8CD005ECD3F /* bt_playlist_play_normal@3x.png in Resources */,
+				7C4194611E26896E00F505A2 /* AppIcon_app.jpg in Resources */,
 				7C054C571E23AB73005ECD3F /* bt_banner_closed0_normal@2x.png in Resources */,
 				7C4194311E25CB8E00F505A2 /* UNDietBaikeCell.xib in Resources */,
 				7CFC10281E2323EB0023BC0A /* UNDietCollectionViewCell.xib in Resources */,
@@ -1295,9 +1307,11 @@
 			baseConfigurationReference = B1359B43841A1206C1516D28 /* Pods-Cooking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 754TY7VH2R;
 				GCC_PREFIX_HEADER = Cooking/PrefixHeader.pch;
 				INFOPLIST_FILE = Cooking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hi.universe.Cooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1309,9 +1323,11 @@
 			baseConfigurationReference = 8068E23C23649D1453555202 /* Pods-Cooking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 754TY7VH2R;
 				GCC_PREFIX_HEADER = Cooking/PrefixHeader.pch;
 				INFOPLIST_FILE = Cooking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hi.universe.Cooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";

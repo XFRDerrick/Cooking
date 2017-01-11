@@ -84,6 +84,11 @@
     }];
     [self.tableView.mj_header beginRefreshing];
     
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        [self.tableView.mj_footer endRefreshingWithNoMoreData];
+    }];
+//    [self.tableView.mj_footer endRefreshingWithNoMoreData];
+    
 }
 //将数据分组存放
 - (void)categoryMenuDatas{
@@ -143,7 +148,7 @@
     UNHomeMenuListController *menuList = [[UNHomeMenuListController alloc] initWithStyle:UITableViewStylePlain];
     
     menuList.menuData = self.menuDatas;
-    menuList.index = (count-1);
+    menuList.index = count-1;
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:menuList] animated:YES completion:nil];
 }
 

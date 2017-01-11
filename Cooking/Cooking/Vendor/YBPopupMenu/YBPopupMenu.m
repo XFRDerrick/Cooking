@@ -8,8 +8,8 @@
 
 #import "YBPopupMenu.h"
 
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+//#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+//#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kMainWindow  [UIApplication sharedApplication].keyWindow
 
 #pragma mark - /////////////////

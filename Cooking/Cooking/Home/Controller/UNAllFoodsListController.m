@@ -53,6 +53,7 @@
 
 - (void)setupTableView{
     
+    self.tableView.tableFooterView = [[UIView alloc] init];
     [self.tableView registerNib:[UINib nibWithNibName:@"UNHomeListCell" bundle:nil] forCellReuseIdentifier:@"homeListCell"];
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
        //下拉刷新 重新加载数据
@@ -71,12 +72,19 @@
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
        //根据显示的数据
         [NetManager getHomeListModelWithLinkshref:self.nextRequest.next CompletionHandler:^(HomeListModel *model, NSError *error) {
-            [self.tableView.mj_footer endRefreshing];
             if (!error) {
-                self.nextRequest = model.paging;
-                [self.allDatas addObjectsFromArray:model.result];
-                [self.tableView reloadData];
+                if (model.result.count == 0) {
+                    [self.tableView.mj_footer endRefreshingWithNoMoreData];
+                }else{
+                     [self.tableView.mj_footer endRefreshing];
+                    self.nextRequest = model.paging;
+                    [self.allDatas addObjectsFromArray:model.result];
+                    [self.tableView reloadData];
+                }
+            }else{
+                 [self.tableView.mj_footer endRefreshingWithNoMoreData];
             }
+            
         }];
     }];
 }

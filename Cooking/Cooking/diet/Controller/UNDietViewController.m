@@ -180,10 +180,16 @@
     self.collectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         
         [NetManager getDietListModelWithMainId:self.menuModel.mainId Page:++ self.page CompletionHandler:^(UNDietListModel *model, NSError *error) {
-            [self.collectionView.mj_footer endRefreshing];
             if (!error) {
-                [self.listDatas addObjectsFromArray:model.data.recipes];
-                [self.collectionView reloadData];
+                if (model.data.recipes.count ==0) {
+                    [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+                }else{
+                    [self.collectionView.mj_footer endRefreshing];
+                    [self.listDatas addObjectsFromArray:model.data.recipes];
+                    [self.collectionView reloadData];
+                }
+            }else{
+               [self.collectionView.mj_footer endRefreshingWithNoMoreData];
             }
         }];
 

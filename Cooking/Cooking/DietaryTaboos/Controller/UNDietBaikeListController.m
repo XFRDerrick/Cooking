@@ -66,11 +66,19 @@
     
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
        [NetManager getDietBaiKeModelWithPage: ++self.page Classes:self.titleName CompletionHandler:^(UNDietBaiKeModel *model, NSError *error) {
-           [self.tableView.mj_footer endRefreshing];
            if (!error) {
-               [self.datas addObjectsFromArray:model.list];
-               [self.tableView reloadData];
+               if (model.list.count ==0) {
+                   [self.tableView.mj_footer endRefreshingWithNoMoreData];
+               }else{
+                   [self.tableView.mj_footer endRefreshing];
+                   [self.datas addObjectsFromArray:model.list];
+                   [self.tableView reloadData];
+               }
+           }else{
+               [self.tableView.mj_footer endRefreshingWithNoMoreData];
            }
+
+           
        }];
     }];
     
