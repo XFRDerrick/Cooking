@@ -46,6 +46,12 @@
 		7C41944C1E25E07100F505A2 /* UnDietBaikeDetailWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C41944A1E25E07100F505A2 /* UnDietBaikeDetailWebController.m */; };
 		7C41944D1E25E07100F505A2 /* UnDietBaikeDetailWebController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C41944B1E25E07100F505A2 /* UnDietBaikeDetailWebController.xib */; };
 		7C41944F1E260B8600F505A2 /* ms_xiala@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C41944E1E260B8600F505A2 /* ms_xiala@2x.png */; };
+		7C4194531E260D5600F505A2 /* UNSelectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4194511E260D5600F505A2 /* UNSelectTitleViewController.m */; };
+		7C4194541E260D5600F505A2 /* UNSelectTitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4194521E260D5600F505A2 /* UNSelectTitleViewController.xib */; };
+		7C4194581E2611B000F505A2 /* UNTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4194561E2611B000F505A2 /* UNTitleCell.m */; };
+		7C4194591E2611B000F505A2 /* UNTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4194571E2611B000F505A2 /* UNTitleCell.xib */; };
+		7C41945D1E26184400F505A2 /* UNSelectCReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C41945B1E26184400F505A2 /* UNSelectCReusableView.m */; };
+		7C41945E1E26184400F505A2 /* UNSelectCReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C41945C1E26184400F505A2 /* UNSelectCReusableView.xib */; };
 		7C6BBD051E1F2461007A2435 /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD001E1F2461007A2435 /* NSObject+Parse.m */; };
 		7C6BBD061E1F2461007A2435 /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD021E1F2461007A2435 /* UIColor+RandomColor.m */; };
 		7C6BBD071E1F2461007A2435 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BBD041E1F2461007A2435 /* UIView+HUD.m */; };
@@ -178,6 +184,15 @@
 		7C41944A1E25E07100F505A2 /* UnDietBaikeDetailWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnDietBaikeDetailWebController.m; sourceTree = "<group>"; };
 		7C41944B1E25E07100F505A2 /* UnDietBaikeDetailWebController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnDietBaikeDetailWebController.xib; sourceTree = "<group>"; };
 		7C41944E1E260B8600F505A2 /* ms_xiala@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ms_xiala@2x.png"; sourceTree = "<group>"; };
+		7C4194501E260D5500F505A2 /* UNSelectTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNSelectTitleViewController.h; sourceTree = "<group>"; };
+		7C4194511E260D5600F505A2 /* UNSelectTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNSelectTitleViewController.m; sourceTree = "<group>"; };
+		7C4194521E260D5600F505A2 /* UNSelectTitleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNSelectTitleViewController.xib; sourceTree = "<group>"; };
+		7C4194551E2611B000F505A2 /* UNTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNTitleCell.h; sourceTree = "<group>"; };
+		7C4194561E2611B000F505A2 /* UNTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNTitleCell.m; sourceTree = "<group>"; };
+		7C4194571E2611B000F505A2 /* UNTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNTitleCell.xib; sourceTree = "<group>"; };
+		7C41945A1E26184400F505A2 /* UNSelectCReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNSelectCReusableView.h; sourceTree = "<group>"; };
+		7C41945B1E26184400F505A2 /* UNSelectCReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNSelectCReusableView.m; sourceTree = "<group>"; };
+		7C41945C1E26184400F505A2 /* UNSelectCReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNSelectCReusableView.xib; sourceTree = "<group>"; };
 		7C6BBCFF1E1F2461007A2435 /* NSObject+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Parse.h"; sourceTree = "<group>"; };
 		7C6BBD001E1F2461007A2435 /* NSObject+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Parse.m"; sourceTree = "<group>"; };
 		7C6BBD011E1F2461007A2435 /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
@@ -807,6 +822,9 @@
 				7C4194491E25E07100F505A2 /* UnDietBaikeDetailWebController.h */,
 				7C41944A1E25E07100F505A2 /* UnDietBaikeDetailWebController.m */,
 				7C41944B1E25E07100F505A2 /* UnDietBaikeDetailWebController.xib */,
+				7C4194501E260D5500F505A2 /* UNSelectTitleViewController.h */,
+				7C4194511E260D5600F505A2 /* UNSelectTitleViewController.m */,
+				7C4194521E260D5600F505A2 /* UNSelectTitleViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -827,6 +845,12 @@
 				7C41942D1E25CB8E00F505A2 /* UNDietBaikeCell.h */,
 				7C41942E1E25CB8E00F505A2 /* UNDietBaikeCell.m */,
 				7C41942F1E25CB8E00F505A2 /* UNDietBaikeCell.xib */,
+				7C4194551E2611B000F505A2 /* UNTitleCell.h */,
+				7C4194561E2611B000F505A2 /* UNTitleCell.m */,
+				7C4194571E2611B000F505A2 /* UNTitleCell.xib */,
+				7C41945A1E26184400F505A2 /* UNSelectCReusableView.h */,
+				7C41945B1E26184400F505A2 /* UNSelectCReusableView.m */,
+				7C41945C1E26184400F505A2 /* UNSelectCReusableView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -954,6 +978,7 @@
 				7C054C591E23AB73005ECD3F /* bt_banner_closed0_press@2x.png in Resources */,
 				7CFC102D1E232FC30023BC0A /* UNChoiceMenuView.xib in Resources */,
 				7C6BBD851E1F49FE007A2435 /* UNCookFoodCollectionCell.xib in Resources */,
+				7C4194541E260D5600F505A2 /* UNSelectTitleViewController.xib in Resources */,
 				7C6BBD871E1F5A0F007A2435 /* background_image.jpeg in Resources */,
 				7CCA55501E20E588008DF870 /* back_top_icon_gray@2x.png in Resources */,
 				7C6BBD2B1E1F2483007A2435 /* Info.plist in Resources */,
@@ -993,7 +1018,9 @@
 				7C054C5A1E23AB73005ECD3F /* bt_banner_closed0_press@3x.png in Resources */,
 				7C054C601E23ABA2005ECD3F /* bt_listen-knowledge_like_button_press@2x.png in Resources */,
 				7C6BBD771E1F469F007A2435 /* UNCookingStyleCell.xib in Resources */,
+				7C4194591E2611B000F505A2 /* UNTitleCell.xib in Resources */,
 				7CCA554C1E20E57B008DF870 /* topbtn_on@2x.png in Resources */,
+				7C41945E1E26184400F505A2 /* UNSelectCReusableView.xib in Resources */,
 				7CF8D57E1E1EB0A500041DAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1081,6 +1108,7 @@
 				7C6BBD2E1E1F2483007A2435 /* WMMenuView.m in Sources */,
 				7C4194291E25C3DB00F505A2 /* UNDietBaikePageController.m in Sources */,
 				7C6BBD311E1F2483007A2435 /* WMPageController.m in Sources */,
+				7C41945D1E26184400F505A2 /* UNSelectCReusableView.m in Sources */,
 				7C41944C1E25E07100F505A2 /* UnDietBaikeDetailWebController.m in Sources */,
 				7CFED1161E20C0160065A098 /* UNWonderMenuCell.m in Sources */,
 				7CFED10C1E208D1D0065A098 /* UNWonderfulViewController.m in Sources */,
@@ -1095,7 +1123,9 @@
 				7C6BBD2C1E1F2483007A2435 /* iCarousel.m in Sources */,
 				7C6BBD661E1F3DD9007A2435 /* UNBaseNavController.m in Sources */,
 				7C6BBD051E1F2461007A2435 /* NSObject+Parse.m in Sources */,
+				7C4194531E260D5600F505A2 /* UNSelectTitleViewController.m in Sources */,
 				7CF8D5781E1EB0A500041DAB /* AppDelegate.m in Sources */,
+				7C4194581E2611B000F505A2 /* UNTitleCell.m in Sources */,
 				7C6BBD691E1F3EC6007A2435 /* UNMineViewController.m in Sources */,
 				7C1244891E248C2A0071A8CC /* HomeMenuModel.m in Sources */,
 				7C12449E1E24D0E80071A8CC /* UNMenuListCell.m in Sources */,

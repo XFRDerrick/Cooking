@@ -8,6 +8,8 @@
 
 #import "UNDietBaikePageController.h"
 #import "UNDietBaikeListController.h"
+#import "UNSelectTitleViewController.h"
+
 @interface UNDietBaikePageController ()
 
 @end
@@ -49,13 +51,24 @@
 #pragma mark 为MenuView添加右侧选择按钮
 - (void)setupUI{
 
-//    UIButton *button ms_xiala@2x
+    UIButton *selectBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenSize.width - 45, 0, 45, self.menuView.height)];
+    [selectBtn setImage:[UIImage imageNamed:@"ms_xiala"] forState:UIControlStateNormal];
+    [selectBtn addTarget:self action:@selector(pushSelectTitleVC:) forControlEvents:UIControlEventTouchUpInside];
+    self.menuView.rightView = selectBtn;
     
-    UIView *redView = [[UIView alloc] initWithFrame:CGRectMake(kScreenSize.width - 50, 0, 50, 20)];
-    redView.backgroundColor = [UIColor redColor];
-//    self.scrollView.maskView
-    self.menuView.rightView = redView;
+}
 
+- (void)pushSelectTitleVC:(UIButton *)sender{
+
+    
+    UNSelectTitleViewController *selecVC = [[UNSelectTitleViewController alloc] init];
+    selecVC.titles = self.titles;
+    selecVC.currentIndex = self.selectIndex;
+    selecVC.returnIndexBlock = ^(NSUInteger index){
+        self.selectIndex = (int)index;
+    };
+    [self presentViewController:selecVC animated:YES completion:nil];
+    
     
 }
 
