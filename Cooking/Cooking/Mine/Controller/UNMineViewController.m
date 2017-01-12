@@ -10,6 +10,9 @@
 #import "UNMineCell.h"
 #import "UNMineLoginHeaderCell.h"
 
+//关于我们
+#import "UNAboutController.h"
+
 
 //#import "UNWeiBoLoginController.h"
 #import "UNUserInfo.h"
@@ -26,7 +29,6 @@
 @end
 
 @implementation UNMineViewController
-
 
 - (UITableView *)tableView{
 
@@ -99,7 +101,7 @@
 }
 
 
-#pragma mark UICollectionViewDataSource
+#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
 
@@ -147,24 +149,47 @@
 //         AppDelegate *myDelegate =(AppDelegate*)[[UIApplication sharedApplication] delegate];
     
         
-    }else if (indexPath.row == 1){
-    
-        UIAlertController *alterVC = [UIAlertController alertControllerWithTitle:@"反馈" message:@"有问题请联系：hetengfei163@126.com" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *actionDone = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            
-        }];
-        [alterVC addAction:actionDone];
-        [self presentViewController:alterVC animated:YES completion:nil];
-        
     }else{
-    
-        [self.view showMessage:@"暂不支持"];
+        if (indexPath.row == 0) {
+            __weak typeof(self) weekSelf = self;
+            [self addAlterVCWithTitle:@"确认同步" message:@"您收藏的菜谱会同步到登录账号，建议同步！" handler:^{
+                [weekSelf.view showMessage:@"同步成功"];
+            }];
+        }else if (indexPath.row == 1){
+            
+            UIAlertController *alterVC = [UIAlertController alertControllerWithTitle:@"反馈" message:@"有问题请联系：hetengfei163@126.com" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *actionDone = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            }];
+            [alterVC addAction:actionDone];
+            [self presentViewController:alterVC animated:YES completion:nil];
+        }else if (indexPath.row == 2){
+            [self.view showMessage:@"敬请期待"];
+        }
+        
     }
     
 }
 
 
-#pragma mark UICollectionViewDelegateflowLayout
+- (void)addAlterVCWithTitle:(nullable NSString *)title message:(nullable NSString *)message handler:(void (^)())comHandler{
+    
+    UIAlertController *alterVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *actionCancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    UIAlertAction *actionDone = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        comHandler();
+    }];
+    [alterVC addAction:actionCancle];
+    [alterVC addAction:actionDone];
+    
+    [self presentViewController:alterVC animated:YES completion:nil];
+}
+
+
+
+#pragma mark - UICollectionViewDelegateflowLayout
 
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -192,7 +217,7 @@
 }
 
 
-#pragma mark UITableViewDataSource
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
@@ -233,9 +258,24 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    __weak typeof(self) weekSelf = self;
+    if (indexPath.row == 1) {
+        
+        [self addAlterVCWithTitle:@"提示" message:@"是否清空缓存" handler:^{
+            [weekSelf.view showMessage:@"缓存已清除!"];
+        }];
+        
+    }else if (indexPath.row == 3){
     
-    [self.view showMessage:@"敬请期待"];
+        UNAboutController *aboutVC = [[UNAboutController alloc] init];
+        aboutVC.title = @"关于";
+        [self.navigationController pushViewController:aboutVC animated:YES];
+        
     
+    }else{
+        
+        [self.view showMessage:@"敬请期待"];
+    }
     
 }
 

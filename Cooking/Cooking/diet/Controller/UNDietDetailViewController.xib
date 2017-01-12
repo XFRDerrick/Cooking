@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,9 +43,9 @@
                         <constraint firstAttribute="width" constant="40" id="QGS-9N-MOV"/>
                         <constraint firstAttribute="height" constant="40" id="k2e-KN-V8Z"/>
                     </constraints>
-                    <state key="normal" image="bt_listen-knowledge_like_button_normal.png"/>
+                    <state key="normal" image="bt_list_more_share_press.png"/>
                     <state key="selected" image="bt_listen-knowledge_like_button_hl.png"/>
-                    <state key="highlighted" image="bt_listen-knowledge_like_button_press.png"/>
+                    <state key="highlighted" image="bt_list_more_share_normal.png"/>
                     <connections>
                         <action selector="likeAction:" destination="-1" eventType="touchUpInside" id="cFC-VG-Bcd"/>
                     </connections>
@@ -66,8 +65,9 @@
         </view>
     </objects>
     <resources>
+        <image name="bt_list_more_share_normal.png" width="48" height="48"/>
+        <image name="bt_list_more_share_press.png" width="48" height="48"/>
         <image name="bt_listen-knowledge_like_button_hl.png" width="37" height="40"/>
-        <image name="bt_listen-knowledge_like_button_normal.png" width="37" height="40"/>
         <image name="bt_listen-knowledge_like_button_press.png" width="37" height="40"/>
         <image name="bt_listen-knowledge_share_button_normal.png" width="37" height="40"/>
     </resources>

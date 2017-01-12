@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UNAboutController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon_app.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ycq-xs-AQX">
+                    <rect key="frame" x="20" y="84" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="ccx-ll-Sep"/>
+                        <constraint firstAttribute="height" constant="60" id="u7t-3z-Ipd"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美食天地" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEw-km-Kdc">
+                    <rect key="frame" x="90" y="99" width="101.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本：1.0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSW-aD-Y3U">
+                    <rect key="frame" x="20" y="159" width="63" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美食天地是一款实用化的饮食类客户端！通过齐全的菜式和不断更新的饮食知识，为用户提供想要的，想吃的；详细的制作步骤，让你成为大厨！个性化的收藏，记录你的喜好！每天都有你想要的味道！" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXX-HE-qxl">
+                    <rect key="frame" x="20" y="194" width="335" height="67"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系我们：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ga-IM-Ory">
+                    <rect key="frame" x="20" y="311" width="76.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮箱：meishitiandi_com@126.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-EQ-9jh">
+                    <rect key="frame" x="20" y="337" width="207" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如有任何疑问或交涉，请先联系我们。" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvW-3n-gky">
+                    <rect key="frame" x="40" y="412" width="225.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="声明：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFC-DW-Iua">
+                    <rect key="frame" x="20" y="383" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DXX-HE-qxl" firstAttribute="top" secondItem="DSW-aD-Y3U" secondAttribute="bottom" constant="20.5" id="1Gt-vk-VhC"/>
+                <constraint firstItem="kvW-3n-gky" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="1Q0-KG-bY1"/>
+                <constraint firstItem="KFC-DW-Iua" firstAttribute="top" secondItem="VOg-EQ-9jh" secondAttribute="bottom" constant="30" id="1sy-gn-36A"/>
+                <constraint firstItem="kvW-3n-gky" firstAttribute="top" secondItem="KFC-DW-Iua" secondAttribute="bottom" constant="8" id="4FX-8D-Qoi"/>
+                <constraint firstItem="qEw-km-Kdc" firstAttribute="leading" secondItem="ycq-xs-AQX" secondAttribute="trailing" constant="10" id="7EG-SY-FQX"/>
+                <constraint firstItem="qEw-km-Kdc" firstAttribute="centerY" secondItem="ycq-xs-AQX" secondAttribute="centerY" id="EFd-lp-TD0"/>
+                <constraint firstItem="4ga-IM-Ory" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="KsW-2V-STP"/>
+                <constraint firstItem="ycq-xs-AQX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="LS7-WO-TPJ"/>
+                <constraint firstItem="DSW-aD-Y3U" firstAttribute="top" secondItem="ycq-xs-AQX" secondAttribute="bottom" constant="15" id="Lhx-M5-ygy"/>
+                <constraint firstAttribute="trailing" secondItem="DXX-HE-qxl" secondAttribute="trailing" constant="20" id="Tep-Fi-iIx"/>
+                <constraint firstItem="VOg-EQ-9jh" firstAttribute="top" secondItem="4ga-IM-Ory" secondAttribute="bottom" constant="8" id="ZXH-6x-0jo"/>
+                <constraint firstItem="DSW-aD-Y3U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="blH-1E-Mlg"/>
+                <constraint firstItem="DXX-HE-qxl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="kR9-1t-wxR"/>
+                <constraint firstItem="KFC-DW-Iua" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="uRp-sF-fov"/>
+                <constraint firstItem="ycq-xs-AQX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="usx-r1-yVy"/>
+                <constraint firstItem="4ga-IM-Ory" firstAttribute="top" secondItem="DXX-HE-qxl" secondAttribute="bottom" constant="50" id="v9W-xT-8Eg"/>
+                <constraint firstItem="VOg-EQ-9jh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="yNS-1e-FWr"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="AppIcon_app.jpg" width="745" height="783"/>
+    </resources>
+</document>

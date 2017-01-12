@@ -84,6 +84,7 @@
 
     UNMineViewController *mineVC = [[UNMineViewController alloc] init];
     
+//    [self.navigationController pushViewController:mineVC animated:YES];
     [self presentViewController:[[UNBaseNavController alloc] initWithRootViewController:mineVC] animated:YES completion:nil];
 }
 

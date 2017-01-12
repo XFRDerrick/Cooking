@@ -15,6 +15,8 @@
 #import "UNAllFoodsListController.h"
 #import "UNFoodDetailController.h"
 
+#import "UNBaseNavController.h"
+
 @interface UNHomeTableViewController ()<UNCookingStyleCellDelegate,UICollectionViewDelegate>
 
 @property (nonatomic, strong) NSArray<HomeMenuLinksModel *> *menuDatas;
@@ -149,7 +151,7 @@
     
     menuList.menuData = self.menuDatas;
     menuList.index = count-1;
-    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:menuList] animated:YES completion:nil];
+    [self presentViewController:[[UNBaseNavController alloc] initWithRootViewController:menuList] animated:YES completion:nil];
 }
 
 
