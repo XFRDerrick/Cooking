@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -89,10 +88,11 @@
                                 <constraint firstItem="4iB-Pb-Le4" firstAttribute="centerX" secondItem="uDT-mh-FTI" secondAttribute="centerX" id="kiW-VA-9AM"/>
                             </constraints>
                         </view>
+                        <color key="backgroundColor" red="1" green="0.59982468339999995" blue="0.076409968159999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="d7W-Vv-140"/>
                         </constraints>
-                        <blurEffect style="light"/>
+                        <blurEffect style="dark"/>
                     </visualEffectView>
                 </subviews>
             </view>

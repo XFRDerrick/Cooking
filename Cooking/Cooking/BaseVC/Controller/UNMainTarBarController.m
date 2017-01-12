@@ -15,6 +15,7 @@
 #import "UNWonderMenuLayout.h"
 
 #import "UNMineViewController.h"
+#import "UNMineCollectController.h"
 #import "UNDietViewController.h"
 #import "CHTCollectionViewWaterfallLayout.h"
 
@@ -30,20 +31,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.tabBarController.tabBar.backgroundColor = [UIColor whiteColor];
+    
+    [self setupUI];
     [self addChildControllers];
+    
+}
+- (void)setupUI{
+    self.tabBar.barTintColor = [UIColor whiteColor];
+    self.tabBar.tintColor = kRGBA_COLOR(237, 109, 0, 1);
     
 }
 
 - (void)addChildControllers{
 
     UNHomeTableViewController *homeVC = [[UNHomeTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    homeVC.title = @"菜系";
-    
-    [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:homeVC]];
+    homeVC.title = @"菜品分类";
+    homeVC.tabBarItem.image = [UIImage imageNamed:@"item-zf"];
+     [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:homeVC]];
     
     UNWonderfulViewController *wonVC = [[UNWonderfulViewController alloc] initWithCollectionViewLayout:[[UNWonderMenuLayout alloc] init]];
-    wonVC.title = @"菜谱";
+    wonVC.title = @"菜谱推荐";
+    wonVC.tabBarItem.image = [UIImage imageNamed:@"item-fl"];
      [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:wonVC]];
     
     CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
@@ -51,6 +59,7 @@
     layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     UNDietViewController *dietVC = [[UNDietViewController alloc] initWithCollectionViewLayout:layout];
     dietVC.title = @"减肥食谱";
+    dietVC.tabBarItem.image = [UIImage imageNamed:@"item-home"];
       [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:dietVC]];
     /*
     UNDietaryTaboosController *dietabVC = [[UNDietaryTaboosController alloc] init];
@@ -60,10 +69,12 @@
     
     UNDietBaikePageController *baikeVC = [[UNDietBaikePageController alloc] init];
     baikeVC.title = @"健康饮食";
+    baikeVC.tabBarItem.image = [UIImage imageNamed:@"item-gx"];
     [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:baikeVC]];
     
-    UNMineViewController *mineVC = [[UNMineViewController alloc] init];
-    mineVC.title = @"我";
+    UNMineCollectController *mineVC = [[UNMineCollectController alloc] init];
+    mineVC.title = @"我的收藏";
+    mineVC.tabBarItem.image = [UIImage imageNamed:@"item-fav"];
     [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:mineVC]];
     
    

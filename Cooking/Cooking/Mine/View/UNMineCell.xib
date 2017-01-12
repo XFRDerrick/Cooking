@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UNMineCell" id="gTV-IL-0wX" customClass="UNMineCell">
+            <rect key="frame" x="0.0" y="0.0" width="159" height="157"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="159" height="157"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_common_goldenmusic_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="uze-RO-9AK">
+                        <rect key="frame" x="25" y="8" width="108" height="108"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="uze-RO-9AK" secondAttribute="height" multiplier="1:1" id="RYg-Zx-nA9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的收藏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWO-DN-JOY">
+                        <rect key="frame" x="44.5" y="126" width="69.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="YGN-LW-1Qi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sWO-DN-JOY" firstAttribute="top" secondItem="uze-RO-9AK" secondAttribute="bottom" constant="10" id="9SX-0E-aLb"/>
+                <constraint firstItem="uze-RO-9AK" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="VdF-WG-M56"/>
+                <constraint firstAttribute="bottom" secondItem="sWO-DN-JOY" secondAttribute="bottom" constant="10" id="dDo-Ho-XJU"/>
+                <constraint firstItem="uze-RO-9AK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="dPE-go-S3t"/>
+                <constraint firstItem="sWO-DN-JOY" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="rLQ-9E-hYH"/>
+            </constraints>
+            <size key="customSize" width="159" height="157"/>
+            <connections>
+                <outlet property="imageIV" destination="uze-RO-9AK" id="iqc-3K-oAi"/>
+                <outlet property="titleNameLable" destination="sWO-DN-JOY" id="Gb7-Z4-ZHY"/>
+            </connections>
+            <point key="canvasLocation" x="88.5" y="107.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_common_goldenmusic_normal.png" width="24" height="24"/>
+    </resources>
+</document>
