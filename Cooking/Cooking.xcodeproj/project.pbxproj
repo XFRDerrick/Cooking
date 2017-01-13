@@ -67,6 +67,12 @@
 		7C4194611E26896E00F505A2 /* AppIcon_app.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C4194601E26896E00F505A2 /* AppIcon_app.jpg */; };
 		7C440C651E278EA200B936C3 /* UNAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C440C631E278EA200B936C3 /* UNAboutController.m */; };
 		7C440C661E278EA200B936C3 /* UNAboutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C440C641E278EA200B936C3 /* UNAboutController.xib */; };
+		7C440CAD1E27A15600B936C3 /* UNSetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C440CAC1E27A15600B936C3 /* UNSetTableViewController.m */; };
+		7C440CB01E27A3A000B936C3 /* bt_list_more_remove_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C440CAE1E27A3A000B936C3 /* bt_list_more_remove_normal@2x.png */; };
+		7C440CB11E27A3A000B936C3 /* bt_list_more_remove_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C440CAF1E27A3A000B936C3 /* bt_list_more_remove_normal@3x.png */; };
+		7C440CB31E27A3CE00B936C3 /* like_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C440CB21E27A3CE00B936C3 /* like_s@2x.png */; };
+		7C440CB71E27A57100B936C3 /* UNSetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C440CB51E27A57100B936C3 /* UNSetTableViewCell.m */; };
+		7C440CB81E27A57100B936C3 /* UNSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C440CB61E27A57100B936C3 /* UNSetTableViewCell.xib */; };
 		7C6142D21E272EA400A1D630 /* IQButtonBarArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C6142D01E272EA400A1D630 /* IQButtonBarArrowLeft@2x.png */; };
 		7C6142D31E272EA400A1D630 /* IQButtonBarArrowLeft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C6142D11E272EA400A1D630 /* IQButtonBarArrowLeft@3x.png */; };
 		7C6142D51E2731F100A1D630 /* favEmpty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C6142D41E2731F100A1D630 /* favEmpty@2x.png */; };
@@ -235,6 +241,14 @@
 		7C440C621E278EA200B936C3 /* UNAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNAboutController.h; sourceTree = "<group>"; };
 		7C440C631E278EA200B936C3 /* UNAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNAboutController.m; sourceTree = "<group>"; };
 		7C440C641E278EA200B936C3 /* UNAboutController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNAboutController.xib; sourceTree = "<group>"; };
+		7C440CAB1E27A15600B936C3 /* UNSetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNSetTableViewController.h; sourceTree = "<group>"; };
+		7C440CAC1E27A15600B936C3 /* UNSetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNSetTableViewController.m; sourceTree = "<group>"; };
+		7C440CAE1E27A3A000B936C3 /* bt_list_more_remove_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_list_more_remove_normal@2x.png"; sourceTree = "<group>"; };
+		7C440CAF1E27A3A000B936C3 /* bt_list_more_remove_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_list_more_remove_normal@3x.png"; sourceTree = "<group>"; };
+		7C440CB21E27A3CE00B936C3 /* like_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like_s@2x.png"; sourceTree = "<group>"; };
+		7C440CB41E27A57100B936C3 /* UNSetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNSetTableViewCell.h; sourceTree = "<group>"; };
+		7C440CB51E27A57100B936C3 /* UNSetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNSetTableViewCell.m; sourceTree = "<group>"; };
+		7C440CB61E27A57100B936C3 /* UNSetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNSetTableViewCell.xib; sourceTree = "<group>"; };
 		7C6142D01E272EA400A1D630 /* IQButtonBarArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IQButtonBarArrowLeft@2x.png"; sourceTree = "<group>"; };
 		7C6142D11E272EA400A1D630 /* IQButtonBarArrowLeft@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IQButtonBarArrowLeft@3x.png"; sourceTree = "<group>"; };
 		7C6142D41E2731F100A1D630 /* favEmpty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favEmpty@2x.png"; sourceTree = "<group>"; };
@@ -635,6 +649,11 @@
 				7C440C621E278EA200B936C3 /* UNAboutController.h */,
 				7C440C631E278EA200B936C3 /* UNAboutController.m */,
 				7C440C641E278EA200B936C3 /* UNAboutController.xib */,
+				7C440CAB1E27A15600B936C3 /* UNSetTableViewController.h */,
+				7C440CAC1E27A15600B936C3 /* UNSetTableViewController.m */,
+				7C440CB41E27A57100B936C3 /* UNSetTableViewCell.h */,
+				7C440CB51E27A57100B936C3 /* UNSetTableViewCell.m */,
+				7C440CB61E27A57100B936C3 /* UNSetTableViewCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -741,6 +760,9 @@
 		7C6BBD781E1F4770007A2435 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7C440CB21E27A3CE00B936C3 /* like_s@2x.png */,
+				7C440CAE1E27A3A000B936C3 /* bt_list_more_remove_normal@2x.png */,
+				7C440CAF1E27A3A000B936C3 /* bt_list_more_remove_normal@3x.png */,
 				7C6142D61E276A9E00A1D630 /* bt_list_more_share_normal@2x.png */,
 				7C6142D71E276A9E00A1D630 /* bt_list_more_share_normal@3x.png */,
 				7C6142D81E276A9E00A1D630 /* bt_list_more_share_press@2x.png */,
@@ -1125,14 +1147,17 @@
 				7C4194381E25CCEB00F505A2 /* ms_caipu_level@2x.png in Resources */,
 				7C14452E1E2726DC006A9AC7 /* star.png in Resources */,
 				7C1445161E272291006A9AC7 /* fav_nd_icon_36.png in Resources */,
+				7C440CB81E27A57100B936C3 /* UNSetTableViewCell.xib in Resources */,
 				7C6142DC1E276A9E00A1D630 /* bt_list_more_share_press@2x.png in Resources */,
 				7CFC10401E2381300023BC0A /* UNFoodDetailController.xib in Resources */,
+				7C440CB11E27A3A000B936C3 /* bt_list_more_remove_normal@3x.png in Resources */,
 				7C054C4F1E23A8CD005ECD3F /* bt_playlist_play_normal@2x.png in Resources */,
 				7C4194461E25D6F000F505A2 /* fav_sx_icon_36.png in Resources */,
 				7CCA55491E20E111008DF870 /* ms_caipu_time@3x.png in Resources */,
 				7C054C691E23B64F005ECD3F /* UNDietDetailViewController.xib in Resources */,
 				7C12449F1E24D0E80071A8CC /* UNMenuListCell.xib in Resources */,
 				7C6142D51E2731F100A1D630 /* favEmpty@2x.png in Resources */,
+				7C440CB31E27A3CE00B936C3 /* like_s@2x.png in Resources */,
 				7C6142D31E272EA400A1D630 /* IQButtonBarArrowLeft@3x.png in Resources */,
 				7C054C501E23A8CD005ECD3F /* bt_playlist_play_normal@3x.png in Resources */,
 				7C14452A1E272653006A9AC7 /* UNMineLoginHeaderCell.xib in Resources */,
@@ -1140,6 +1165,7 @@
 				7C054C571E23AB73005ECD3F /* bt_banner_closed0_normal@2x.png in Resources */,
 				7C4194311E25CB8E00F505A2 /* UNDietBaikeCell.xib in Resources */,
 				7CFC10281E2323EB0023BC0A /* UNDietCollectionViewCell.xib in Resources */,
+				7C440CB01E27A3A000B936C3 /* bt_list_more_remove_normal@2x.png in Resources */,
 				7C1244961E24C2660071A8CC /* UNHomeListCell.xib in Resources */,
 				7C6142DB1E276A9E00A1D630 /* bt_list_more_share_normal@3x.png in Resources */,
 				7C054C521E23A8CD005ECD3F /* bt_playlist_play_press@3x.png in Resources */,
@@ -1247,6 +1273,7 @@
 				7CFED10C1E208D1D0065A098 /* UNWonderfulViewController.m in Sources */,
 				7C6BBD631E1F3DC5007A2435 /* UNMainTarBarController.m in Sources */,
 				7C4194301E25CB8E00F505A2 /* UNDietBaikeCell.m in Sources */,
+				7C440CAD1E27A15600B936C3 /* UNSetTableViewController.m in Sources */,
 				7C6BBD281E1F2483007A2435 /* NetManager.m in Sources */,
 				7C6BBD301E1F2483007A2435 /* WMScrollView.m in Sources */,
 				7C6BBD061E1F2461007A2435 /* UIColor+RandomColor.m in Sources */,
@@ -1281,6 +1308,7 @@
 				7CFC10271E2323EB0023BC0A /* UNDietCollectionViewCell.m in Sources */,
 				7C6BBD2D1E1F2483007A2435 /* WMMenuItem.m in Sources */,
 				7CFD0EB31E22929B000DA902 /* UNDietViewController.m in Sources */,
+				7C440CB71E27A57100B936C3 /* UNSetTableViewCell.m in Sources */,
 				7C1244951E24C2660071A8CC /* UNHomeListCell.m in Sources */,
 				7C1445351E2727D1006A9AC7 /* UNUserInfo.m in Sources */,
 			);

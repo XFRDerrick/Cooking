@@ -12,6 +12,7 @@
 
 //关于我们
 #import "UNAboutController.h"
+#import "UNSetTableViewController.h"
 
 
 //#import "UNWeiBoLoginController.h"
@@ -146,8 +147,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section == 0) {
-//         AppDelegate *myDelegate =(AppDelegate*)[[UIApplication sharedApplication] delegate];
-    
+        //AppDelegate *myDelegate =(AppDelegate*)[[UIApplication sharedApplication] delegate];
         
     }else{
         if (indexPath.row == 0) {
@@ -264,6 +264,12 @@
         [self addAlterVCWithTitle:@"提示" message:@"是否清空缓存" handler:^{
             [weekSelf.view showMessage:@"缓存已清除!"];
         }];
+        
+    }else if(indexPath.row == 2){
+    
+        UNSetTableViewController *setVC = [[UNSetTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        
+        [self.navigationController pushViewController:setVC animated:YES];
         
     }else if (indexPath.row == 3){
     
