@@ -23,20 +23,16 @@
     _info = info;
     if (self.info) {
         self.userNameLable.text = self.info.screen_name;
-        [self.headerImageIV setImageURL:[NSURL URLWithString:self.info.avatar_large]];
+        if (self.info.avatar_large.length > 0) {
+            [self.headerImageIV setImageWithURL:[NSURL URLWithString:self.info.avatar_large] placeholder:[UIImage imageNamed:@"setting_personal.png"]];
+        }
     }else{
-//        setting_personal.png
-        self.userNameLable.text = @"微博登陆";
+        self.userNameLable.text = @"登陆";
         self.headerImageIV.image = [UIImage imageNamed:@"setting_personal.png"];
     }
     
 }
-//
-//- (void)setHeaderImage:(UIImage *)headerImage{
-//
-//    _headerImage = headerImage;
-//    [self.headerImageIV setImage:headerImage];
-//}
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];

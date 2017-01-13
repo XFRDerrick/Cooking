@@ -144,7 +144,7 @@
    
     int count = 0;
     for (int i = 0; i <= cell.tag; i ++) {
-        count += [self.menuCategoryDatas[i] count];
+        count += [(NSMutableArray*)self.menuCategoryDatas[i] count];
     }
     
     UNHomeMenuListController *menuList = [[UNHomeMenuListController alloc] initWithStyle:UITableViewStylePlain];

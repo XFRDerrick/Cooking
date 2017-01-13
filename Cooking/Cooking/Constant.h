@@ -12,6 +12,9 @@
 #define kSCREEN_SIZE [UIScreen mainScreen].bounds.size
 //RGB颜色
 #define kRGBA_COLOR(r,g,b,a) [UIColor colorWithRed:r/ 255.0 green:g/ 255.0 blue:b/ 255.0 alpha:a];
+/**bmob id**/
+#define kApplicationID @"1cb7173491f65ea3725d94f8086f16ae"
+
 
 //界面一
 //菜系

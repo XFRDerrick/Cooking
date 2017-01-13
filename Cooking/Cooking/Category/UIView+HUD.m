@@ -34,7 +34,7 @@
     hud.label.text = message;
     hud.contentColor = [UIColor blackColor];
     
-    [hud hideAnimated:YES afterDelay:2.0];
+    [hud hideAnimated:YES afterDelay:1.0];
 //    [hud hide:YES afterDelay:2.0];
     
 }

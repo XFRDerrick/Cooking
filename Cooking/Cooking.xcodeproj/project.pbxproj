@@ -12,6 +12,8 @@
 		7C010E5D1E28767400857F22 /* qq_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C010E591E28767400857F22 /* qq_icon@3x.png */; };
 		7C010E621E2876E300857F22 /* S_share_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C010E601E2876E300857F22 /* S_share_icon@2x.png */; };
 		7C010E631E2876E300857F22 /* S_share_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C010E611E2876E300857F22 /* S_share_icon@3x.png */; };
+		7C010E661E28AAA200857F22 /* UNBmobWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C010E651E28AAA200857F22 /* UNBmobWorkTools.m */; };
+		7C010E691E28ADE500857F22 /* UITextField+FormatJudge.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C010E681E28ADE500857F22 /* UITextField+FormatJudge.m */; };
 		7C054C491E239E2B005ECD3F /* UNWFoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C054C471E239E2B005ECD3F /* UNWFoodDetailViewController.m */; };
 		7C054C4F1E23A8CD005ECD3F /* bt_playlist_play_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C054C4B1E23A8CD005ECD3F /* bt_playlist_play_normal@2x.png */; };
 		7C054C501E23A8CD005ECD3F /* bt_playlist_play_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C054C4C1E23A8CD005ECD3F /* bt_playlist_play_normal@3x.png */; };
@@ -171,6 +173,10 @@
 		7C010E591E28767400857F22 /* qq_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq_icon@3x.png"; sourceTree = "<group>"; };
 		7C010E601E2876E300857F22 /* S_share_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S_share_icon@2x.png"; sourceTree = "<group>"; };
 		7C010E611E2876E300857F22 /* S_share_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S_share_icon@3x.png"; sourceTree = "<group>"; };
+		7C010E641E28AAA200857F22 /* UNBmobWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNBmobWorkTools.h; sourceTree = "<group>"; };
+		7C010E651E28AAA200857F22 /* UNBmobWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNBmobWorkTools.m; sourceTree = "<group>"; };
+		7C010E671E28ADE500857F22 /* UITextField+FormatJudge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+FormatJudge.h"; sourceTree = "<group>"; };
+		7C010E681E28ADE500857F22 /* UITextField+FormatJudge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+FormatJudge.m"; sourceTree = "<group>"; };
 		7C054C461E239E2B005ECD3F /* UNWFoodDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNWFoodDetailViewController.h; sourceTree = "<group>"; };
 		7C054C471E239E2B005ECD3F /* UNWFoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNWFoodDetailViewController.m; sourceTree = "<group>"; };
 		7C054C4B1E23A8CD005ECD3F /* bt_playlist_play_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_playlist_play_normal@2x.png"; sourceTree = "<group>"; };
@@ -560,6 +566,10 @@
 				7C6BBD0B1E1F2483007A2435 /* BaseNetManager.m */,
 				7C6BBD0C1E1F2483007A2435 /* NetManager.h */,
 				7C6BBD0D1E1F2483007A2435 /* NetManager.m */,
+				7C010E641E28AAA200857F22 /* UNBmobWorkTools.h */,
+				7C010E651E28AAA200857F22 /* UNBmobWorkTools.m */,
+				7C010E671E28ADE500857F22 /* UITextField+FormatJudge.h */,
+				7C010E681E28ADE500857F22 /* UITextField+FormatJudge.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -1342,6 +1352,7 @@
 				7C6BBD2F1E1F2483007A2435 /* WMProgressView.m in Sources */,
 				7C41942C1E25CB6D00F505A2 /* UNDietBaikeListController.m in Sources */,
 				7C1445271E272653006A9AC7 /* UNMineCell.m in Sources */,
+				7C010E691E28ADE500857F22 /* UITextField+FormatJudge.m in Sources */,
 				7C1244991E24D0BE0071A8CC /* UNHomeMenuListController.m in Sources */,
 				7C6BBD2C1E1F2483007A2435 /* iCarousel.m in Sources */,
 				7C6BBD661E1F3DD9007A2435 /* UNBaseNavController.m in Sources */,
@@ -1349,6 +1360,7 @@
 				7C4194531E260D5600F505A2 /* UNSelectTitleViewController.m in Sources */,
 				7C4C2AF21E28667300C39427 /* UNLoginRegisterController.m in Sources */,
 				7CF8D5781E1EB0A500041DAB /* AppDelegate.m in Sources */,
+				7C010E661E28AAA200857F22 /* UNBmobWorkTools.m in Sources */,
 				7C4194581E2611B000F505A2 /* UNTitleCell.m in Sources */,
 				7C1244891E248C2A0071A8CC /* HomeMenuModel.m in Sources */,
 				7C12449E1E24D0E80071A8CC /* UNMenuListCell.m in Sources */,

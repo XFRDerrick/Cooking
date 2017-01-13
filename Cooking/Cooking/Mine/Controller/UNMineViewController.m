@@ -22,12 +22,14 @@
 
 @interface UNMineViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegateFlowLayout>
 
+@property (nonatomic, assign,getter=isLogin) BOOL login;
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-
 @property (nonatomic, strong) UNUserInfo *userInfoModel;
+
+
 
 @end
 
@@ -41,7 +43,6 @@
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(UIEdgeInsetsZero);
         }];
-        
         _tableView.rowHeight = 50;
         _tableView.tableFooterView = [[UIView alloc] init];
         _tableView.delegate = self;
@@ -79,15 +80,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor whiteColor];
-
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.tableHeaderView = self.collectionView;
     [self setupNav];
    
     //判断是否登录
-    [self changeLoginAndGetUserInfo];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeLoginAndGetUserInfo) name:@"isLogin" object:nil];
+    self.login = [UNBmobWorkTools userIsLogin];
     
 }
 
@@ -122,7 +122,14 @@
 
     if (indexPath.section == 0) {
         UNMineLoginHeaderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UNMineLoginHeaderCell" forIndexPath:indexPath];
-       
+        if (self.isLogin) {
+            //赋值
+            BmobUser *bUser = [BmobUser currentUser];
+            UNUserInfo *info = [[UNUserInfo alloc] init];
+            info.screen_name = bUser.username;
+            info.avatar_large = [bUser objectForKey:@"headerImagePath"];
+            cell.info = info;
+        }
         return cell;
     }else{
     
@@ -149,12 +156,15 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section == 0) {
-        //AppDelegate *myDelegate =(AppDelegate*)[[UIApplication sharedApplication] delegate];
-       
         //如果没有登录—— 登录界面
-        UNLoginRegisterController *loginVC = [[UNLoginRegisterController alloc] init];
-        [self.navigationController pushViewController:loginVC animated:YES];
-
+        if (self.isLogin) {
+            //个人信息界面
+            
+            
+        }else{
+            UNLoginRegisterController *loginVC = [[UNLoginRegisterController alloc] init];
+            [self.navigationController pushViewController:loginVC animated:YES];
+        }
         
     }else{
         if (indexPath.row == 0) {
@@ -292,12 +302,11 @@
     
 }
 
-- (void)changeLoginAndGetUserInfo{
-    
-}
+
 
 - (void)viewWillAppear:(BOOL)animated{
     //登录刷新
+    [self.collectionView reloadData];
 }
 - (void)viewWillDisappear:(BOOL)animated{
 }

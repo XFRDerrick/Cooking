@@ -7,6 +7,7 @@
 //
 
 #import "UNLoginRegisterController.h"
+#import "UITextField+FormatJudge.h"
 
 @interface UNLoginRegisterController ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *LoginMethodSegment;
@@ -53,7 +54,6 @@
         self.passBtn.selected = NO;
     }
     
-    
 }
 
 #pragma mark - 获取验证码
@@ -73,10 +73,7 @@
     //请求验证码
     //判断手机号格式
     NSLog(@"已经请求验证码");
-    
 }
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -90,10 +87,103 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - 登录按钮Action
 - (IBAction)didLoginBtnTouched:(UIButton *)sender {
+    
+    if (self.LoginMethodSegment.selectedSegmentIndex == 0) {
+        //普通登录
+        if (![self.accountTextField isNULL] && ![self.passwordTextField isNULL]) {
+            [self.view showHUD];
+            [self bmobLogin];
+        }else{
+            [self.view showMessage:@"密码或账号不能为空！"];
+        }
+    }else{//手机登录
+        
+    }
 }
+
+- (void)bmobLogin{
+    [BmobUser loginInbackgroundWithAccount:[self.accountTextField deleteBlankSpace] andPassword:[self.passwordTextField deleteBlankSpace] block:^(BmobUser *user, NSError *error) {
+        if (user) {
+            //登录成功直接返回之前界面
+            [self dismissViewControllerAnimated:YES completion:nil];
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        } else {
+            [self.view hidenHUD];
+            NSString *judgeStr = error.userInfo.allValues[0];
+            if ([judgeStr containsString:@"incorrect"]) {
+                [self showFailRegisterOrLoginWithTitle:@"登录失败" Message:@"账户名或密码不正确"];
+                
+            }else if ([judgeStr containsString:@"connect failed"]){
+                [self showFailRegisterOrLoginWithTitle:@"登录失败" Message:@"请检查网络后重新登录"];
+            }else{
+                [self showFailRegisterOrLoginWithTitle:@"登录失败" Message:@"请重新输入账号和密码"];
+            }
+        }
+    }];
+    
+}
+
+
+#pragma mark - 注册按钮Action
 - (IBAction)didRegisterBtnTouched:(UIButton *)sender {
+    
+    if (self.LoginMethodSegment.selectedSegmentIndex == 0) {
+        //普通账号注册
+        if (![self.accountTextField isNULL] && ![self.passwordTextField isNULL]) {
+            [self.view showHUD];
+            [self bmobRegister];
+        }else{
+            //提示输入不能为空
+            [self.view showMessage:@"密码或账号不能为空！"];
+        }
+        
+    }else{//手机账号注册
+       
+    }
+    
+    
 }
+
+#pragma mark - 注册方法
+- (void)bmobRegister{
+    //删除了首尾的空格
+    BmobUser *bUser = [[BmobUser alloc] init];
+    [bUser setUsername:[self.accountTextField deleteBlankSpace]];
+    [bUser setPassword:[self.passwordTextField deleteBlankSpace]];
+    [bUser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error){
+        if (isSuccessful){
+            [self.view showMessage:@"注册成功,请重新登录"];
+            //会自动缓存注册的信息 需要清楚
+            [BmobUser logout];
+            
+        } else {
+            [self.view hidenHUD];
+            NSString *userInfo = error.userInfo.allValues[0];
+            NSString *judgeStr = userInfo;
+            if ([judgeStr containsString:@"already taken"]) {
+                [self showFailRegisterOrLoginWithTitle:@"注册" Message:@"用户名已存在"];
+            }else if ([judgeStr containsString:@"connect failed"]){
+                [self showFailRegisterOrLoginWithTitle:@"注册" Message:@"请检查网络后重新注册"];
+            }else{
+                [self showFailRegisterOrLoginWithTitle:@"注册" Message:@"请重新输入账号和密码"];
+            }
+        }
+    }];
+}
+#pragma mark - 注册失败提示信息
+- (void)showFailRegisterOrLoginWithTitle:(NSString *)title Message:(NSString *)message{
+
+    UIAlertController *alterVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *actionDone = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    [alterVC addAction:actionDone];
+    [self presentViewController:alterVC animated:YES completion:nil];
+}
+
+#pragma mark - 第三方登录
 - (IBAction)didQQLoginTouched:(UIButton *)sender {
 }
 - (IBAction)didWchatLoginTouched:(UIButton *)sender {
@@ -104,21 +194,5 @@
     [self.view endEditing:YES];
 }
 
-
-- (void)dealloc{
- 
-    NSLog(@"释放了吗？？");
-    
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

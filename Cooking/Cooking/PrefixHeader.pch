@@ -27,5 +27,7 @@
 #import "UIView+HUD.h"
 
 #import "AppDelegate.h"
+#import <BmobSDK/Bmob.h>
+#import "UNBmobWorkTools.h"
 
 #endif /* PrefixHeader_pch */

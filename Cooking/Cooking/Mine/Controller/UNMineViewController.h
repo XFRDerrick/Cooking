@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UNMineViewController : UIViewController
-- (void)changeLoginAndGetUserInfo;
+
+
 @end

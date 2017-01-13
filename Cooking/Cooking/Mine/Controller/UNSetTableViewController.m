@@ -8,6 +8,8 @@
 
 #import "UNSetTableViewController.h"
 #import "UNSetTableViewCell.h"
+#import "UNMainTarBarController.h"
+
 @interface UNSetTableViewController ()
 
 @end
@@ -65,6 +67,39 @@
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    if (indexPath.section == 0) {
+        
+        [self addAlterVCWithTitle:nil message:@"退出登录" handler:^{
+            //重新加载应用
+            [BmobUser logout];
+            UIWindow *window = [UIApplication sharedApplication].keyWindow;
+            UNMainTarBarController *tabVC = [[UNMainTarBarController alloc] init];
+            window.rootViewController = tabVC;
+            [window makeKeyAndVisible];
+            
+        }];
+        
+    }
+    
+}
+
+- (void)addAlterVCWithTitle:(nullable NSString *)title message:(nullable NSString *)message handler:(void (^)())comHandler{
+    
+    UIAlertController *alterVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *actionCancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    UIAlertAction *actionDone = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        comHandler();
+    }];
+    [alterVC addAction:actionCancle];
+    [alterVC addAction:actionDone];
+    
+    [self presentViewController:alterVC animated:YES completion:nil];
 }
 
 

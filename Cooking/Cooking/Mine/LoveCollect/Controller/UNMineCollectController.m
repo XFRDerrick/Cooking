@@ -42,20 +42,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.login = NO;
+    //是否登录
+    self.login = [UNBmobWorkTools userIsLogin];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupNav];
-    
+    [self noDataBackGroundIV];
     if (self.isLogin) {//已经登录
-        //如果收藏为空显示
-        [self noDataBackGroundIV];
-        
+        //如果收藏为空显示 去bomb获取数据
+#pragma mark - 未添加收藏数据的加载
         //不为空加载
  
-    }else{//未登录
-        //提示登录
-        [self noDataBackGroundIV];
+    }else{//未登录 提示登录
         [self addAlterVC];
+        
     }
     
     

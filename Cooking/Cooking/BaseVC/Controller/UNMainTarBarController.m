@@ -61,12 +61,7 @@
     dietVC.title = @"减肥食谱";
     dietVC.tabBarItem.image = [UIImage imageNamed:@"item-home"];
       [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:dietVC]];
-    /*
-    UNDietaryTaboosController *dietabVC = [[UNDietaryTaboosController alloc] init];
-    dietabVC.title = @"饮食禁忌";
-    [self addChildViewController:[[UNBaseNavController alloc] initWithRootViewController:dietabVC]];
-    */
-    
+  
     UNDietBaikePageController *baikeVC = [[UNDietBaikePageController alloc] init];
     baikeVC.title = @"健康饮食";
     baikeVC.tabBarItem.image = [UIImage imageNamed:@"item-gx"];

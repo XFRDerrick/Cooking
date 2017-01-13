@@ -17,7 +17,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //应用设置
+    [Bmob registerWithAppKey:kApplicationID];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UNMainTarBarController *tabVC = [[UNMainTarBarController alloc] init];
     self.window.rootViewController = tabVC;

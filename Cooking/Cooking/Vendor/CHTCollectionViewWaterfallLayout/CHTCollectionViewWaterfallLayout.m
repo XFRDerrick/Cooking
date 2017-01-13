@@ -404,7 +404,7 @@ static CGFloat CHTFloorCGFloat(CGFloat value) {
   if (path.section >= [self.sectionItemAttributes count]) {
     return nil;
   }
-  if (path.item >= [self.sectionItemAttributes[path.section] count]) {
+  if (path.item >= [(NSMutableArray*)self.sectionItemAttributes[path.section] count]) {
     return nil;
   }
   return (self.sectionItemAttributes[path.section])[path.item];
