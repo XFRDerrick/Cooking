@@ -11,4 +11,6 @@ pod 'YYKit'
 pod 'MJRefresh'
 pod 'MBProgressHUD'
 
+pod 'BmobSDK'
+
 end
