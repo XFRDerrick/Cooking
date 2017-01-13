@@ -84,9 +84,9 @@
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.tableHeaderView = self.collectionView;
     [self setupNav];
+   
     //判断是否登录
     [self changeLoginAndGetUserInfo];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeLoginAndGetUserInfo) name:@"isLogin" object:nil];
     
 }
@@ -153,8 +153,6 @@
        
         //如果没有登录—— 登录界面
         UNLoginRegisterController *loginVC = [[UNLoginRegisterController alloc] init];
-        
-        
         [self.navigationController pushViewController:loginVC animated:YES];
 
         

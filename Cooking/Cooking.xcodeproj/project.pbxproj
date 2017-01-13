@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		205D469EFC17F9EAE67FAA0A /* Pods_Cooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CC375C299491EE41BC3CF7 /* Pods_Cooking.framework */; };
+		7C010E5C1E28767400857F22 /* qq_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C010E581E28767400857F22 /* qq_icon@2x.png */; };
+		7C010E5D1E28767400857F22 /* qq_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C010E591E28767400857F22 /* qq_icon@3x.png */; };
+		7C010E621E2876E300857F22 /* S_share_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C010E601E2876E300857F22 /* S_share_icon@2x.png */; };
+		7C010E631E2876E300857F22 /* S_share_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C010E611E2876E300857F22 /* S_share_icon@3x.png */; };
 		7C054C491E239E2B005ECD3F /* UNWFoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C054C471E239E2B005ECD3F /* UNWFoodDetailViewController.m */; };
 		7C054C4F1E23A8CD005ECD3F /* bt_playlist_play_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C054C4B1E23A8CD005ECD3F /* bt_playlist_play_normal@2x.png */; };
 		7C054C501E23A8CD005ECD3F /* bt_playlist_play_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C054C4C1E23A8CD005ECD3F /* bt_playlist_play_normal@3x.png */; };
@@ -163,6 +167,10 @@
 
 /* Begin PBXFileReference section */
 		00CC375C299491EE41BC3CF7 /* Pods_Cooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C010E581E28767400857F22 /* qq_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq_icon@2x.png"; sourceTree = "<group>"; };
+		7C010E591E28767400857F22 /* qq_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq_icon@3x.png"; sourceTree = "<group>"; };
+		7C010E601E2876E300857F22 /* S_share_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S_share_icon@2x.png"; sourceTree = "<group>"; };
+		7C010E611E2876E300857F22 /* S_share_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S_share_icon@3x.png"; sourceTree = "<group>"; };
 		7C054C461E239E2B005ECD3F /* UNWFoodDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNWFoodDetailViewController.h; sourceTree = "<group>"; };
 		7C054C471E239E2B005ECD3F /* UNWFoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNWFoodDetailViewController.m; sourceTree = "<group>"; };
 		7C054C4B1E23A8CD005ECD3F /* bt_playlist_play_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_playlist_play_normal@2x.png"; sourceTree = "<group>"; };
@@ -803,6 +811,10 @@
 		7C6BBD781E1F4770007A2435 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7C010E581E28767400857F22 /* qq_icon@2x.png */,
+				7C010E591E28767400857F22 /* qq_icon@3x.png */,
+				7C010E601E2876E300857F22 /* S_share_icon@2x.png */,
+				7C010E611E2876E300857F22 /* S_share_icon@3x.png */,
 				7C4C2AF41E28670C00C39427 /* Launch.png */,
 				7C440CB21E27A3CE00B936C3 /* like_s@2x.png */,
 				7C440CAE1E27A3A000B936C3 /* bt_list_more_remove_normal@2x.png */,
@@ -1166,6 +1178,7 @@
 				7C440C661E278EA200B936C3 /* UNAboutController.xib in Resources */,
 				7C6142DD1E276A9E00A1D630 /* bt_list_more_share_press@3x.png in Resources */,
 				7C6BBD2B1E1F2483007A2435 /* Info.plist in Resources */,
+				7C010E631E2876E300857F22 /* S_share_icon@3x.png in Resources */,
 				7C41944D1E25E07100F505A2 /* UnDietBaikeDetailWebController.xib in Resources */,
 				7C1445301E272762006A9AC7 /* ic_common_goldenmusic_normal@2x.png in Resources */,
 				7CF8D5831E1EB0A500041DAB /* LaunchScreen.storyboard in Resources */,
@@ -1174,6 +1187,7 @@
 				7C6142D21E272EA400A1D630 /* IQButtonBarArrowLeft@2x.png in Resources */,
 				7CCA554D1E20E57B008DF870 /* topbtn_on@3x.png in Resources */,
 				7CFED1171E20C0160065A098 /* UNWonderMenuCell.xib in Resources */,
+				7C010E5C1E28767400857F22 /* qq_icon@2x.png in Resources */,
 				7C6BBD8F1E1FA6B3007A2435 /* UNFoodCell.xib in Resources */,
 				7C054C511E23A8CD005ECD3F /* bt_playlist_play_press@2x.png in Resources */,
 				7C4194361E25CCEB00F505A2 /* ms_caipu_level_un@2x.png in Resources */,
@@ -1199,6 +1213,7 @@
 				7C4194461E25D6F000F505A2 /* fav_sx_icon_36.png in Resources */,
 				7CCA55491E20E111008DF870 /* ms_caipu_time@3x.png in Resources */,
 				7C4C2AF51E28670C00C39427 /* Launch.png in Resources */,
+				7C010E5D1E28767400857F22 /* qq_icon@3x.png in Resources */,
 				7C054C691E23B64F005ECD3F /* UNDietDetailViewController.xib in Resources */,
 				7C12449F1E24D0E80071A8CC /* UNMenuListCell.xib in Resources */,
 				7C6142D51E2731F100A1D630 /* favEmpty@2x.png in Resources */,
@@ -1211,6 +1226,7 @@
 				7C4194311E25CB8E00F505A2 /* UNDietBaikeCell.xib in Resources */,
 				7CFC10281E2323EB0023BC0A /* UNDietCollectionViewCell.xib in Resources */,
 				7C440CB01E27A3A000B936C3 /* bt_list_more_remove_normal@2x.png in Resources */,
+				7C010E621E2876E300857F22 /* S_share_icon@2x.png in Resources */,
 				7C1244961E24C2660071A8CC /* UNHomeListCell.xib in Resources */,
 				7C6142DB1E276A9E00A1D630 /* bt_list_more_share_normal@3x.png in Resources */,
 				7C054C521E23A8CD005ECD3F /* bt_playlist_play_press@3x.png in Resources */,

@@ -9,10 +9,14 @@
 #import "UNMineCollectController.h"
 #import "UNMineViewController.h"
 #import "UNBaseNavController.h"
+#import "UNLoginRegisterController.h"
+
 @interface UNMineCollectController ()
 
 @property (nonatomic, strong) UIImageView *noDataBackGroundIV;
 @property (nonatomic, assign,getter=isLogin) BOOL login;
+
+@property (nonatomic, strong) UNLoginRegisterController *lrVC;
 
 @end
 
@@ -65,13 +69,26 @@
     
     UIAlertAction *actionDone = [UIAlertAction actionWithTitle:@"确定登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
        //跳转到登录界面
-        [self userInfoLogin:nil];
+         UNLoginRegisterController *loginVC = [[UNLoginRegisterController alloc] init];
+        
+        loginVC.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismisLoginRegisterVC:)];
+        
+        self.lrVC = loginVC;
+        [self  presentViewController:[[UNBaseNavController alloc] initWithRootViewController:loginVC] animated:YES completion:nil];
+        
     }];
     
     [alterVC addAction:actionCancle];
     [alterVC addAction:actionDone];
     
     [self presentViewController:alterVC animated:YES completion:nil];
+}
+
+- (void)dismisLoginRegisterVC:(UIBarButtonItem *)sender{
+
+    [self.lrVC dismissViewControllerAnimated:YES completion:nil];
+    //解除引用
+    self.lrVC = nil;
 }
 
 
