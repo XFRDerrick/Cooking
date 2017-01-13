@@ -73,6 +73,9 @@
 		7C440CB31E27A3CE00B936C3 /* like_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C440CB21E27A3CE00B936C3 /* like_s@2x.png */; };
 		7C440CB71E27A57100B936C3 /* UNSetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C440CB51E27A57100B936C3 /* UNSetTableViewCell.m */; };
 		7C440CB81E27A57100B936C3 /* UNSetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C440CB61E27A57100B936C3 /* UNSetTableViewCell.xib */; };
+		7C4C2AF21E28667300C39427 /* UNLoginRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C2AF01E28667300C39427 /* UNLoginRegisterController.m */; };
+		7C4C2AF31E28667300C39427 /* UNLoginRegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4C2AF11E28667300C39427 /* UNLoginRegisterController.xib */; };
+		7C4C2AF51E28670C00C39427 /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4C2AF41E28670C00C39427 /* Launch.png */; };
 		7C6142D21E272EA400A1D630 /* IQButtonBarArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C6142D01E272EA400A1D630 /* IQButtonBarArrowLeft@2x.png */; };
 		7C6142D31E272EA400A1D630 /* IQButtonBarArrowLeft@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C6142D11E272EA400A1D630 /* IQButtonBarArrowLeft@3x.png */; };
 		7C6142D51E2731F100A1D630 /* favEmpty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C6142D41E2731F100A1D630 /* favEmpty@2x.png */; };
@@ -249,6 +252,10 @@
 		7C440CB41E27A57100B936C3 /* UNSetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNSetTableViewCell.h; sourceTree = "<group>"; };
 		7C440CB51E27A57100B936C3 /* UNSetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNSetTableViewCell.m; sourceTree = "<group>"; };
 		7C440CB61E27A57100B936C3 /* UNSetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNSetTableViewCell.xib; sourceTree = "<group>"; };
+		7C4C2AEF1E28667300C39427 /* UNLoginRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNLoginRegisterController.h; sourceTree = "<group>"; };
+		7C4C2AF01E28667300C39427 /* UNLoginRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNLoginRegisterController.m; sourceTree = "<group>"; };
+		7C4C2AF11E28667300C39427 /* UNLoginRegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UNLoginRegisterController.xib; sourceTree = "<group>"; };
+		7C4C2AF41E28670C00C39427 /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch.png; sourceTree = "<group>"; };
 		7C6142D01E272EA400A1D630 /* IQButtonBarArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IQButtonBarArrowLeft@2x.png"; sourceTree = "<group>"; };
 		7C6142D11E272EA400A1D630 /* IQButtonBarArrowLeft@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IQButtonBarArrowLeft@3x.png"; sourceTree = "<group>"; };
 		7C6142D41E2731F100A1D630 /* favEmpty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favEmpty@2x.png"; sourceTree = "<group>"; };
@@ -490,6 +497,41 @@
 			name = Old;
 			sourceTree = "<group>";
 		};
+		7C4C2AEB1E28664400C39427 /* LoginRegister(登录注册) */ = {
+			isa = PBXGroup;
+			children = (
+				7C4C2AEC1E28664400C39427 /* Controller */,
+				7C4C2AED1E28664400C39427 /* Model */,
+				7C4C2AEE1E28664400C39427 /* View */,
+			);
+			name = "LoginRegister(登录注册)";
+			path = LoginRegister;
+			sourceTree = "<group>";
+		};
+		7C4C2AEC1E28664400C39427 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7C4C2AEF1E28667300C39427 /* UNLoginRegisterController.h */,
+				7C4C2AF01E28667300C39427 /* UNLoginRegisterController.m */,
+				7C4C2AF11E28667300C39427 /* UNLoginRegisterController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7C4C2AED1E28664400C39427 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C4C2AEE1E28664400C39427 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7C6BBCFE1E1F2461007A2435 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +675,7 @@
 		7C6BBD521E1F2CAF007A2435 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				7C4C2AEB1E28664400C39427 /* LoginRegister(登录注册) */,
 				7C14451A1E272572006A9AC7 /* LoveCollect(收藏) */,
 				7C6BBD531E1F2CAF007A2435 /* Controller */,
 				7C6BBD541E1F2CAF007A2435 /* Model */,
@@ -760,6 +803,7 @@
 		7C6BBD781E1F4770007A2435 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7C4C2AF41E28670C00C39427 /* Launch.png */,
 				7C440CB21E27A3CE00B936C3 /* like_s@2x.png */,
 				7C440CAE1E27A3A000B936C3 /* bt_list_more_remove_normal@2x.png */,
 				7C440CAF1E27A3A000B936C3 /* bt_list_more_remove_normal@3x.png */,
@@ -1154,6 +1198,7 @@
 				7C054C4F1E23A8CD005ECD3F /* bt_playlist_play_normal@2x.png in Resources */,
 				7C4194461E25D6F000F505A2 /* fav_sx_icon_36.png in Resources */,
 				7CCA55491E20E111008DF870 /* ms_caipu_time@3x.png in Resources */,
+				7C4C2AF51E28670C00C39427 /* Launch.png in Resources */,
 				7C054C691E23B64F005ECD3F /* UNDietDetailViewController.xib in Resources */,
 				7C12449F1E24D0E80071A8CC /* UNMenuListCell.xib in Resources */,
 				7C6142D51E2731F100A1D630 /* favEmpty@2x.png in Resources */,
@@ -1176,6 +1221,7 @@
 				7C6BBD771E1F469F007A2435 /* UNCookingStyleCell.xib in Resources */,
 				7C4194591E2611B000F505A2 /* UNTitleCell.xib in Resources */,
 				7CCA554C1E20E57B008DF870 /* topbtn_on@2x.png in Resources */,
+				7C4C2AF31E28667300C39427 /* UNLoginRegisterController.xib in Resources */,
 				7C41945E1E26184400F505A2 /* UNSelectCReusableView.xib in Resources */,
 				7CF8D57E1E1EB0A500041DAB /* Main.storyboard in Resources */,
 			);
@@ -1285,6 +1331,7 @@
 				7C6BBD661E1F3DD9007A2435 /* UNBaseNavController.m in Sources */,
 				7C6BBD051E1F2461007A2435 /* NSObject+Parse.m in Sources */,
 				7C4194531E260D5600F505A2 /* UNSelectTitleViewController.m in Sources */,
+				7C4C2AF21E28667300C39427 /* UNLoginRegisterController.m in Sources */,
 				7CF8D5781E1EB0A500041DAB /* AppDelegate.m in Sources */,
 				7C4194581E2611B000F505A2 /* UNTitleCell.m in Sources */,
 				7C1244891E248C2A0071A8CC /* HomeMenuModel.m in Sources */,
@@ -1460,6 +1507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 754TY7VH2R;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = Cooking/PrefixHeader.pch;
 				INFOPLIST_FILE = Cooking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1476,6 +1524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 754TY7VH2R;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = Cooking/PrefixHeader.pch;
 				INFOPLIST_FILE = Cooking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

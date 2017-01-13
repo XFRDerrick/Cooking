@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UNLoginRegisterController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch.png" translatesAutoresizingMaskIntoConstraints="NO" id="e48-Bd-mQc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPf-0T-Op8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UBY-Di-gsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="e48-Bd-mQc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Xb-lq-aQ8"/>
+                <constraint firstItem="e48-Bd-mQc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AN2-gj-yJQ"/>
+                <constraint firstAttribute="trailing" secondItem="e48-Bd-mQc" secondAttribute="trailing" id="EAB-kQ-1f4"/>
+                <constraint firstAttribute="bottom" secondItem="e48-Bd-mQc" secondAttribute="bottom" id="Jf2-fl-E9r"/>
+                <constraint firstAttribute="bottom" secondItem="IPf-0T-Op8" secondAttribute="bottom" id="fzA-fc-YQ4"/>
+                <constraint firstItem="IPf-0T-Op8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g9R-j2-uG9"/>
+                <constraint firstAttribute="trailing" secondItem="IPf-0T-Op8" secondAttribute="trailing" id="j2h-bx-u0y"/>
+                <constraint firstItem="IPf-0T-Op8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uUk-12-MD7"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="Launch.png" width="1242" height="2208"/>
+    </resources>
+</document>

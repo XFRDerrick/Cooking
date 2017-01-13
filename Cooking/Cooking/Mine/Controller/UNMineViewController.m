@@ -11,6 +11,8 @@
 #import "UNMineLoginHeaderCell.h"
 
 //关于我们
+#import "UNLoginRegisterController.h"
+
 #import "UNAboutController.h"
 #import "UNSetTableViewController.h"
 
@@ -148,6 +150,13 @@
     
     if (indexPath.section == 0) {
         //AppDelegate *myDelegate =(AppDelegate*)[[UIApplication sharedApplication] delegate];
+       
+        //如果没有登录—— 登录界面
+        UNLoginRegisterController *loginVC = [[UNLoginRegisterController alloc] init];
+        
+        
+        [self.navigationController pushViewController:loginVC animated:YES];
+
         
     }else{
         if (indexPath.row == 0) {
