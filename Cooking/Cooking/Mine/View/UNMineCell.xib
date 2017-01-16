@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="159" height="157"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_common_goldenmusic_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="uze-RO-9AK">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ms_caipu_level.png" translatesAutoresizingMaskIntoConstraints="NO" id="uze-RO-9AK">
                         <rect key="frame" x="25" y="8" width="108" height="108"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="uze-RO-9AK" secondAttribute="height" multiplier="1:1" id="RYg-Zx-nA9"/>
@@ -52,6 +52,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="ic_common_goldenmusic_normal.png" width="24" height="24"/>
+        <image name="ms_caipu_level.png" width="13" height="13"/>
     </resources>
 </document>

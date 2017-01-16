@@ -9,10 +9,10 @@
 #import "UNMineViewController.h"
 #import "UNMineCell.h"
 #import "UNMineLoginHeaderCell.h"
-
+#import "UNMineTableViewCell.h"
 //关于我们
 #import "UNLoginRegisterController.h"
-
+#import "UNUserInfoViewController.h"
 #import "UNAboutController.h"
 #import "UNSetTableViewController.h"
 
@@ -47,7 +47,8 @@
         _tableView.tableFooterView = [[UIView alloc] init];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+        
+        [_tableView registerNib:[UINib nibWithNibName:@"UNMineTableViewCell" bundle:nil] forCellReuseIdentifier:@"mineTableViewCell"];
     }
     return _tableView;
 }
@@ -122,14 +123,15 @@
 
     if (indexPath.section == 0) {
         UNMineLoginHeaderCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UNMineLoginHeaderCell" forIndexPath:indexPath];
+         UNUserInfo *info = [[UNUserInfo alloc] init];
         if (self.isLogin) {
             //赋值
             BmobUser *bUser = [BmobUser currentUser];
-            UNUserInfo *info = [[UNUserInfo alloc] init];
             info.screen_name = bUser.username;
             info.avatar_large = [bUser objectForKey:@"headerImagePath"];
-            cell.info = info;
+            self.userInfoModel = info;
         }
+        cell.info = info;
         return cell;
     }else{
     
@@ -159,9 +161,11 @@
         //如果没有登录—— 登录界面
         if (self.isLogin) {
             //个人信息界面
-            
-            
+            UNUserInfoViewController *userVC = [[UNUserInfoViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            userVC.info = self.userInfoModel;
+            [self.navigationController pushViewController:userVC animated:YES];
         }else{
+            
             UNLoginRegisterController *loginVC = [[UNLoginRegisterController alloc] init];
             [self.navigationController pushViewController:loginVC animated:YES];
         }
@@ -243,33 +247,33 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    UNMineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mineTableViewCell" forIndexPath:indexPath];
     
     UIImage *tableViewImage = nil;
     NSString *titleStr = nil;
     switch (indexPath.row) {
         case 0:
-            tableViewImage = [UIImage imageNamed:@"ic_common_goldenmusic_normal"];
+            tableViewImage = [UIImage imageNamed:@"aite"];
             titleStr = @"推送";
             break;
         case 1:
-            tableViewImage = [UIImage imageNamed:@"ic_common_goldenmusic_normal"];
+            tableViewImage = [UIImage imageNamed:@"delicon"];
             titleStr = @"清除缓存";
             break;
         case 2:
-            tableViewImage = [UIImage imageNamed:@"ic_common_goldenmusic_normal"];
+            tableViewImage = [UIImage imageNamed:@"Menu_setting"];
             titleStr = @"设置";
             break;
         case 3:
-            tableViewImage = [UIImage imageNamed:@"ic_common_goldenmusic_normal"];
+            tableViewImage = [UIImage imageNamed:@"Menu_star"];
             titleStr = @"关于我们";
             break;
         default:
             break;
     }
     
-    cell.imageView.image = tableViewImage;
-    cell.textLabel.text = titleStr;
+    cell.imageIV.image = tableViewImage;
+    cell.titleLable.text = titleStr;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }

@@ -22,13 +22,14 @@
 - (void)setInfo:(UNUserInfo *)info{
     _info = info;
     if (self.info) {
-        self.userNameLable.text = self.info.screen_name;
+        
+        self.userNameLable.text = self.info.screen_name == nil ? @"登录":self.info.screen_name;
         if (self.info.avatar_large.length > 0) {
-            [self.headerImageIV setImageWithURL:[NSURL URLWithString:self.info.avatar_large] placeholder:[UIImage imageNamed:@"setting_personal.png"]];
+            [self.headerImageIV setImageWithURL:[NSURL URLWithString:self.info.avatar_large] placeholder:[UIImage imageNamed:@"share_qq_icon"]];
+        }else{
+            self.headerImageIV.image = [UIImage imageNamed:@"share_qq_icon"];
         }
-    }else{
-        self.userNameLable.text = @"登陆";
-        self.headerImageIV.image = [UIImage imageNamed:@"setting_personal.png"];
+        
     }
     
 }
