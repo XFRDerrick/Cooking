@@ -25,7 +25,7 @@
 
 @end
 
-@interface UNDietListDataRecipesModel : NSObject
+@interface UNDietListDataRecipesModel : NSObject<NSCoding>
 /*
  "id":45,
  "title":"牛油果沙拉",
@@ -33,12 +33,13 @@
  "img_url":"http://ocb1i37yp.bkt.clouddn.com/jianfeishipu/shala/1.jpg?imageView2/2/w/200/h/200/interlace/0/q/90",
  "page_url":"http://zaijiawan.com/matrix_common/CookBook.jsp?mainId=4&id=45"
  */
-@property (nonatomic, assign) NSInteger *recipesId;
+@property (nonatomic, assign) NSInteger recipesId;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *desc;
 @property (nonatomic, copy) NSString *img_url;
 @property (nonatomic, copy) NSString *page_url;
-
+- (void)encodeWithCoder:(NSCoder *)aCoder;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder;
 @end
 
 

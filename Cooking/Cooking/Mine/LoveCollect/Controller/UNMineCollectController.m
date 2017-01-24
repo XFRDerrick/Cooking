@@ -27,21 +27,16 @@
 @property (nonatomic, strong) UNCollectionModel *collectionData;
 //显示shoucang
 @property (nonatomic, strong) UITableView *tableView;
-//展开按钮
-@property (nonatomic, strong) NSMutableArray *showButtons;
 
+//区展开
+@property (nonatomic, assign, getter=isFirstShow) BOOL firstShow;
+@property (nonatomic, assign, getter=isSecondShow) BOOL secondShow;
+@property (nonatomic, assign, getter=isThirdShow) BOOL thirdShow;
+@property (nonatomic, assign, getter=isFoutShow) BOOL foutShow;
 @end
 
 @implementation UNMineCollectController
 
-
-- (NSMutableArray *)showButtons{
-
-    if (!_showButtons) {
-        _showButtons = [NSMutableArray array];
-    }
-    return _showButtons;
-}
 #pragma mark - 懒加载
 - (UIImageView *)noDataBackGroundIV{
 
@@ -63,6 +58,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.firstShow = NO;
+    self.secondShow = NO;
+    self.thirdShow = NO;
+    self.foutShow = NO;
     //是否登录
     self.login = [UNBmobWorkTools userIsLogin];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -120,7 +119,7 @@
     
     
 }
-#pragma mark 收藏展示
+#pragma mark - 收藏展示
 
 - (UITableView *)tableView{
     
@@ -157,32 +156,25 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
     //获取头按钮
-    UIButton *rowBtn = nil;
-    for (UIButton *btn in self.showButtons) {
-        if (btn.tag == section) {
-            rowBtn = btn;
-        }
-    }
-    
     NSUInteger count = 0;
     switch (section) {
         case 0:
-            if (rowBtn) {
+            if (self.isFirstShow) {
                 count = self.collectionData.cookingStyleData.count;
             }
             break;
         case 1:
-            if (rowBtn) {
+            if (self.isSecondShow) {
                 count = self.collectionData.recommendData.count;
             }
             break;
         case 2:
-            if (rowBtn) {
+            if (self.isThirdShow) {
                 count = self.collectionData.dietData.count;
             }
             break;
         case 3:
-            if (rowBtn) {
+            if (self.isFoutShow) {
                 count = self.collectionData.healthyDietData.count;
             }
             break;
@@ -207,15 +199,24 @@
         
         UNNormalFoodCell *cell = [tableView dequeueReusableCellWithIdentifier:@"foodNormalCell" forIndexPath:indexPath];
         
-        cell.titleLable.text = @"haha";
-        
+        if (indexPath.section == 1) {
+            MenuDataModel *model = self.collectionData.recommendData[indexPath.row];
+            [cell.imageIV setImageWithURL:[NSURL URLWithString:model.imageUrl] placeholder:[UIImage imageNamed:@"background_image.jpeg"]];
+            cell.titleLable.text = model.title;
+            cell.descLable.text = model.desc;
+            
+        }else{
+            UNDietListDataRecipesModel *model = self.collectionData.dietData[indexPath.row];
+            [cell.imageIV setImageWithURL:[NSURL URLWithString:model.img_url] placeholder:[UIImage imageNamed:@"background_image.jpeg"]];
+            cell.titleLable.text = model.title;
+            cell.descLable.text = model.desc;
+        }
         return cell;
 
     }else{
+        
         UNDietBaikeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"dietBaikeCell" forIndexPath:indexPath];
-        
         cell.model = self.collectionData.healthyDietData[indexPath.row];
-        
         return cell;
     }
     
@@ -225,35 +226,95 @@
 
     return 45;
 }
+#pragma mark - 收藏编辑
 
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        //将数据从文件中删除 indexPath
+        NSMutableArray *tmpArr = [NSMutableArray array];
+        id model  = nil;
+        if (indexPath.section == 0) {
+            model = self.collectionData.cookingStyleData[indexPath.row];
+            [tmpArr addObjectsFromArray:self.collectionData.cookingStyleData];
+            [tmpArr removeObject:model];
+            self.collectionData.cookingStyleData = tmpArr.copy;
+            
+        }else if (indexPath.section == 1){
+            model = self.collectionData.recommendData[indexPath.row];
+            [tmpArr addObjectsFromArray:self.collectionData.recommendData];
+            [tmpArr removeObject:model];
+            self.collectionData.recommendData = tmpArr.copy;
+        }else if (indexPath.section == 2){
+            model = self.collectionData.dietData[indexPath.row];
+            [tmpArr addObjectsFromArray:self.collectionData.dietData];
+            [tmpArr removeObject:model];
+            self.collectionData.dietData = tmpArr.copy;
+        }else{
+            model = self.collectionData.healthyDietData[indexPath.row];
+            [tmpArr addObjectsFromArray:self.collectionData.healthyDietData];
+            [tmpArr removeObject:model];
+            self.collectionData.healthyDietData = tmpArr.copy;
+        }
+        [PlistWorkTools deleteCollection:model];
+        
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+
+    }
+}
+
+
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
+
+
+
+#pragma mark - 头视图
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 
     UNCollectionHeader *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"collectionHeader"];
     headerView.contentView.backgroundColor = kRGBA_COLOR(244, 244, 234, 1);
-    headerView.rowButton.tag = section;
     if (section == 0) {
         headerView.titleLable.text = @"菜系收藏";
         headerView.collectionsCountLable.text = @(self.collectionData.cookingStyleData.count).stringValue;
+       headerView.rowButton.selected = self.firstShow;
     }else if (section == 1){
         headerView.titleLable.text = @"推荐收藏";
         headerView.collectionsCountLable.text = @(self.collectionData.recommendData.count).stringValue;
+        headerView.rowButton.selected = self.secondShow;
     }else if (section == 2){
         headerView.titleLable.text = @"减肥收藏";
         headerView.collectionsCountLable.text = @(self.collectionData.dietData.count).stringValue;
+        headerView.rowButton.selected = self.thirdShow;
     }else{
         headerView.titleLable.text = @"健康饮食收藏";
         headerView.collectionsCountLable.text = @(self.collectionData.healthyDietData.count).stringValue;
+         headerView.rowButton.selected = self.foutShow;
     }
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
         
-        NSLog(@"点击了：%ld",section);
-        headerView.rowButton.selected = !headerView.rowButton.selected;
-        if (headerView.rowButton.selected) {
-            [self.showButtons addObject:headerView.rowButton];
-        }else{
-            [self.showButtons removeObject:headerView.rowButton];
-        }
-        [self.tableView reloadData];
+        [self didCellShowStyleChangedSection:section];
     }];
     [headerView addGestureRecognizer:tap];
     
@@ -261,10 +322,28 @@
     
 }
 
+- (void)didCellShowStyleChangedSection:(NSUInteger)section{
+    if (section == 0) {
+        self.firstShow = !self.firstShow;
+        
+    }else if (section == 1){
+        self.secondShow = !self.secondShow;
+        
+    }else if (section == 2){
+        self.thirdShow = !self.thirdShow;
+        
+    }else{
+        self.foutShow = !self.foutShow;
+       
+    }
+    [self.tableView reloadData];
+}
 
 
 
-#pragma mark 登录提示
+
+
+#pragma mark - 登录提示
 - (void)addAlterVC{
     UIAlertController *alterVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"您还未登录，请先登录！" preferredStyle:UIAlertControllerStyleAlert];
     
@@ -294,11 +373,21 @@
     self.lrVC = nil;
 }
 
-#pragma mark 导航栏设置
+#pragma mark - 导航栏设置
 
 - (void)setupNav{
 
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"fav_nd_icon_36"] style:UIBarButtonItemStyleDone target:self action:@selector(userInfoLogin:)];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(delegateLinkmanAction:)];
+    
+    self.navigationItem.rightBarButtonItem = rightItem;
+    
+}
+//设置编辑状态
+- (void)delegateLinkmanAction:(UIBarButtonItem*)sender{
+    [self.tableView setEditing:!self.tableView.editing animated:YES];
+    [sender setTitle:self.tableView.editing ? @"完成":@"编辑"];
 }
 
 - (void)userInfoLogin:(UIBarButtonItem *)item{
@@ -306,8 +395,8 @@
     UNMineViewController *mineVC = [[UNMineViewController alloc] init];
     
     [self presentViewController:[[UNBaseNavController alloc] initWithRootViewController:mineVC] animated:YES completion:nil];
+    
 }
-
 
 - (void)viewWillAppear:(BOOL)animated{
     self.login = [UNBmobWorkTools userIsLogin];

@@ -51,7 +51,7 @@
 @property (nonatomic, copy) NSString *resultId;
 
 - (void)encodeWithCoder:(NSCoder *)aCoder;
-- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder;
 
 @end
 

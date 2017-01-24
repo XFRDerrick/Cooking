@@ -13,7 +13,6 @@
 @interface PlistWorkTools : NSObject
 
 + (UNCollectionModel *)readCollectionDatas;
-
 + (void)collectionFood:(id)foodModel;
-
++ (void)deleteCollection:(id)foodModel;
 @end

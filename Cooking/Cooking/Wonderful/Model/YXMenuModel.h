@@ -18,7 +18,7 @@
 @property (nonatomic, copy) NSString *code;
 
 @end
-@interface MenuDataModel : NSObject
+@interface MenuDataModel : NSObject<NSCoding>
 
 @property (nonatomic, copy) NSString *detailsUrl;
 
@@ -96,5 +96,7 @@
 
 @property (nonatomic, copy) NSString *displayState;
 
+- (void)encodeWithCoder:(NSCoder *)aCoder;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder;
 @end
 

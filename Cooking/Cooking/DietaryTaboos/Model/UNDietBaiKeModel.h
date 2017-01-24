@@ -19,7 +19,7 @@
 @property (nonatomic, strong) NSArray<UNDietBaiKeListModel *> *list;
 @end
 
-@interface UNDietBaiKeListModel : NSObject
+@interface UNDietBaiKeListModel : NSObject<NSCoding>
 
 
 @property (nonatomic, assign) NSInteger resourceid;
@@ -44,5 +44,6 @@
  "addtimedesc":"2016-09-28",
  "clickcount":1,
  */
-
+- (void)encodeWithCoder:(NSCoder *)aCoder;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder;
 @end
