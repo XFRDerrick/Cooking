@@ -149,6 +149,8 @@
 
     HomeListResultModel *model = self.allDatas[indexPath.row];
     UNFoodDetailController *detailVC = [[UNFoodDetailController alloc] init];
+    
+    detailVC.model = model;
     detailVC.resultId = model.resultId;
     detailVC.title = model.title;
     [self.navigationController pushViewController:detailVC animated:YES];

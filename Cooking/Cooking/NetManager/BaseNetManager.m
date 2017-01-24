@@ -14,7 +14,7 @@
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];//[[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:kBasePath]];
     
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", @"text/json", @"text/javascript", @"text/plain", nil];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", @"text/json", @"text/javascript", @"text/plain",@"text/xml", nil];
     return [manager GET:path parameters:paramaters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",task.currentRequest.URL.absoluteString);
         
@@ -31,7 +31,7 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager] ;
     
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", @"text/json", @"text/javascript", @"text/plain", nil];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", @"text/json", @"text/javascript", @"text/plain",@"text/xml", nil];
     
     return [manager GET:path parameters:paramaters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"success_%@",task.currentRequest.URL.absoluteString);

@@ -29,5 +29,6 @@
 #import "AppDelegate.h"
 #import <BmobSDK/Bmob.h>
 #import "UNBmobWorkTools.h"
+#import "PlistWorkTools.h"
 
 #endif /* PrefixHeader_pch */

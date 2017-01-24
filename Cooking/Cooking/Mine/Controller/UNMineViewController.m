@@ -174,7 +174,10 @@
         if (indexPath.row == 0) {
             __weak typeof(self) weekSelf = self;
             [self addAlterVCWithTitle:@"确认同步" message:@"您收藏的菜谱会同步到登录账号，建议同步！" handler:^{
-                [weekSelf.view showMessage:@"同步成功"];
+                //正在同步
+                [weekSelf.view showMessage:@"正在同步……" Time:30];
+                /*同步代码 上传文件*/
+                [weekSelf updatePlistFile];
             }];
         }else if (indexPath.row == 1){
             
@@ -191,6 +194,36 @@
     }
     
 }
+
+- (void)updatePlistFile{
+    
+    BmobUser *buser = [BmobUser currentUser];
+  
+    NSString *plistPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/collection.plist"];
+    
+    NSLog(@"22-%@",plistPath);
+    
+    BmobFile *file = [[BmobFile alloc] initWithFilePath:plistPath];
+    [file saveInBackground:^(BOOL isSuccessful, NSError *error) {
+        if (isSuccessful) {
+            
+            [buser setObject:file.url forKey:@"collectionPath"];
+            [buser updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+                if (isSuccessful) {
+                    [self.view showMessage:@"同步成功"];
+                }else{
+                    [self.view showMessage:@"同步失败2"];
+                    NSLog(@"error:%@",error);
+                }
+            }];
+            //打印file文件的url地址
+        }else{
+            //进行处理
+            [self.view showMessage:@"同步失败1"];
+        }
+    }];
+}
+
 
 
 - (void)addAlterVCWithTitle:(nullable NSString *)title message:(nullable NSString *)message handler:(void (^)())comHandler{

@@ -28,7 +28,7 @@
 @property (nonatomic, assign) NSInteger offset;
 @end
 
-@interface HomeListResultModel : NSObject
+@interface HomeListResultModel : NSObject<NSCoding>
 /*
  "publishAt":"2015-07-17T07:50:34",
  "cooking_time":"三十分钟",
@@ -49,6 +49,9 @@
 @property (nonatomic, assign) NSInteger likes;
 @property (nonatomic, copy) NSString *thumbnail;
 @property (nonatomic, copy) NSString *resultId;
+
+- (void)encodeWithCoder:(NSCoder *)aCoder;
+- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder;
 
 @end
 

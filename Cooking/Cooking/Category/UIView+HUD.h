@@ -13,5 +13,6 @@
 - (void)showHUD;
 - (void)hidenHUD;
 - (void)showMessage:(NSString *)message;
+- (void)showMessage:(NSString *)message Time:(NSTimeInterval)time;
 
 @end

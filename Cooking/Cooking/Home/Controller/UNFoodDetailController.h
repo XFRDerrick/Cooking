@@ -12,4 +12,6 @@
 
 @property (nonatomic, copy) NSString *resultId;
 
+@property (nonatomic, strong) HomeListResultModel *model;
+
 @end

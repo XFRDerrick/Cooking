@@ -63,14 +63,15 @@
 - (void)didLikeButtonTouched:(UIControl *)sender{
 
     if (self.like.selected) {
-        NSLog(@"取消收藏");
+//        NSLog(@"取消收藏");
+        [self.view showMessage:@"取消收藏"];
     }else{
-    
-       NSLog(@"收藏成功");
+        
+        NSLog(@"%@",self.model);
+        [PlistWorkTools collectionFood:self.model];
+        [self.view showMessage:@"收藏成功"];
     }
-    
     self.like.selected = !self.like.selected;
-    
 }
 
 

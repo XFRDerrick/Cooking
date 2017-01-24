@@ -39,5 +39,14 @@
     
 }
 
+- (void)showMessage:(NSString *)message Time:(NSTimeInterval)time{
+    [self hidenHUD];
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+    hud.label.text = message;
+    hud.contentColor = [UIColor blackColor];
+    [hud hideAnimated:YES afterDelay:time];
+}
+
 
 @end
